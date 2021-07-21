@@ -213,7 +213,7 @@ header label{
 
 .home .image img{
     width:40vw;
-    animation: ngambang 3s linear infinite;
+    animation: ngambang 3s ease-in-out infinite;
 }
 @keyframes ngambang{
     0%, 100%{
@@ -309,13 +309,13 @@ header label{
 }
 
 .pricing .box-container .box .price{
-    font-size: 4rem;
+    font-size: 3rem;
     color:var(--white2);
     padding:1rem 0;
 }
 
 .pricing .box-container .box .price span{
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-decoration: line-through;
 }
 
@@ -330,7 +330,9 @@ header label{
     padding:.5rem 0;
 }
 
-.pricing .box-container .box ul li .fa-check{
+.pricing .box-container .box ul li .fa-check,
+.pricing .box-container .box ul li .fa-clock,
+.pricing .box-container .box ul li .fa-magic{
     color:lightgreen;
 }
 
@@ -343,7 +345,7 @@ header label{
     padding-top: 3rem;
     background-color: var(--dark2);
     width: 100%;
-    padding: 3rem 9% 0 9%;
+    padding: 3rem 5% 0 5%;
 }
 
 .footer .box-container{
@@ -540,7 +542,7 @@ header label{
     margin-bottom: 10px;
 }
 
-#popup1:target,#popup2:target{
+#popup1:target,#partnerships:target{
     display:block;
 }
 
@@ -596,7 +598,6 @@ header label{
     .popup-content .popup-body{
         font-size: 1.4rem;
     }
-
 }
 
 @media (max-width:768px){
@@ -685,7 +686,9 @@ header label{
         padding-bottom: 10px;
         font-size: 1.5rem;
     }
+    
 }
+
 @media (max-width:320px){
     .popup .popup-content{
         position: relative;
