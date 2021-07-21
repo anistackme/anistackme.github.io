@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 :root{
     --white1: #ffffff;--white2: #9ec3fc;--white3: #f1f9ff;
-    --dark1: #161b27;--dark2: #1a2131;--dark3: #18233b;
+    --dark1: #161b27;--dark2: #1a2131;--dark3: #202e4d;
     --accent1: #5278e0;--accent2: #3f5aa7;--accent3: #3160e2;
     --title: #5278e0;--subtitle: #5774c2;--paragraph1: #ffffff;--paragraph2:#57678d;
 }
@@ -43,7 +43,7 @@ body{
 }
 section{
     min-height: 100vh;
-    padding:0 9%;padding-top: 7.5rem;padding-bottom: 2rem;
+    padding:0 9%;padding-top: 10.5rem;padding-bottom: 2rem;
 }
 
 
@@ -277,6 +277,137 @@ header label{
     padding: 1rem 0;
 }
 
+/* === bagian pricing === */
+.pricing .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.pricing .box-container .box{
+    flex:1 1 27rem;
+    margin:1rem;
+    padding:1rem;
+    background:var(--dark3);
+    border:.1rem solid rgba(0,0,0,.2);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    border-radius: .5rem;
+    text-align: center;
+    padding-bottom: 3rem;
+}
+
+.pricing .box-container .box:nth-child(2),
+.pricing .box-container .box:hover{
+    border:.3rem solid var(--accent1);
+}
+
+.pricing .box-container .box .title{
+    color:var(--white1);
+    font-size: 2.5rem;
+    padding-top: 1rem;
+}
+
+.pricing .box-container .box .price{
+    font-size: 4rem;
+    color:var(--white2);
+    padding:1rem 0;
+}
+
+.pricing .box-container .box .price span{
+    font-size: 2rem;
+    text-decoration: line-through;
+}
+
+.pricing .box-container .box ul{
+    padding:1rem 0;
+    list-style: none;
+}
+
+.pricing .box-container .box ul li{
+    font-size: 1.7rem;
+    color:var(--white2);
+    padding:.5rem 0;
+}
+
+.pricing .box-container .box ul li .fa-check{
+    color:lightgreen;
+}
+
+.pricing .box-container .box ul li .fa-times{
+    color:tomato;
+}
+
+/* === bagian footer === */
+.footer{
+    padding-top: 3rem;
+    background-color: var(--dark2);
+    width: 100%;
+    padding: 3rem 9% 0 9%;
+}
+
+.footer .box-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer .box-container .box{
+    flex:1 1 25rem;
+    margin:2rem;
+}
+
+.footer .box-container .box h3{
+    font-size: 1.9rem;
+    padding:1rem 0;
+    color:#fff;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+}
+
+.footer .box-container .box p{
+    font-size: 1.2rem;
+    padding:.5rem 0;
+    color:#eee;
+}
+
+.footer .box-container .box a{
+    display: block;
+    font-size: 1.3rem;
+    padding:.5rem 0;
+    color:#eee;
+}
+
+.footer .box-container .box a:hover{
+    text-decoration: underline;
+}
+
+.footer .box-container .box .info{
+    display: flex;
+    align-items: center;
+}
+
+.footer .box-container .box .info i{
+    margin:.5rem 0;
+    margin-right: 1rem;
+    border-radius: 50%;
+    background:#fff;
+    color:var(--pink);
+    font-size: 1.3rem;
+    height:2.5rem;
+    width:2.5rem;
+    display: flex;
+    align-items: center;justify-content: center;
+    text-align: center;
+}
+
+.footer .credit{
+    width: 100%;
+    font-size: 1rem;font-weight: normal;letter-spacing: .1rem;
+    color:#fff;;
+    border-top: .1rem solid rgba(97, 89, 206, 0.333);
+    padding:2.5rem 1rem;
+    text-align: center;
+}
 
 
 
@@ -345,7 +476,7 @@ header label{
     position: absolute;
     top: 50%;left: 50%;
     transform:translate(-50%,-50%);
-    height: 400px;
+    width: 50%;height: 400px;
     background-color: var(--dark2);
     display: flex;
     flex-direction: column;
@@ -356,13 +487,14 @@ header label{
     left: 0;top: 0;
     width: 100%;height: 10%;
     padding: 30px 20px;
-    background-color: var(--dark3);
+    background-color: var(--accent2);
     display: flex;align-items: center;justify-content: space-between;
     border-radius: 20px 20px 0px 0px;
 }
 .popup-content .popup-header h1{
     color: var(--white1);
-    font-size: 2.5rem;
+    font-size: 2.3rem;
+    font-weight: 500;
 }
 .popup-content .popup-header a{
     color: red;
@@ -377,8 +509,11 @@ header label{
     color: var(--white1);
     padding: 30px 20px;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     width: 100%;
+}
+.popup-content .popup-body ul{
+    list-style: none;
 }
 .popup-content .popup-body-left{
     position: relative;
@@ -543,9 +678,7 @@ header label{
     .popup-content .popup-body{
         font-size: 1.2rem;
         padding: 30px 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        display: flex;flex-direction: column;justify-content: space-between;
         width: 100%;
     }
     .popup-content .popup-body-left h3{
