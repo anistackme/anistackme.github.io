@@ -332,11 +332,13 @@ header label{
 
 .pricing .box-container .box ul li .fa-check,
 .pricing .box-container .box ul li .fa-clock,
+.pricing .box-container .box ul li .fa-tint,
 .pricing .box-container .box ul li .fa-magic{
     color:lightgreen;
 }
 
-.pricing .box-container .box ul li .fa-times{
+.pricing .box-container .box ul li .fa-times,
+.pricing .box-container .box ul li .fa-tint-slash{
     color:tomato;
 }
 
@@ -441,6 +443,15 @@ header label{
 
 
 
+
+
+
+
+
+
+
+
+
 /* ===== bagian loader ===== */
 .loader{
     position: fixed;
@@ -511,10 +522,19 @@ header label{
     color: var(--white1);
     padding: 30px 20px;
     display: flex;
-    /* justify-content: space-between; */
+    /* justify-content: center; */
     width: 100%;
 }
-.popup-content .popup-body ul{
+.popup-content .popup-body-centered{
+    font-size: 1.5rem;
+    color: var(--white1);
+    padding: 30px 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.popup-content .popup-body ul,
+.popup-content .popup-body-centered ul{
     list-style: none;
 }
 .popup-content .popup-body-left{
@@ -541,8 +561,19 @@ header label{
     background-size: cover;background-repeat: no-repeat;background-position: center;
     margin-bottom: 10px;
 }
+.accenter{
+    color: gold;
+    font-weight: 600;
+}
+.accenter2{
+    color: coral;
+    font-weight: 600;
+}
+.price2{
+    margin-bottom: 15px;
+}
 
-#popup1:target,#partnerships:target{
+#popup1:target,#partnerships:target,#p-basic:target{
     display:block;
 }
 
