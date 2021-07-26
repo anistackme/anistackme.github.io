@@ -581,9 +581,7 @@ footer{
     margin-bottom: 15px;
 }
 
-#popup1:target,#partnerships:target,
-#p-basic:target,#p-standard:target,
-#p-express:target,#p-custom:target{
+#popup1:target,#p-basic:target,#p-standard:target,#p-express:target,#p-custom:target{
     display:block;
 }
 
