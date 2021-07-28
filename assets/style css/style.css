@@ -300,8 +300,6 @@ header label{
     text-align: center;
     padding-bottom: 3rem;
 }
-
-.pricing .box-container .box:nth-child(2),
 .pricing .box-container .box:hover{
     border:.3rem solid var(--accent1);
 }
@@ -581,9 +579,16 @@ footer{
     margin-bottom: 15px;
 }
 
-#popup1:target,#p-basic:target,#p-standard:target,#p-express:target,#p-custom:target{
+#popup1:target,#p-basic:target,#p-standard:target,
+#p-normal:target,#p-express:target,#p-custom:target{
     display:block;
 }
+
+
+
+
+
+
 
 
 
