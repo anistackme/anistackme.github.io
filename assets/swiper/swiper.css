@@ -1,7 +1,8 @@
 .slider{
   position: relative;
   /* background: #222; */
-  background: url('https://i.pinimg.com/originals/5f/55/11/5f55113929c643f388eaf017157f98e9.gif');
+  /* background: url('https://i.pinimg.com/originals/5f/55/11/5f55113929c643f388eaf017157f98e9.gif'); */
+  background: url('https://i.pinimg.com/originals/5c/5c/f4/5c5cf4d5ae7003749cc0ca91ec52bb2f.gif');
   background-size: cover;
   width: 100%;
   min-height: 200px;
@@ -52,7 +53,7 @@
 }
 
 .navigation{
-  height: 550px;
+  height: 500px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -92,10 +93,10 @@
 .navigation-visibility .slide-icon{
   z-index: 999;
   background: rgba(255, 255, 255, 0.5);
-  width: 20px;
-  height: 10px;
+  width: 30px;
+  height: 5px;
   transform: translateY(-50px);
-  margin: 0 6px;
+  margin: 0 4px;
   border-radius: 2px;
   box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
 }
@@ -117,6 +118,13 @@
     margin-left: auto;
     margin-right: auto;
   }
+  .navigation{
+    height: 250px;
+  }
+  .navigation-visibility .slide-icon{
+    width: 10px;
+    height: 5px;
+  }
   
 }
 
@@ -128,5 +136,12 @@
 
   .slider .slide .info p{
     font-size: 0.9em;
+  }
+  .navigation{
+    height: 350px;
+  }
+  .navigation-visibility .slide-icon{
+    width: 10px;
+    height: 5px;
   }
 }
