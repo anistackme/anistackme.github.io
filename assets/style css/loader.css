@@ -1,0 +1,24 @@
+/* ===== bagian loader ===== */
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #040F16;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1110;
+  }
+  
+  .disppear{
+    animation: vanish 2s forwards;
+    animation-duration: 2s;
+  }
+  @keyframes vanish {
+    100%{
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
