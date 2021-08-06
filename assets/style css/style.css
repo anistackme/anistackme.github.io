@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 :root{
-    --white1: #ffffff;--white2: #9ec3fc;--white3: #f1f9ff;
+    --white1: #ffffff;--white2: #9ec3fc;--white3: #f1f9ff;--white4: #4d8dbe;
     --dark1: #161b27;--dark2: #1a2131;--dark3: #202e4d;
     --accent1: #5278e0;--accent2: #3f5aa7;--accent3: #3160e2;
     --title: #5278e0;--subtitle: #5774c2;--paragraph1: #ffffff;--paragraph2:#57678d;
@@ -182,7 +182,7 @@ header label{
     height: auto;
     padding: 0 10px;
 }
-.newsimg{
+/* .newsimg{
     width: 100%;
     animation: matsuri 5s ease-in-out infinite;
 }
@@ -193,7 +193,7 @@ header label{
     50%{
         transform: translateY(-3.5rem);
     }
-}
+} */
 
 .cbbox{
     position: relative;
@@ -209,10 +209,12 @@ header label{
     position: relative;
     background-color: var(--dark3);
     padding: 20px;
-    margin-bottom: 5rem;
+    margin-bottom: 5px;
     width: auto;
-    height: auto;
+    height: 100px;
     transition: all ease 1s;
+    border: 1px solid var(--accent2);
+    overflow: hidden;
 }
 .cbox:hover{
     background-color: #2a375c;
@@ -228,26 +230,27 @@ header label{
 }
 .cbox .cbox-top .dateme{
     color: var(--white2);
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 400;
 }
 .cbox-middle{
-    padding: 30px 0;
+    padding: 5px 0;
 }
 .cbox-middle p{
+    color: var(--white4);
+    font-size: 12px;
+}
+.cbox-middle p .label-mods{
     color: var(--white1);
-    font-size: 16px;
+    padding: 0 10px;
+    background-color: var(--accent1);
+    border-radius: 10px;
 }
-.cbox-bottom{
-    padding-bottom: 20px;
-}
-.cbox-bottom a{
-    color: var(--accent1);
-    font-size: 14px;
-    font-weight: 500;
-    float: right;
-}
-.cbox-bottom a:hover{
-    color: var(--white2);
+.cbox-middle p .label-admin{
+    color: var(--white1);
+    padding: 0 10px;
+    background-color: coral;
+    border-radius: 10px;
 }
 
 
@@ -498,15 +501,15 @@ header label{
         overflow-x: hidden;
         flex: wrap;
     }
+    .cbox{
+        height: 70px;
+    }
     .cbox .cbox-top .ctitle,
     .cbox .cbox-top .dateme{
-        font-size: 1.2rem;
+        font-size: .9rem;
     }
     .cbox .cbox-middle p{
-        font-size: 1rem;
-    }
-    .cbox .cbox-bottom a{
-        font-size: 1rem;
+        font-size: .8rem;
     }
     .tombol-main,
     .tombol-second{
@@ -517,6 +520,10 @@ header label{
     }
     .m-container {
         border-radius: 10px;
+    }
+    .cbox-middle p .label-mods,
+    .cbox-middle p .label-admin{
+        padding: 0 5px;
     }
 }
 @media (max-width:320px){
