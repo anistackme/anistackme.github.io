@@ -1,0 +1,170 @@
+/* ================ kode bagian popup ================ */
+.popup{
+    position:fixed;
+    top:0px;left:0px;
+    width:100vw;height:100vh;
+    background:#0a0c11b9;
+    display:none;
+    z-index: 30;
+}
+.popup .popup-content{
+    position: absolute;
+    top: 50%;left: 50%;
+    transform:translate(-50%,-50%);
+    width: 50%;height: 400px;
+    background-color: var(--dark2);
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+}
+.popup-content .popup-header{
+    position: relative;
+    left: 0;top: 0;
+    width: 100%;height: 10%;
+    padding: 30px 20px;
+    background-color: var(--accent2);
+    display: flex;align-items: center;justify-content: space-between;
+    border-radius: 20px 20px 0px 0px;
+}
+.popup-content .popup-header h1{
+    color: var(--white1);
+    font-size: 2.3rem;
+    font-weight: 500;
+}
+.popup-content .popup-header a{
+    color: red;
+    border-radius: 20px;
+    font-size: 35px;font-weight: 6 00;
+}
+.popup-content .popup-header a:hover{
+    color: var(--white1);
+}
+.popup-content .popup-body{
+    font-size: 1.5rem;
+    color: var(--white1);
+    padding: 30px 20px;
+    display: flex;
+    /* justify-content: center; */
+    width: 100%;
+}
+.popup-content .popup-body-centered{
+    font-size: 1.5rem;
+    color: var(--white1);
+    padding: 30px 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.popup-content .popup-body ul,
+.popup-content .popup-body-centered ul{
+    list-style: none;
+}
+.popup-content .popup-body-left{
+    position: relative;
+    float: left;
+    padding: 0 10px;
+    display: flex;flex-direction: column; align-items: flex-start;justify-content: center;
+}
+.popup-content .popup-body-left h3{
+    padding-bottom: 10px;
+    color: var(--accent1);
+    font-size: 1.2rem;
+}
+.popup-content .popup-body-right{
+    position: relative;
+    float: right;
+    padding: 0 10px;
+    display: flex;align-items: flex-start;justify-content: center;
+}
+.popup-content .popup-body img{
+    position: relative;
+    top: 0;left: 0;
+    width: 100%;height: auto;
+    background-size: cover;background-repeat: no-repeat;background-position: center;
+    margin-bottom: 10px;
+}
+.accenter{
+    color: gold;
+    font-weight: 600;
+}
+.accenter2{
+    color: coral;
+    font-weight: 600;
+}
+.price2{
+    margin-bottom: 15px;
+}
+
+/* ============================= media query ============================= */
+@media (max-width:991px){
+    .popup-content .popup-header h1{
+        color: var(--white1);
+        font-size: 1.8rem;
+    }
+    .popup-content .popup-body{
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width:768px){
+    .popup .popup-content{
+        position: relative;
+        width:90%;height: 550px;
+    }
+    .popup-content .popup-header h1{
+        color: var(--white1);
+        font-size: 1.8rem;
+    }
+    .popup-content .popup-header a{
+        color: red;
+        border-radius: 20px;
+        font-size: 35px;font-weight: 6 00;
+    }
+    .popup-content .popup-header a:hover{
+        color: var(--white1);
+    }
+    .popup-content .popup-body{
+        font-size: 1.2rem;
+        padding: 30px 20px;
+        display: flex;flex-direction: column;justify-content: space-between;
+        width: 100%;
+    }
+    .popup-content .popup-body-left h3{
+        padding-bottom: 10px;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width:320px){
+    .popup .popup-content{
+        position: relative;
+        width:90%;height: auto;
+    }
+    .popup-content .popup-header h1{
+        color: var(--white1);
+        font-size: 1.8rem;
+    }
+    .popup-content .popup-header a{
+        color: red;
+        font-size: 30px;font-weight: 600;
+    }
+    .popup-content .popup-header a:hover{
+        color: var(--white1);
+    }
+    .popup-content .popup-body{
+        font-size: 1.2rem;
+    }
+    .popup-content .popup-body img{
+        margin-bottom: 10px;
+    }
+    .footer-credits p{
+        font-size: .7rem;
+        color: var(--white1);
+    }
+}
+
+/* ========================== setup target =================================== */
+#popup1:target,#p-basic:target,#p-standard:target,
+#p-normal:target,#p-express:target,#p-custom:target{
+    display:block;
+}
