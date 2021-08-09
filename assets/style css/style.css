@@ -502,14 +502,14 @@ header label{
         flex: wrap;
     }
     .cbox{
-        height: 70px;
+        height: auto;
     }
     .cbox .cbox-top .ctitle,
     .cbox .cbox-top .dateme{
-        font-size: .9rem;
+        font-size: 1.3rem;
     }
     .cbox .cbox-middle p{
-        font-size: .8rem;
+        font-size: 1.2rem;
     }
     .tombol-main,
     .tombol-second{
