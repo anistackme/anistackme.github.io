@@ -525,6 +525,10 @@ header label{
     .cbox-middle p .label-admin{
         padding: 0 5px;
     }
+        /* width */
+    ::-webkit-scrollbar{
+        width: 5px;
+    }
 }
 @media (max-width:320px){
     .footer-credits p{
