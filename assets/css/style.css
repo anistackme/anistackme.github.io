@@ -819,4 +819,10 @@ footer{
     }
 }
 
+@media (max-width:256px){
+    html{
+        font-size: 42%;
+    }
+}
+
 /* @media (max-width:){} */
