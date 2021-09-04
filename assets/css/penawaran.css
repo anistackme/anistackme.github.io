@@ -600,17 +600,17 @@ footer{
         font-size: 1.2rem;
     }
     #buttone {
-        width: 3rem;
-        height: 3rem;
+        width: 4rem;
+        height: 4rem;
         border-radius: 50%;
-        bottom: 3rem; right: .5rem;
+        bottom: 3rem; right: 3rem;
     }
     #buttone::after {
         content: "▲";
         font-weight: normal;
         font-style: normal;
-        font-size: 1.3rem;
-        line-height: 3rem;
+        font-size: 2rem;
+        line-height: 4rem;
         color: var(--white100);
     }
 }
