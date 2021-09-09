@@ -401,8 +401,12 @@ section{
 /* bagian pricing akhir */
 
 
+
+
+
+
 /* bagian review akhir */
-.review .box-container{
+/* .review .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap: 1.5rem;
@@ -449,9 +453,105 @@ section{
     font-size: 1.6rem;
     line-height: 1.7;
     padding-top: 1rem;
+} */
+
+
+
+/* bagian review cuma pake swiper.js */
+/* .reviews{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #321423;
+    overflow: hidden;
+} */
+.swiper-container{
+    /* background: #777; */
+    width: 100%;
+    margin: 5rem 0;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+.swiper-pagination-bullet-active{
+    background: var(--main-color);
+}
+.swiper-slide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+    width: 70rem;
+    filter: blur(4px);
+}
+.swiper-slide-active{
+    filter: blur(0px);
+}
+.swiper-slide .box{
+    box-shadow: var(--box-shadow);
+    border-radius: 1rem;
+    background: var(--bg-color2);
+    padding: 3.5rem;
+    height: 30rem;
+}
+.swiper-slide .box .user{
+    display: flex;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+.swiper-slide .box .user img{
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1rem;
+}
+.swiper-slide .box .user .fa-quote-right{
+    color: var(--main-color);
+    font-size: 4rem;
+    margin-left: auto;
+}
+.swiper-slide .box .user .info h3{
+    color: var(--text-color1);
+    font-size: 2rem;
+    padding-bottom: .5rem;
+}
+.swiper-slide .box .user .info .stars i{
+    color: var(--main-color);
+    font-size: 1.5rem;
 }
 
+.swiper-slide .box .user .info .stars span{
+    color: var(--text-color2);
+    font-size: 1.5rem;
+}
+.swiper-slide .box p{
+    color: var(--text-color2);
+    font-size: 1.6rem;
+    line-height: 1.7;
+    padding-top: 1rem;
+}
+/* .swiper-3d .swiper-slide-shadow-left {
+    background-image: linear-gradient(to left, var(--bg-color2),rgba(0,0,0,0));
+}
+.swiper-3d .swiper-slide-shadow-right {
+    background-image: linear-gradient(to left, var(--bg-color2),rgba(0,0,0,0));
+} */
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right {
+    background-image: none;
+}
+
+
+
 /* bagian review akhir */
+
+
+
+
 
 
 /* bagian kontak awal */
@@ -522,10 +622,11 @@ section.contact{
 }
 .collapsible1 {
     background-color: transparent;
+    /* background-color: skyblue; */
     color: var(--text-color2);
     cursor: pointer;
     padding: 18px;
-    width: 70%;
+    width: 80%;
     border: none;
     text-align: left;
     outline: none;
@@ -558,7 +659,8 @@ section.contact{
     overflow: hidden;
     transition: max-height 0.2s ease-out;
     /* background-color: bg; */
-    width: 70%;
+    width: 80%;
+    /* width: auto; */
   }
   .contentu p{
       font-size: 1.4rem;
@@ -794,6 +896,9 @@ footer{
 @media (max-width:450px){
     html{
         font-size: 50%;
+    }
+    .header .logo {
+        font-size: 2rem;
     }
     .header .icons div{
         height: 3.5rem;
