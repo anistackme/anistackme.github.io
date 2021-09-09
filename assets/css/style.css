@@ -458,7 +458,7 @@ section{
 
 
 /* bagian review cuma pake swiper.js */
-/* .reviews{
+.reviews{
     position: relative;
     width: 100%;
     min-height: 100vh;
@@ -467,7 +467,7 @@ section{
     align-items: center;
     background: #321423;
     overflow: hidden;
-} */
+}
 .swiper-container{
     /* background: #777; */
     width: 100%;
