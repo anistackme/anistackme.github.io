@@ -56,6 +56,28 @@ body.active{
 section{
     padding: 2rem 9%;
 }
+section .ullist{
+    display: flex;
+    margin-bottom: 2rem;
+}
+section ul .list{
+    list-style: none;
+    background: hsl(0, 0%, 50%, 50%);
+    color: var(--white100);
+    padding: 1rem 4rem;
+    margin: 2rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    font-size: 1.3rem;
+    opacity: .7;
+}
+section ul .list:hover,
+section ul .list.active:hover{
+    opacity: 1;
+}
+section ul .list.active{
+    background: var(--main-color);
+}
 
 .btn{
     margin-top: .8rem;
@@ -236,6 +258,7 @@ section{
     font-size: 1.7rem;
     color: hsl(0, 0%, 50%, 50%);
     margin-bottom: 1.5rem;
+    margin-top: 2rem;
   }
   
   .headings:before,
@@ -260,146 +283,97 @@ section{
   }
 
 
-
-
-
-/* bagian pricing awal */
-.pricing .box-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap: 1.5rem;
-    margin-bottom: 5rem;
+.product{
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    /* justify-content: center; */
+    justify-content: flex-start;
 }
-.pricing .box-container .box{
+.product .itembx{
+    position: relative;
+    width: 29rem;
+    height: auto;
+    /* height: 35rem; */
+    margin: 1rem;
     background: var(--bg-color2);
     border-radius: .5rem;
     box-shadow: var(--box-shadow);
     text-align: center;
     padding: 2rem 0;
 }
-/* .box-container .box span{
-    font-size: 7rem;
-    padding-top: 1rem;
-    padding-bottom: 2rem;
-    color: var(--main-color);
-} */
-.pricing .box-container .box span img{
-    width: 10rem;
-    padding-top: 1rem;
-}
-.pricing .box-container .box h3{
-    /* background: var(--main-color); */
-    /* color: var(--white100); */
-    color: var(--text-color2);
-    padding: 1rem 0;
-    margin: 1rem 0;
-    font-size: 2rem;
-}
-.pricing .box-container .box h3 a{
-    /* background: var(--main-color); */
-    /* color: var(--white100); */
-    color: var(--text-color2);
-    padding: 1rem 0;
+.product .itembx .box{
+    position: relative;
+    height: auto;
+    width: auto;
     margin: auto;
-    font-size: 2rem;
-    display: block;
-    width:90%;
+    padding: auto;
 }
-.pricing .box-container .box h3 a:hover{
-    /* background: var(--main-color); */
-    /* color: var(--white100); */
-    background: hsl(0, 0%, 50%, 20%);
-    /* color: var(--main-color); */
-    font-size: 2rem;
-    padding: 1rem 0;
+.product .itembx .box span img{
+    width: 25%;height: 25%;
 }
-.pricing .box-container .box ul{
-    padding: 1rem 0;
+.product .itembx .box h3{
+    font-size: 2rem;
+    color: var(--text-color1);
+    margin: 1rem 0;
+}
+.product .itembx .box i{
+    font-size: 1.5rem;
+    color: var(--text-color1);
+    font-weight: normal;
+}
+.product .itembx .box .price{
+    font-size: 3rem;
+    font-weight: bolder;
+    color: var(--text-color1);
+}
+.product .itembx .box ul{
+    padding-top: 2rem;
     list-style: none;
 }
-.pricing .box-container .box ul li{
-    padding: .7rem 0;
-    font-size: 1.7rem;
-    color: var(--text-color2);
-}
-.pricing .box-container .box ul li i{
-    padding-right: .5rem;
-    color: var(--main-color);
-}
-.pricing .box-container .box .price{
-    color: var(--text-color1);
-    font-weight: bolder;
-    font-size: 5rem;
-}
-.pricing .box-container .box .price i{
-    color: var(--text-color2);
+.product .itembx .box ul li{
     font-size: 1.5rem;
-    padding: 0 .5rem;
-    font-weight: lighter;
+    font-weight: 400;
+    color: var(--text-color1);
 }
+.product .itembx .box ul li i{
+    position: absolute;
+    left: 5rem;
+    font-size: 2rem;
+    color: var(--main-color);
+    /* float: left; */
+    /* margin: auto; */
+}
+.product .itembx .box h3 a{
+    display: block;
+    width: 100%;
+    font-size: 1.7rem;
+    color: var(--text-color1);
+    /* margin-top: 1rem; */
+    padding: 1rem 0;
+}
+.product .itembx .box h3 a:hover{
+    background: hsl(0, 0%, 50%, 20%);
+}
+.product .itembx .box
+
+
+
+
+
+/* bagian pricing awal */
+/* .pricing .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 5rem;
+} */
 .btn{
     display: block;
     border-radius: 0;
     width: 100%;
     text-align: center;
 }
-
-
-.pricing .flex-container {
-    /* We first create a flex layout context */
-    display: flex;
-    /* flex-direction: row;
-    flex-wrap: wrap; */
-    flex-flow: row wrap;
-    /* Then we define how is distributed the remaining space */
-    justify-content: start;
-    align-items: center;
-    padding: 0;
-    margin-bottom: 2rem;
-    list-style: none;
-}
-  
-.pricing .flex-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.pricing .flex-item a{
-    border-radius: 1.5rem;
-    text-transform: uppercase;
-    /* color: var(--main-color); */
-    color: var(--text-color1);
-    font-size: 1.5rem;
-    font-weight: 500;
-    background: var(--bg-color2);
-    /* margin: auto; */
-    margin-right: 1rem;
-    /* margin-top: 10px; */
-    /* line-height: 150px; */
-    padding: .5rem 3rem;
-}
-.pricing .flex-item a:hover{
-    background: hsl(0, 0%, 50%, 30%);
-}
-/* bagian t-content awal */
-.pricing .t-content{
-    position: relative;
-    height: auto;
-    width: 100%;
-    margin-bottom: 3rem;
-}
-.pricing .t-content .title{
-    font-size: 2rem;
-    color: var(--main-color);
-    font-weight: bold;
-    margin: 4rem 0 0rem 0;
-}
-.pricing .t-content p{
-    font-size: 1.7rem;
-    color: var(--text-color1);
-    font-weight: normal;
-}
-/* bagian t-content akhir */
 /* bagian pricing akhir */
 
 
@@ -533,6 +507,12 @@ footer{
 
 
 /* media responsif */
+@media (max-width:1024px){
+    section .ullist{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
 @media (max-width:911px){
     html{
         font-size: 55%;
@@ -562,6 +542,11 @@ footer{
 
     .home .content{
         padding: 3rem;
+    }
+    .product{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
 
@@ -613,12 +598,26 @@ footer{
         line-height: 4rem;
         color: var(--white100);
     }
+    section .ullist{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    section ul .list{
+        margin: 1rem;
+        letter-spacing: 1px;
+        font-size: 1rem;
+    }
 }
 
 
 @media (max-width:320px){
     html{
         font-size: 45%;
+    }
+    section ul .list{
+        margin: .5rem;
+        letter-spacing: 0px;
+        font-size: 1.3rem;
     }
 }
 
