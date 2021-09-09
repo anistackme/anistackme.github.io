@@ -292,12 +292,12 @@ section ul .list.active{
 }
 .product .itembx{
     position: relative;
-    width: 29rem;
+    width: 25rem;
     height: auto;
     /* height: 35rem; */
     margin: 1rem;
     background: var(--bg-color2);
-    border-radius: .5rem;
+    border-radius: 1rem;
     box-shadow: var(--box-shadow);
     text-align: center;
     padding: 2rem 0;
