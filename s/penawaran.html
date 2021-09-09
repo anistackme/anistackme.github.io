@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="../assets/css/penawaran.css">
     <link rel="stylesheet" href="../assets/css/loader.css">
     <!-- <script src="../assets/script/main.js"></script> -->
-    
+
     <!-- ini judul -->
     <title>Anistackme-Offers</title>
 </head>
@@ -26,7 +26,7 @@
 
     <!-- bagian loader -->
     <div class="loader">
-        <img src="https://www3.shutterstock.com/base/public/images/tetris-loading-636b2b0944.gif" alt="" />
+        <img src="https://www3.shutterstock.com/base/public/images/tetris-loading-636b2b0944.gif" alt="loader" />
     </div>
 
     <!-- bagian scrolling -->
@@ -38,10 +38,9 @@
         <a href="\" class="logo">ANISTACKME</a>
 
         <div class="icons">
-            <a href="#snkme"><div class="fas fa-exclamation" style="background: #e2262685; color: white;"></div></a>
+            <div class="fas fa-search" id="search-btn" style="opacity: 0; cursor: default;"></div>
             <div class="fas fa-moon" id="theme-btn"></div>
             <div class="fas fa-palette" id="color-btn"></div>
-            <div class="fas fa-search" id="search-btn"></div>
             <div class="fas fa-bars" id="menu-btn"></div>
         </div>
 
@@ -54,12 +53,6 @@
             <a href="../s/gallery.html">Gallery</a>
             <a href="./about.html">Tentang</a>
         </nav>
-
-        <!-- bagian searchbar -->
-        <form action="" class="search-form">
-            <input type="search" name="" placeholder="Cari Disini..." id="search-box">
-            <label for="search-box" class="fas fa-search"></label>
-        </form>
 
         <!-- bagian warna -->
         <div class="colors-palette">
@@ -80,152 +73,191 @@
     </header>
     <!-- bagian header akhir -->
 
-    <!-- bagian pricing awal -->
-    <section class="pricing" id="pricing">
 
-        <p class="headings">Best Offers</p>
-        <ul class="flex-container">
-            <li class="flex-item"><a href="#d/bsclotmp"><img src="" alt="">Logo Basic</a></li>
-            <li class="flex-item"><a href="#d/igtmp"><img src="" alt="">Insta Template</a></li>
+
+
+    <section>
+        <p class="headings">Filter</p>
+        <ul class="ullist">
+            <li class="list active" data-filter="all">All</li>
+            <li class="list" data-filter="topsel">Topsel</li>
+            <li class="list" data-filter="logo">Logo</li>
+            <li class="list" data-filter="flyer">Flyer</li>
+            <li class="list" data-filter="vector">Vector</li>
+            <li class="list" data-filter="duotone">Duotone</li>
+            <li class="list" data-filter="insta">Instagram</li>
+
         </ul>
 
-
-        <p class="headings">Penawaran Terkait</p>
-        <div class="box-container">
-            <!-- bagian box pricing -->
-            <div class="box" id="d/bsclotmp">
-                <span><img
-                        src="https://i.pinimg.com/favicons/29f00658087a35db084423e32c7ecc67f8009774137ad8a8c78d91ff.ico?4ad1d9ad48f98cb0013748f98da6cfbe"
-                        alt=""></span>
-                <h3>Desain Logo Basic</h3>
-                <div class="price"><i>Rp.</i>5.000<i>/Desain</i></div>
-                <ul>
-                    <li><i class="fas fa-check"></i> 1 File Custom</li>
-                    <li><i class="fas fa-check"></i> 1x redesign</li>
-                </ul>
-                <h3><a href="https://api.whatsapp.com/send?phone=6285881630649&text=Permisi%20min%21%20Ingin%20membeli%20Desain%20Logo%20Basic."
-                        target="_blank">Pilih Design</a></h3>
+        <p class="headings">Offer</p>
+        <div class="product">
+            <div class="itembx logo">
+                <div class="box">
+                    <span><img
+                            src="https://i.pinimg.com/favicons/29f00658087a35db084423e32c7ecc67f8009774137ad8a8c78d91ff.ico?4ad1d9ad48f98cb0013748f98da6cfbe"
+                            alt=""></span>
+                    <h3>Desain Logo Basic</h3>
+                    <div class="price"><i>Rp.</i>5.000<i>/Desain</i></div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> 1 File Custom</li>
+                        <li><i class="fas fa-check"></i> 1x redesign</li>
+                    </ul>
+                    <h3><a href="https://api.whatsapp.com/send?phone=6285881630649&text=Permisi%20min%21%20Ingin%20membeli%20Desain%20Logo%20Basic."
+                            target="_blank">Pilih Design</a></h3>
+                </div>
             </div>
 
-            <div class="box">
-                <span><img
-                        src="https://img.freepik.com/free-vector/flat-application-brochure-template_23-2148054026.jpg?size=338&ext=jpg"
-                        alt=""></span>
-                <h3>Flyer/Poster basic</h3>
-                <div class="price"><i>Rp.</i>15.000<i>/Desain</i></div>
-                <ul>
-                    <li><i class="fas fa-check"></i> 1 File Custom</li>
-                    <li><i class="fas fa-check"></i> 2x redesign</li>
-                </ul>
-                <h3><a href="https://api.whatsapp.com/send?phone=6285881630649&text=Permisi%20min%21%20Ingin%20membeli%20Desain%20Poster%20ini."
-                        target="_blank">Pilih Design</a></h3>
+            <div class="itembx flyer">
+                <div class="box">
+                    <span><img
+                            src="https://img.freepik.com/free-vector/flat-application-brochure-template_23-2148054026.jpg?size=338&ext=jpg"
+                            alt=""></span>
+                    <h3>Flyer/Poster basic</h3>
+                    <div class="price"><i>Rp.</i>15.000<i>/Desain</i></div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> 1 File Custom</li>
+                        <li><i class="fas fa-check"></i> 2x redesign</li>
+                    </ul>
+                    <h3><a href="https://api.whatsapp.com/send?phone=6285881630649&text=Permisi%20min%21%20Ingin%20membeli%20Desain%20Poster%20ini."
+                            target="_blank">Pilih Design</a></h3>
+                </div>
             </div>
 
-            <div class="box">
-                <span><img
-                        src="https://coreldrawdesign.com/resources/previews/preview-simple-flat-green-business-card-1543854332.jpg"
-                        alt=""></span>
-                <h3>Kartu Nama</h3>
-                <div class="price"><i>Rp.</i>10.000<i>/Desain</i></div>
-                <ul>
-                    <li><i class="fas fa-check"></i> 2 File Custom</li>
-                    <li><i class="fas fa-check"></i> Depan Belakang</li>
-                </ul>
-                <h3><a href="https://api.whatsapp.com/send?phone=6285881630649&text=Permisi%20min%21%20Ingin%20membeli%20Desain%20Kartu%20ini."
-                        target="_blank">Pilih Design</a></h3>
+            <div class="itembx logo">
+                <div class="box">
+                    <span><img
+                            src="https://coreldrawdesign.com/resources/previews/preview-simple-flat-green-business-card-1543854332.jpg"
+                            alt=""></span>
+                    <h3>Kartu Nama</h3>
+                    <div class="price"><i>Rp.</i>10.000<i>/Desain</i></div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> 2 File Custom</li>
+                        <li><i class="fas fa-check"></i> Depan Belakang</li>
+                    </ul>
+                    <h3><a href="https://api.whatsapp.com/send?phone=6285881630649&text=Permisi%20min%21%20Ingin%20membeli%20Desain%20Kartu%20ini."
+                            target="_blank">Pilih Design</a></h3>
+                </div>
             </div>
 
-            <div class="box">
-                <span><img
-                        src="https://img2.pngdownload.id/20190222/ypx/kisspng-lincoln-university-lincoln-blue-tigers-womens-bas-5c6fa5660330a8.5011319215508207100131.jpg"
-                        alt=""></span>
-                <h3>ESport Logo Desain</h3>
-                <div class="price"><i>Rp.</i>35.000<i>/Desain</i></div>
-                <ul>
-                    <li><i class="fas fa-check"></i> 3 File Custom</li>
-                    <li><i class="fas fa-check"></i> File Vector</li>
-                </ul>
-                <h3><a href="https://api.whatsapp.com/send?phone=6285881630649&text=Permisi%20min%21%20Ingin%20memesan%20desain%20esport%20ini."
-                        target="_blank">Pilih Design</a></h3>
+            <div class="itembx logo esport topsel">
+                <div class="box">
+                    <span><img
+                            src="https://img2.pngdownload.id/20190222/ypx/kisspng-lincoln-university-lincoln-blue-tigers-womens-bas-5c6fa5660330a8.5011319215508207100131.jpg"
+                            alt=""></span>
+                    <h3>ESport Logo Desain</h3>
+                    <div class="price"><i>Rp.</i>35.000<i>/Desain</i></div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> 3 File Custom</li>
+                        <li><i class="fas fa-check"></i> File Vector</li>
+                    </ul>
+                    <h3><a href="https://api.whatsapp.com/send?phone=6285881630649&text=Permisi%20min%21%20Ingin%20memesan%20desain%20esport%20ini."
+                            target="_blank">Pilih Design</a></h3>
+                </div>
+            </div>
+
+            <div class="itembx insta">
+                <div class="box" id="d/igtmp">
+                    <span><img src="https://cdn4.geckoandfly.com/wp-content/uploads/2019/06/instagram-template-03.jpg"
+                            alt=""></span>
+                    <h3>Instagram Template</h3>
+                    <div class="price"><i>Rp.</i>25.000<i>/Desain</i></div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> 10 File Custom</li>
+                        <li><i class="fas fa-check"></i> 5x redesign</li>
+                    </ul>
+                    <h3><a href="https://api.whatsapp.com/send?phone=6285881630649&text=Permisi%20min%21%20Ingin%20memesan%20Desain%20IG%20Basic."
+                            target="_blank">Pilih Design</a></h3>
+                </div>
+            </div>
+
+            <div class="itembx logo">
+                <div class="box">
+                    <span><img
+                            src="https://t4.ftcdn.net/jpg/04/22/23/37/360_F_422233753_GQ0VhYv12CgORTxZqvpY25q16r33vhO1.jpg"
+                            alt=""></span>
+                    <h3>Desain Logo Pro</h3>
+                    <div class="price"><i>Rp.</i>10.000<i>/Desain</i></div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> 1 File Custom</li>
+                        <li><i class="fas fa-check"></i> 2x redesign</li>
+                        <li><i class="fas fa-check"></i> Fast Response</li>
+                    </ul>
+                    <h3><a href="https://api.whatsapp.com/send?phone=6285881630649&text=Permisi%20min%21%20Ingin%20membeli%20Desain%20Logo%20Pro."
+                            target="_blank">Pilih Design</a></h3>
+                </div>
+            </div>
+
+            <div class="itembx vector">
+                <div class="box">
+                    <span><img
+                            src="https://logoeps.com/wp-content/uploads/2014/04/33388-designfloat-logo-icon-vector-icon-vector-eps.png"
+                            alt=""></span>
+                    <h3>Desain Vector Logo Basic</h3>
+                    <div class="price"><i>Rp.</i>5.000<i>/Desain</i></div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> 1 File Custom</li>
+                        <li><i class="fas fa-check"></i> 1x redesign</li>
+                    </ul>
+                    <h3><a href="https://api.whatsapp.com/send?phone=6285881630649&text=Permisi%20min%21%20Ingin%20membeli%20Desain%20Vlogo%20Basic."
+                            target="_blank">Pilih Design</a></h3>
+                </div>
             </div>
         </div>
 
-        <!-- kontainer ke dua -->
-        <div class="box-container">
-            <!-- bagian box pricing -->
-            <div class="box" id="d/igtmp">
-                <span><img
-                        src="https://cdn4.geckoandfly.com/wp-content/uploads/2019/06/instagram-template-03.jpg"
-                        alt=""></span>
-                <h3>Instagram Template</h3>
-                <div class="price"><i>Rp.</i>25.000<i>/Desain</i></div>
-                <ul>
-                    <li><i class="fas fa-check"></i> 10 File Custom</li>
-                    <li><i class="fas fa-check"></i> 5x redesign</li>
-                </ul>
-                <h3><a href="https://api.whatsapp.com/send?phone=6285881630649&text=Permisi%20min%21%20Ingin%20memesan%20Desain%20IG%20Basic."
-                        target="_blank">Pilih Design</a></h3>
-            </div>
 
-            <div class="box">
-                <span><img
-                        src="https://image.freepik.com/free-vector/resume-template-flat-design_23-2147535120.jpg"
-                        alt=""></span>
-                <h3>Desain CV</h3>
-                <div class="price"><i>Rp.</i>20.000<i>/Desain</i></div>
-                <ul>
-                    <li><i class="fas fa-check"></i> 1 File Custom</li>
-                    <li><i class="fas fa-check"></i> raw file .docx include</li>
-                </ul>
-                <h3><a href="https://api.whatsapp.com/send?phone=6285881630649&text=Permisi%20min%21%20Ingin%20memesan%20Desain%20CV%20ini."
-                        target="_blank">Pilih Design</a></h3>
-            </div>
-        </div>
 
-        <div class="t-content" id="snkme">
-            <h3 class="title">Syarat dan Ketentuan.</h3>
-            <p>Kami mohon untuk terlebih dahulu membaca S&K kami agar tidak terjadi masalah saat melakukan pemesanan maupun saat transaksi terjadi. <br><br>
-                1. Saat sudah melakukan pemesanan desain, kami setidaknya harus menerima <b>5%</b> dari total harga yang di cantum kan, untuk memulai pembuatan. <br>
-                2. Saat Client sudah melakukan deal terhadap <b>Final Design</b>, maka Client harus melunaskan pembayaran untuk mendapatkan desain lengkapnya. <br><br>
-                <i style="color: tomato;">"Harap Di Catat bahwa desain tidak akan diberikan sebelum Client melunaskan pembayaran nya."</i>
-            </p>
-            <p><br> Untuk saat ini hanya itu S&K dari Kami, jika ada kekurangan mohon untuk tinggalkan di kolom <a href="../index.html#contact">Feedback</a> Kami! Terimakasih</p>
+        <p class="headings">Syarat dan Ketentuan</p>
 
-            <h3 class="title">Metode Pembayaran</h3>
-            <p>Pembayaran yang digunakan untuk saat ini adalah: GoPay, Dana</p>
-        </div>
 
     </section>
-    <!-- bagian pricing akhir -->
+
+
+
 
     <!-- bagian footer -->
     <div w3-include-html="../assets/footer.html"></div>
 
     <!-- external js -->
     <script src="../assets/script/main.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script>
         includeHTML();
-    </script>
-        <script>
-            // ini bagian buat munculin scroll saat di static page tanpa header
-            var btn = $('#buttone');
-    
-            $(window).scroll(function () {
-                if ($(window).scrollTop() > 300) {
-                    btn.addClass('show');
-                } else {
-                    btn.removeClass('show');
+
+        // ini bagian buat munculin scroll saat di static page tanpa header
+        var btn = $('#buttone');
+
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 300) {
+                btn.addClass('show');
+            } else {
+                btn.removeClass('show');
+            }
+        });
+
+        btn.on('click', function (e) {
+            e.preventDefault();
+            $('html, body').animate({ scrollTop: 0 }, '300');
+        });
+
+
+        $(document).ready(function () {
+            $('.list').click(function () {
+                const value = $(this).attr('data-filter');
+                if (value == 'all') {
+                    $('.itembx').show('1000');
                 }
-            });
-    
-            btn.on('click', function (e) {
-                e.preventDefault();
-                $('html, body').animate({ scrollTop: 0 }, '300');
-            });
-    
-    
-        </script>
+                else {
+                    $('.itembx').not('.' + value).hide('1000');
+                    $('.itembx').filter('.' + value).show('1000');
+                }
+            })
+            // nambahin active class di list
+            $('.list').click(function () {
+                $(this).addClass('active').siblings().removeClass('active');
+            })
+        })
+    </script>
 </body>
 
 </html>
