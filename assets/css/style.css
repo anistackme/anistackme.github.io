@@ -518,6 +518,7 @@ section .review{
     margin-right: 2rem;
 }
 .swiper-container .swiper-slide .testimonialsbox .details .imgbx img{
+    width: 6rem;height: 6rem;
     background-position: center;
     background-size: cover;
 
