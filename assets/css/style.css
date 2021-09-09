@@ -458,82 +458,80 @@ section{
 
 
 /* bagian review cuma pake swiper.js */
-.reviews{
+/* .reviews{
     position: relative;
     width: 100%;
-    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #321423;
+    overflow: hidden;
+} */
+section .review{
+    position: relative;
+    width: 100%;
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-color1);
     overflow: hidden;
 }
 .swiper-container{
-    /* background: #777; */
     width: 100%;
-    margin: 5rem 0;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-}
-.swiper-pagination-bullet-active{
-    background: var(--main-color);
+    padding-top: 10rem;
+    padding-bottom: 10rem;
 }
 .swiper-slide{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-position: center;
     background-size: cover;
     width: 70rem;
-    filter: blur(4px);
-}
-.swiper-slide-active{
-    filter: blur(0px);
-}
-.swiper-slide .box{
-    box-shadow: var(--box-shadow);
-    border-radius: 1rem;
+    height: auto;
     background: var(--bg-color2);
-    padding: 3.5rem;
-    height: 30rem;
+    box-shadow: var(--box-shadow);
 }
-.swiper-slide .box .user{
+.swiper-container .swiper-slide .testimonialsbox{
+    position: relative;
+    width: 100%;
+    padding: 5rem;
+    padding-top: 15rem;
+    color: var(--text-color1);
+}
+.swiper-container .swiper-slide .testimonialsbox i{
+    position: absolute;
+    top: 2rem;right: 2rem;
+    font-size: 3rem;
+    opacity: .4;
+}
+.swiper-container .swiper-slide .testimonialsbox .content p{
+    font-size: 2rem;
+}
+.swiper-container .swiper-slide .testimonialsbox .details{
     display: flex;
     align-items: center;
-    padding-bottom: 1rem;
+    margin-top: 3rem;
 }
-.swiper-slide .box .user img{
-    height: 7rem;
-    width: 7rem;
+.swiper-container .swiper-slide .testimonialsbox .details .imgbx{
+    position: relative;
+    width: 6rem;height: 6rem;
     border-radius: 50%;
-    object-fit: cover;
-    margin-right: 1rem;
+    overflow: hidden;
+    margin-right: 2rem;
 }
-.swiper-slide .box .user .fa-quote-right{
-    color: var(--main-color);
-    font-size: 4rem;
-    margin-left: auto;
+.swiper-container .swiper-slide .testimonialsbox .details .imgbx img{
+    background-position: center;
+    background-size: cover;
+
 }
-.swiper-slide .box .user .info h3{
-    color: var(--text-color1);
+.swiper-container .swiper-slide .testimonialsbox .details h3{
     font-size: 2rem;
-    padding-bottom: .5rem;
+    font-weight: bold;
 }
-.swiper-slide .box .user .info .stars i{
-    color: var(--main-color);
+.swiper-container .swiper-slide .testimonialsbox .details span{
     font-size: 1.5rem;
+    font-weight: normal;
 }
 
-.swiper-slide .box .user .info .stars span{
-    color: var(--text-color2);
-    font-size: 1.5rem;
-}
-.swiper-slide .box p{
-    color: var(--text-color2);
-    font-size: 1.6rem;
-    line-height: 1.7;
-    padding-top: 1rem;
-}
+
 /* .swiper-3d .swiper-slide-shadow-left {
     background-image: linear-gradient(to left, var(--bg-color2),rgba(0,0,0,0));
 }
