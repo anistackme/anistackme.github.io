@@ -493,7 +493,7 @@ section .review{
     position: relative;
     width: 100%;
     padding: 5rem;
-    padding-top: 15rem;
+    padding-top: 10rem;
     color: var(--text-color1);
 }
 .swiper-container .swiper-slide .testimonialsbox i{
@@ -888,6 +888,65 @@ footer{
 
     .home .content{
         padding: 3rem;
+    }
+    .swiper-slide{
+        display: flex;
+        justify-content: center;
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: auto;
+        background: var(--bg-color2);
+        box-shadow: var(--box-shadow);
+    }
+    .swiper-container .swiper-slide .testimonialsbox{
+        display: flex;
+        /* margin: 0; */
+        padding: 10rem 2rem;
+    }
+    .swiper-container .swiper-slide .testimonialsbox .content p{
+        font-size: 1.5rem;
+    }
+    .swiper-container .swiper-slide .testimonialsbox .details{
+        display: flex;
+        position: absolute;
+        top: 0;left: 2rem;
+    }
+    .swiper-container .swiper-slide .testimonialsbox .details h3{
+        font-size: 1.6rem;
+    }
+    .swiper-container .swiper-slide .testimonialsbox i {
+        font-size: 2rem;
+    }
+    /* .swiper-container .swiper-slide .testimonialsbox .details .imgbx {
+        position: absolute;
+        top: 2rem;left: 2rem;
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 2rem;
+    } */
+    .contact .box-container {
+        width: 100%;
+    }
+    .faq .box-container {
+        width: 100%;
+    }
+    .collapsible1 {
+        padding: 5px;
+        width: 90%;
+        font-size: 1.2rem;
+    }
+    .contentu {
+        margin-bottom: 3rem;
+        margin-top: 2rem;
+        padding: 0 18px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        width: 90%;
+        /* width: auto; */
     }
 }
 
