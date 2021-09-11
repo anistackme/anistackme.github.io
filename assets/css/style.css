@@ -564,7 +564,7 @@ section.contact{
     background: linear-gradient(rgba(0, 0, 0, 0.623), rgba(0, 0, 0, 0.658)), url('https://wallpaperaccess.com/full/3825469.png');
     /* background: #ffffff41; */
     /* background-image: url("img_tree.gif"); */
-    min-height: 60rem;
+    /* min-height: 60rem; */
     background-attachment: fixed;
     background-position: top;
     background-repeat: no-repeat;
