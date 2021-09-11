@@ -58,6 +58,7 @@ section{
 }
 section .ullist{
     display: flex;
+    flex-wrap: wrap;
     margin-bottom: 2rem;
 }
 section ul .list{
@@ -606,6 +607,10 @@ footer{
         margin: 1rem;
         letter-spacing: 1px;
         font-size: 1rem;
+    }
+    .product .itembx {
+        width: 100%;
+        height: auto;
     }
 }
 
