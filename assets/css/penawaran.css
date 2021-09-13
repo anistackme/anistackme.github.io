@@ -291,6 +291,9 @@ section ul .list.active{
     /* justify-content: center; */
     justify-content: flex-start;
 }
+section ol li{
+    font-size: 1.5rem;
+}
 .product .itembx{
     position: relative;
     width: 25rem;
@@ -339,7 +342,7 @@ section ul .list.active{
 }
 .product .itembx .box ul li i{
     position: absolute;
-    left: 5rem;
+    left: 3rem;
     font-size: 2rem;
     color: var(--main-color);
     /* float: left; */
