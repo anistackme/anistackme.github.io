@@ -12,6 +12,7 @@
     --white50: #ffffff80;
     --dark100: #2e2e2e;
     --dark50: #2e2e2e80;
+    --limitbg: url('https://thumbs.gfycat.com/CourteousWaterloggedButterfly-max-1mb.gif') center;
 }
 
 *{
@@ -293,6 +294,9 @@ section ul .list.active{
 }
 section ol li{
     font-size: 1.5rem;
+    color: var(--text-color1);
+    line-height: 5rem;
+    margin-left: 3rem;
 }
 .product .itembx{
     position: relative;
@@ -472,7 +476,7 @@ footer{
     text-align: center;
     border-radius: 50%;
     position: fixed;
-    bottom: 3rem; right: .5rem;
+    bottom: 3rem; right: 2rem;
     transition: background-color .3s, 
       opacity .5s, visibility .5s;
     opacity: 0;
