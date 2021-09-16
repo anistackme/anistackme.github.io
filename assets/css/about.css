@@ -1,0 +1,480 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@100;200;300;400;500;600;700;800;900');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900');
+:root{
+    --main-color: #2980b9;
+    --bg-color1: #eeeeee;
+    --bg-color2: #ffffff;
+    --text-color1: #444444;
+    --text-color2: #666666;
+    --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    --white100: #ffffff;
+    --white50: #ffffff80;
+    --dark100: #2e2e2e;
+    --dark50: #2e2e2e80;
+}
+
+*{
+    /* font-family: 'Nunito', sans-serif; */
+    /* font-family: 'Raleway', sans-serif; */
+    font-family: 'Poppins', sans-serif;
+    margin: 0;padding: 0;box-sizing: border-box;
+    outline: none;border: none;
+    text-transform: capitalize;text-decoration: none;
+    transition: .2s linear;
+}
+section.main{
+    /* height: 100vh; */
+    height: auto;
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 10rem;
+}
+section.main2{
+    /* height: 100vh; */
+    height: auto;
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 10rem;
+    background: var(--bg-color1);
+}
+.mainheader{
+    position: relative;
+    overflow-y: hidden;
+    height: 50rem;
+    background: var(--main-color);
+    /* background: url('https://wallpaperaccess.com/full/3825473.jpg'); */
+    background: url('https://images.alphacoders.com/113/1130518.png');
+    background-position: top;
+    background-size: cover;
+    background-clip: border-box;
+}
+.mainheader img{
+    background-position: center;
+    background-size: cover;
+    /* height: 20rem; */
+    width: 100%;
+}
+/* bagian heading */
+.heading{
+    text-align: center;
+    color: var(--text-color1);
+    text-transform: uppercase;
+    font-size: 4rem;
+    margin-bottom: 10rem;
+}
+.heading span{
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+
+		
+.maincontainer, .maincontainer2{
+    position: relative;
+    width: 70%;
+    /* height: 40vh; */
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    padding: 4rem;
+    /* background: tomato; */
+    margin: auto;
+}
+.main2 .maincontainer, .main2 .maincontainer2{
+    position: relative;
+    width: 100%;
+    /* height: 40vh; */
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    padding: 4rem;
+    /* background: tomato; */
+    margin: auto;
+}
+.maincontainer .container-r,
+.maincontainer2 .container-l{
+    position: relative;
+    width: 65%;
+}
+.main2 .maincontainer .container-r,
+.main2 .maincontainer2 .container-l{
+    position: relative;
+    width: 65%;
+    padding: 0 2rem;
+}
+.maincontainer .container-l,
+.maincontainer2 .container-r{
+    /* position: relative; */
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.maincontainer .container-l .icon,
+.maincontainer2 .container-r .icon{
+    font-size: 20rem;
+    color: var(--main-color);
+}
+.container-l .moreicon,
+.container-r .moreicon{
+    /* background: var(--white100); */
+    padding: 2rem 0;
+    display: flex;
+}
+.container-l .moreicon a,
+.container-r .moreicon a{
+    padding: 1rem 3rem;
+    font-size: 1.4rem;
+    color: var(--white100);
+    background: var(--main-color);
+    margin-right: 2rem;
+    opacity: .8;
+    display: block;
+    box-sizing: border-box;
+    box-shadow: var(--box-shadow);
+}
+.container-l .moreicon a:hover,
+.container-r .moreicon a:hover{
+    opacity: 1;
+}
+
+
+.title{
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--text-color1);
+    /* line-height: ; */
+    padding-bottom: 1rem;
+}
+.subtitle{
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--main-color);
+    padding-bottom: 3rem;
+}
+.paraf{
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--text-color2);
+}
+.main2 .title{
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--text-color1);
+    /* line-height: ; */
+    padding-bottom: 1rem;
+}
+.main2 .subtitle{
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--main-color);
+    padding-bottom: 1.5rem;
+}
+.main2 .paraf{
+    font-size: 1.7rem;
+    font-weight: 300;
+    color: var(--text-color2);
+    text-align: justify;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* bagian scrolling */
+#buttone {
+    display: inline-block;
+    background-color: var(--main-color);
+    width: 5rem;
+    height: 5rem;
+    text-align: center;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 3rem; right: 2rem;
+    transition: background-color .3s, 
+      opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1005;
+  }
+  #buttone::after {
+    content: "▲";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 5rem;
+    color: var(--white100);
+  }
+  #buttone:hover {
+    cursor: pointer;
+    background-color: hsl(0, 0%, 50%, 50%);
+  }
+  #buttone.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media responsif */
+@media (max-width:1440px){
+    section.main{
+        padding-top: 10rem;
+    }
+    .maincontainer, .maincontainer2{
+        position: relative;
+        width: 80%;
+        /* height: 40vh; */
+        height: auto;
+        display: flex;
+        justify-content: space-around;
+        padding: 4rem;
+        /* background: tomato; */
+        margin: auto;
+    }
+    .maincontainer .container-r,
+    .maincontainer2 .container-l{
+        position: relative;
+        width: 65%;
+    }
+    .maincontainer .container-l,
+    .maincontainer2 .container-r{
+        /* position: relative; */
+        width: 30%;
+        height: 100%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+    .maincontainer .container-l .icon,
+    .maincontainer2 .container-r .icon{
+        font-size: 15rem;
+        color: var(--main-color);
+    }
+    .container-l .moreicon a,
+    .container-r .moreicon a{
+        padding: 1rem 3rem;
+        margin: auto;
+    }
+    
+    
+    .title{
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: var(--text-color1);
+        /* line-height: ; */
+        padding-bottom: 1rem;
+    }
+    .subtitle{
+        font-size: 1.3rem;
+        font-weight: 400;
+        color: var(--main-color);
+        padding-bottom: 3rem;
+    }
+    .paraf{
+        font-size: 1.5rem;
+        font-weight: 300;
+        color: var(--text-color2);
+    }
+}
+@media (max-width:911px){
+    html{
+        font-size: 55%;
+    }
+    section{
+        padding: 2rem;
+    }
+}
+
+
+@media (max-width:768px){
+    section.main{
+        padding-top: 8rem;
+    }
+    /* bagian heading */
+    .heading{
+        margin-bottom: 5rem;
+    }
+    .maincontainer, .maincontainer2{
+        position: relative;
+        width: 90%;
+        /* height: 40vh; */
+        height: auto;
+        display: flex;
+        justify-content: space-around;
+        padding: 4rem;
+        /* background: tomato; */
+        margin: auto;
+    }
+    .maincontainer .container-r,
+    .maincontainer2 .container-l{
+        position: relative;
+        width: 65%;
+    }
+    .maincontainer .container-l,
+    .maincontainer2 .container-r{
+        /* position: relative; */
+        width: 30%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+    .maincontainer .container-l .icon,
+    .maincontainer2 .container-r .icon{
+        font-size: 10rem;
+    }
+    .container-l .moreicon a,
+    .container-r .moreicon a{
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        margin: auto;
+    }
+    
+    
+    .title{
+        font-size: 2.2rem;
+    }
+    .subtitle{
+        font-size: 1.1rem;
+    }
+    .paraf{
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width:450px){
+    html{
+        font-size: 50%;
+    }
+    #buttone {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        bottom: 3rem; right: 3rem;
+    }
+    #buttone::after {
+        content: "▲";
+        font-weight: normal;
+        font-style: normal;
+        font-size: 2rem;
+        line-height: 4rem;
+        color: var(--white100);
+    }
+    .maincontainer{
+        position: relative;
+        width: 100%;
+        /* height: 40vh; */
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 1rem;
+        /* background: tomato; */
+        margin: auto;
+    }
+    .maincontainer2{
+        display: flex;
+        width: 100%;
+        flex-direction: column-reverse;
+        padding: 1rem;
+    }
+    .main2 .maincontainer{
+        padding: 1rem;
+    }
+    .main2 .maincontainer2{
+        padding: 1rem;
+    }
+    .maincontainer .container-r,
+    .maincontainer2 .container-l{
+        width: 100%;
+        position: relative;
+    }
+    .main2 .maincontainer .container-r,
+    .main2 .maincontainer2 .container-l{
+        width: 100%;
+        position: relative;
+        padding: .5rem;
+    }
+    .maincontainer .container-l,
+    .maincontainer2 .container-r{
+        /* position: relative; */
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .maincontainer .container-l .icon,
+    .maincontainer2 .container-r .icon{
+        font-size: 10rem;
+    }
+    .container-l .moreicon a,
+    .container-r .moreicon a{
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+        margin: auto;
+    }
+    
+    .title{
+        font-size: 3rem;
+        margin-top: 2rem;
+    }
+    .subtitle{
+        font-size: 1.7rem;
+    }
+    .paraf{
+        font-size: 2rem;
+    }
+    .main2 .title{
+        font-size: 3rem;
+        margin-top: 2rem;
+    }
+    .main2 .subtitle{
+        font-size: 1.7rem;
+    }
+    .main2 .paraf{
+        font-size: 2rem;
+    }
+}
+
+
+@media (max-width:320px){
+    html{
+        font-size: 45%;
+    }
+}
+
+@media (max-width:256px){
+    html{
+        font-size: 40%;
+    }
+    .container-l .moreicon a,
+    .container-r .moreicon a{
+        padding: 1rem 1.5rem;
+        font-size: .9rem;
+        margin: auto;
+    }
+}
+
+/* @media (max-width:){} */
