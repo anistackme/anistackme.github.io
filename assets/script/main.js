@@ -1,3 +1,4 @@
+  
 let menuBtn = document.querySelector('#menu-btn');
 let searchBtn = document.querySelector('#search-btn');
 let colorBtn = document.querySelector('#color-btn');
@@ -54,6 +55,19 @@ themeBtn.onclick = () => {
     }
 }
 
+
+var start = new Date();
+var end = new Date();
+var time = new Date().getTime();
+    
+//Set the start hours and ending hours
+if (time > start.setHours(18,00) && time < end.setHours(23,59)) {
+    document.body.classList.add('active');
+}
+else {
+    document.body.classList.remove('active');
+}
+
 // include html nih
 function includeHTML() {
     var z, i, elmnt, file, xhttp;
@@ -108,6 +122,3 @@ for (i = 0; i < coll.length; i++) {
     } 
   });
 }
-
-
-
