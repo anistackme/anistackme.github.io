@@ -1,405 +1,231 @@
 <!DOCTYPE html>
-<html lang="en">
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="https://www.shareicon.net/data/512x512/2016/10/20/846390_letter_512x512.png" type="image/x-icon">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--========== BOX ICONS ==========-->
+        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 
-    <!-- font-awesome cdn -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" /> -->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.1/css/all.css" />
+        <!--========== CSS ==========-->
+        <link rel="stylesheet" href="assets/css/styles.css">
 
-    <!-- swiper.js cdn -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+        <!--====== FONT AWESOME ======-->
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" /> -->
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.1/css/all.css" />
 
-    <!-- external css -->
-    <link rel="shortcut icon" href="https://www.shareicon.net/data/512x512/2016/10/20/846390_letter_512x512.png"
-        type="image/x-icon">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/loader.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        
 
-    <!-- ini judul -->
-    <title>Anistackme</title>
-</head>
-
-<body>
-
-    <!-- bagian loader -->
-    <div class="loader">
-        <img src="https://www3.shutterstock.com/base/public/images/tetris-loading-636b2b0944.gif" alt="" />
-    </div>
-
-
-    <!-- bagian header awal -->
-    <header class="header">
-        <a href="\" class="logo">ANISTACKME</a>
-
-        <div class="icons">
-            <div class="fas fa-moon" id="theme-btn"></div>
-            <div class="fas fa-palette" id="color-btn"></div>
-            <div class="fas fa-search" id="search-btn"></div>
-            <div class="fas fa-bars" id="menu-btn"></div>
-        </div>
-
-        <!-- bagian navigasi -->
-        <nav class="navbar">
-            <a href="#">Beranda</a>
-            <a href="#services">Pelayanan</a>
-            <a href="./s/penawaran">Penawaran</a>
-            <a href="#contact">Kontak</a>
-            <a href="./s/gallery">Gallery</a>
-            <a href="./s/about">Tentang</a>
-        </nav>
-
-        <!-- bagian searchbar -->
-        <form action="https://anistackmeblog.blogspot.com/search" class="search-form">
-            <input type="search" name="q" placeholder="Cari Di Blog..." id="search-box" value="">
-            <label for="search-box" class="fas fa-search"></label>
-        </form>
-
-        <!-- bagian warna -->
-        <div class="colors-palette">
-            <h3>Pilih Warna</h3>
-            <div class="colors">
-                <div class="color" style="background: #2980b9;"></div>
-                <div class="color" style="background: #27ae60;"></div>
-                <div class="color" style="background: #e74c3c;"></div>
-                <div class="color" style="background: #8e44ad;"></div>
-                <div class="color" style="background: #b33771;"></div>
-                <div class="color" style="background: #0fb9b1;"></div>
-                <div class="color" style="background: #d88716;"></div>
-                <div class="color" style="background: #e84393;"></div>
-                <div class="color" style="background: #17c0eb;"></div>
-            </div>
-        </div>
-
-    </header>
-    <!-- bagian header akhir -->
-
-
-    <!-- whatsapp floating button -->
-    <a href="https://api.whatsapp.com/send?phone=6285881630649&text=Permisi%20min%21%20Ingin%20bertanya%20tentang%20Anistackme."
-        class="float1" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-
-
-    <!-- bagian home awal -->
-    <section class="home" id="home">
-
-        <div class="content">
-            <h3>WELCOME FOLLOWERS</h3>
-            <p>Selamat Datang Di BlogWeb Anistackme, Dimana Kalian Bisa Lebih Mengenal Mimin Dan Juga Mempermudah Kalian
-                Berinteraksi Dengan Anistackme Dengan Shortcut-Shortcut Yang Tentunya Mempermudah Kalian :)</p>
-            <a href="https://instagram.com/anistackme" target="_blank" class="btn">Jelajahi</a>
-        </div>
-
-    </section>
-    <!-- bagian home akhir -->
-
-    <!-- <section w3-include-html="./assets/slider/slide"></section> -->
-
-    <!-- bagian service awal -->
-    <section class="services" id="services">
-
-        <h1 class="heading"><span>Pelayanan</span> yang Kami Berikan</h1>
-
-        <!-- ini box kontainer -->
-        <div class="box-container">
-
-            <!-- ini box konten -->
-            <div class="box">
-                <span class="numbs">01</span>
-                <i class="fas fa-handshake"></i>
-                <h3>Partnership</h3>
-                <span class="mini-link">
-                    <p><a href="./s/partner">cek disni!</a></p>
-                </span>
-                <p>Menjadi Salah Satu Bagian Dari Partnerhip Anistackme Dan Mendapatkan Banyak Benefit-Benefit Menarik
-                    Yang Diberikan. Syarat Dan Ketentuan Berlaku!</p>
-            </div>
-
-            <div class="box">
-                <span class="numbs">02</span>
-                <i class="fas fa-megaphone"></i>
-                <h3>PFP</h3>
-                <span class="mini-link">
-                    <p><a href="./s/promotion">cek disni!</a></p>
-                </span>
-                <p>Paling Di Minati, Saling Support Fanpage Dengan Saling Melakukan Promosi Baik Itu Akun, Maupun
-                    Postingan. Syarat Dan Ketentuan Berlaku!</p>
-            </div>
-
-            <div class="box">
-                <span class="numbs">03</span>
-                <i class="fas fa-ad"></i>
-                <h3>Paid Promote</h3>
-                <span class="mini-link">
-                    <p><a href="./s/promotion">cek disni!</a></p>
-                </span>
-                <p>Melakukan Promosi Akun/Post/Produk Kalian Di Fp Anistackme Dengan Hanya Memberikan Konten Finish
-                    Kalian Dan Sebuah Tip. Syarat Dan Ketentuan Berlaku!</p>
-            </div>
-
-            <div class="box">
-                <span class="numbs">04</span>
-                <i class="fas fa-pen-nib"></i>
-                <h3>Open Design</h3>
-                <span class="mini-link">
-                    <p><a href="./s/penawaran">cek disni!</a></p>
-                </span>
-                <p>Kamu Ingin Membuat FP Tapi Malas Mengedit? Kami Siap Untuk Melayani Para Client Dengan Design-Design
-                    Yang Menarik Tentunya. Syarat Dan Ketentuan Berlaku!</p>
-            </div>
-
-        </div>
-
-    </section>
-    <!-- bagian service akhir -->
-
-
-
-    <!-- bagian pricing awal -->
-    <section class="pricing" id="pricing">
-        <h1 class="heading"><span>Promo Bundle</span> dari kami</h1>
-
-        <div class="box-container">
-
-            <!-- bagian box pricing -->
-            <div class="box">
-                <span class="fas fa-pencil"></span>
-                <h3>Basic Bundle Design</h3>
-                <div class="price"><i>Rp.</i>25.000<i>/Bundle</i></div>
-                <ul>
-                    <li><i class="fas fa-check"></i> 1 File Custom</li>
-                    <li><i class="fas fa-check"></i> 2x Redesign</li>
-                    <li>-</li>
-                    <li><i class="fas fa-check"></i> format jpg</li>
-                    <li>-</li>
-                    <li>-</li>
-                    <li><i class="fas fa-check"></i> Tanpa Watermark</li>
-                </ul>
-                <h3><a href="https://api.whatsapp.com/send?phone=6285881630649&text=Permisi%20min%21%20Ingin%20membeli%20bundle%20Basic%20ini."
-                        target="_blank">Pilih Bundle</a></h3>
-            </div>
-
-            <div class="box">
-                <span class="fas fa-pen-alt"></span>
-                <h3>Hot Promo Bundle Design</h3>
-                <div class="price"><i>Rp.</i>50.000<i>/Desain</i></div>
-                <ul>
-                    <li><i class="fas fa-check"></i> 2 File</li>
-                    <li><i class="fas fa-check"></i> 2x Redesign</li>
-                    <li><i class="fas fa-check"></i> 1 Folder Custom</li>
-                    <li><i class="fas fa-check"></i> format PNG</li>
-                    <li><i class="fas fa-check"></i> format SVG</li>
-                    <li>-</li>
-                    <li><i class="fas fa-check"></i> Tanpa Watermark</li>
-                </ul>
-                <h3><a href="https://api.whatsapp.com/send?phone=6285881630649&text=Permisi%20min%21%20Ingin%20membeli%20bundle%20Hot%20Promo%20ini."
-                        target="_blank">Pilih Bundle</a></h3>
-            </div>
-
-            <div class="box">
-                <span class="fas fa-pen-fancy"></span>
-                <h3>Premium Bundle Design</h3>
-                <div class="price"><i>Rp.</i>100.000<i>/Desain</i></div>
-                <ul>
-                    <li><i class="fas fa-check"></i> 2 File each</li>
-                    <li><i class="fas fa-check"></i> 5x Redesign</li>
-                    <li><i class="fas fa-check"></i> 2 Folder Custom</li>
-                    <li><i class="fas fa-check"></i> format PNG</li>
-                    <li><i class="fas fa-check"></i> format SVG</li>
-                    <li><i class="fas fa-check"></i> Include Raw File</li>
-                    <li><i class="fas fa-check"></i> Tanpa Watermark</li>
-                </ul>
-                <h3><a href="https://api.whatsapp.com/send?phone=6285881630649&text=Permisi%20min%21%20Ingin%20membeli%20bundle%20Premium%20ini."
-                        target="_blank">Pilih Bundle</a></h3>
-            </div>
-        </div>
-
-        <a href="./s/penawaran" class="btn">Paket Lainnya ></a>
-
-    </section>
-    <!-- bagian pricing akhir -->
-
-
-
-    <!-- bagian review akhir -->
-    <section class="reviews" id="review">
-        <h1 class="heading"><span>Apa Kata</span> Mereka</h1>
-
-        <div class="review">
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <!-- start swiper slide -->
-                    <div class="swiper-slide">
-                        <div class="testimonialsbox">
-                            <i class="fas fa-quote-right"></i>
-                            <div class="content">
-                                <p>Fanpage sama konten nya seru sih, bisa belajar desain sama ada info anime2 gitu, cuma posting nya lama nih min! coba cepetin 1 hari ada 4 postingan gitu wkwkwkkww.</p>
-                                <div class="details">
-                                    <div class="imgbx">
-                                        <img src="https://data.whicdn.com/images/347063602/original.jpg" alt="">
-                                    </div>
-                                    <h3>Kurumi UwU<br/><span>★(3.5)</span></h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end swiper slide -->
-                    <!-- start swiper slide -->
-                    <div class="swiper-slide">
-                        <div class="testimonialsbox">
-                            <i class="fas fa-quote-right"></i>
-                            <div class="content">
-                                <p>Gak tau min mau ngomong apa! hehe</p>
-                                <div class="details">
-                                    <div class="imgbx">
-                                        <img src="https://data.whicdn.com/images/354498388/original.jpg" alt="">
-                                    </div>
-                                    <h3>Pengen Jadi Gue Banget<br/><span>★(4.5)</span></h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end swiper slide -->
-                    <!-- start swiper slide -->
-                    <div class="swiper-slide">
-                        <div class="testimonialsbox">
-                            <i class="fas fa-quote-right"></i>
-                            <div class="content">
-                                <p>Konten Nya Sangat Bermanfaat Dan Adminnya Benar-Benar Totalitas! Keren Banget Lah Pokonya! Untuk Adminnya Semangat Terus Dan Sukses Selalu ❤</p>
-                                <div class="details">
-                                    <div class="imgbx">
-                                        <img src="https://i.pinimg.com/564x/28/cc/81/28cc81081a4ec45b5f4e2e102581efff.jpg" alt="">
-                                    </div>
-                                    <h3>secret admirer<br/><span>★(4.5)</span></h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end swiper slide -->
-                </div>
-                <!-- end swiper wrapper -->
-                <!-- pagination -->
-                <div class="swiper-pagination"></div>
+        <title>Anistackme</title>
+    </head>
+    <body>
+        <!--========== SCROLL TOP ==========-->
+        <a href="#" class="scrolltop" id="scroll-top">
+            <i class='bx bx-up-arrow-alt scrolltop_icon'></i>
+        </a>
+        
+        <!--========== HEADER ==========-->
+        <header class="l-header" id="header">
+            <nav class="nav bd-container magic">
+                <a href="#" class="nav_logo magic__who js-replace">ANISTACKME</a>
                 
-                <!-- controller -->
-                <!-- <div class="swiper-button-prev"></div>
-                   <div class="swiper-button-next"></div> -->
+
+                <div class="nav_menu" id="nav-menu">
+                    <ul class="nav_list">
+                        <li class="nav_item"><a href="#home" class="nav_link active-link">Beranda</a></li>
+                        <li class="nav_item"><a href="#event" class="nav_link">Event</a></li>
+                        <li class="nav_item"><a href="#about" class="nav_link">Tentang</a></li>
+                        <li class="nav_item"><a href="#pricing" class="nav_link">Penawaran</a></li>
+                        <!-- <li class="nav_item"><a href="#accessory" class="nav_link">Accessory</a></li> -->
+
+                        <li><i class='bx bx-toggle-left change-theme' id="theme-button"></i></li>
+                    </ul>
+                </div>
+
+                <div class="nav_toggle" id="nav-toggle">
+                    <i class='bx bx-grid-alt'></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main">
+            <!--========== HOME ==========-->
+            <section class="home" id="home">
+                <div class="home_container bd-container">
+
+                    <div class="home_data">
+                        <h1 class="home_title">Welcome Followers</h1>
+                        <p class="home_description">Selamat Datang di Website Anistackme dan Animepict9, dimana kalian bisa explorasi lebih jauh dan lebih mengenal lagi fanpage kami!</p>
+                        <a href="#event" class="button">Mulai Menyelam</a>
+                    </div>   
+                </div>
+            </section>
+
+
+            <!--========== SEND GIFT ==========-->
+            <section class="section" id="event">
+                <h2 class="section-title">Event Baru Menarik</h2>
+                
+                <!-- kode no event -->
+                <!-- <div class="event_container2 bd-container bd-grid">
+                    <h4 class="gtitle">Tidak Ada Event</h2>
+                    <p>yang dapat ditampilkan saat ini</p>
+                </div> -->
+
+                <!-- kode event baru, masukan di bawah sini bim -->
+                <div class="reflection event_container bd-container bd-grid">
+                    <div class="event_content">
+                        <h2 class="section-title-center event_title">Merge Fanpage ></h2>
+                        <p class="event_description">Sekarang, Anistackme & Animepict9 telah melakukan kolaborasi permanent, dan menjadi partner utama, serta menjadi satu sumber fanpage instagram.</p>
+                        <a href="#" class="button">Pelajari Lebih Lanjut</a>
+                    </div>
+
+                    <div class="event_img">
+                        <img src="https://static.zerochan.net/Kagamine.Len.full.1055492.jpg" alt="">
+                    </div>
+                </div>
+            </section>
+
+
+
+            <!--========== about ==========-->
+            <section class="about section bd-container" id="about">
+                <div class="about_container bd-grid">
+                    <div class="about_data">
+                        <h2 class="section-title-center">Wallpaper Anime & Edukasi setiap hari nyan!~</h2>
+                        <p class="about_description">Berbagi Wallpaper Anime unik, menarik, imut, dan banyak hal lain setiap harinya, serta memberikan info dan edukasi khusus desain bagi para pengunjung yang tertarik~</p>
+                        <div class="mini-container">
+                            <a href="#" class="button">Pelajari tentang @Animepict9</a>
+                            <a href="#" class="button">Pelajari tentang @Anistackme</a>
+                        </div>
+                    </div>
+
+                    <div class="about_img">
+                        <img class="" src="https://i.pinimg.com/originals/97/09/39/970939a906645b2fe80b142d1681214f.png" alt="">
+                    </div>
+                </div>
+            </section>
+
+
+
+            <!--========== PRICING ==========-->
+            <section class="pricing section bd-container" id="pricing">
+                <h2 class="section-title">Give Christmas pricings <br> For Your Home</h2>
+
+                <div class="pricing_container2 bd-grid">
+                    <div class="pricing_data">
+                        <img src="" alt="" class="pricing_img">
+                        <h3 class="pricing_title">Basic</h3>
+                        <a href="#" target="_blank" class="button">Go Shopping</a>
+                        <div class="listed">
+                            <p class="list">Test</p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!--========== ACCESSORIES ==========-->
+            <!-- <section class="accessory section bd-container" id="accessory">
+                <h2 class="section-title">New Christmas <br> Accessories</h2>
+
+                <div class="accessory_container bd-grid">
+                    <div class="accessory_content">
+                        <img src="assets/img/accessory1.png" alt="" class="accessory_img">
+                        <h3 class="accessory_title">Snow Globe</h3>
+                        <span class="accessory_category">Accessory</span>
+                        <span class="accessory_preci">$9.45</span>
+                        <a href="#" class="button accessory_button"><i class='bx bx-heart'></i></a>
+                    </div>
+
+                    <div class="accessory_content">
+                        <img src="assets/img/accessory2.png" alt="" class="accessory_img">
+                        <h3 class="accessory_title">Candy</h3>
+                        <span class="accessory_category">Accessory</span>
+                        <span class="accessory_preci">$2.52</span>
+                        <a href="#" class="button accessory_button"><i class='bx bx-heart'></i></a>
+                    </div>
+
+                    <div class="accessory_content">
+                        <img src="assets/img/accessory3.png" alt="" class="accessory_img">
+                        <h3 class="accessory_title">Angel</h3>
+                        <span class="accessory_category">Accessory</span>
+                        <span class="accessory_preci">$13.15</span>
+                        <a href="#" class="button accessory_button"><i class='bx bx-heart'></i></a>
+                    </div>
+
+                    <div class="accessory_content">
+                        <img src="assets/img/accessory4.png" alt="" class="accessory_img">
+                        <h3 class="accessory_title">Sphere</h3>
+                        <span class="accessory_category">Accessory</span>
+                        <span class="accessory_preci">$4.25</span>
+                        <a href="#" class="button accessory_button"><i class='bx bx-heart'></i></a>
+                    </div>
+
+                    <div class="accessory_content">
+                        <img src="assets/img/accessory5.png" alt="" class="accessory_img">
+                        <h3 class="accessory_title">Surprise gift</h3>
+                        <span class="accessory_category">Accessory</span>
+                        <span class="accessory_preci">$7.99</span>
+                        <a href="#" class="button accessory_button"><i class='bx bx-heart'></i></a>
+                    </div>
+                </div>
+            </section> -->
+        </main>
+
+        <!--========== FOOTER ==========-->
+        <footer class="footer section">
+            <div class="footer_container bd-container bd-grid">
+                <div class="footer_content">
+                    <h3 class="footer_title">Pelayanan Kami</h3>
+                    <ul>
+                        <li><a href="#" class="footer_link">Pricing</a></li>
+                        <li><a href="#" class="footer_link">Promo</a></li>
+                        <li><a href="#" class="footer_link">Lainnya</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer_content">
+                    <h3 class="footer_title">Dari Kami</h3>
+                    <ul>
+                        <li><a href="#" class="footer_link">Blog</a></li>
+                        <li><a href="#" class="footer_link">Tentang Kami</a></li>
+                        <li><a href="#" class="footer_link">Visi Misi</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer_content">
+                    <h3 class="footer_title">Social</h3>
+                    <a href="#" class="footer_social"><i class='bx bxl-facebook-circle '></i></a>
+                    <a href="#" class="footer_social"><i class='bx bxl-twitter'></i></a>
+                    <a href="#" class="footer_social"><i class='bx bxl-instagram-alt'></i></a>
+                </div>
+
+                <div class="footer_content">
+                    <h3 class="footer_title">Info Berguna</h3>
+                    <ul>
+                        <li><a href="#" class="footer_link">Covid-19 +</a></li>
+                    </ul>
+                </div>
             </div>
-        <!-- end swiper container -->
-            <!-- <div w3-include-html="./assets/swiper"></div> -->
-        </div>
+        </footer>
 
-    </section>
-    <!-- bagian review akhir -->
-
-
-    <!-- bagian kontak form awal -->
-    <section class="contact" id="contact">
-
-        <h1 class="heading"><span>Feedback</span> Untuk Kami</h1>
-
-        <div class="fubunyan">
-            <div class="box-container">
-                <form action="https://formsubmit.co/izumiipls@gmail.com" method="POST">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_subject" value="Pesan Masuk Customer!">
-                    <input class="emaily" type="email" name="email" placeholder="Email Kamu" required>
-                    <!-- <input type="hidden" name="_next" value="https://anistackme.github.io/thkltr"> -->
-                    <input class="msgy" type="text" name="name" placeholder="Isi Pesan nya di sini kakak!" required>
-                    <button class="btn" type="submit">Kirim</button>
-                </form>
+        <section class="footer-credits bd-grid">
+            <div class="footer-minibox">
+                <p>copyright @ 2021 anistackme</p>
             </div>
-
-        </div>
-    </section>
-    <!-- bagian kontak form akhir -->
-
-
-
-    <!-- bagian kontak form awal -->
-    <section class="faq" id="faq">
-
-        <h1 class="heading"><span>F</span>AQ</h1>
-
-        <div class="box-container">
-            <button class="collapsible1">Partnerhip sama Partner Beda Apa Sama?</button>
-            <div class="contentu">
-                <p>Sama aja, cuma beda penyebutan. Dan mimin lebih seneng dengan kata Partnership</p>
+            <div class="footer-minibox">
+                <p>dibuat dengan <i class="fas fa-heart"></i> dan <i class="fas fa-coffee"></i> at indonesia</p>
             </div>
+        </section>
 
-            <button class="collapsible1">Mimin Cowok Apa Cewek?</button>
-            <div class="contentu">
-                <p>Mimin Utama nya Cwk, Oke! :D</p>
-            </div>
-        </div>
-    </section>
-    <!-- bagian kontak form akhir -->
+        <!--========== SCROLL REVEAL ==========-->
+        <script src="https://unpkg.com/scrollreveal"></script>
 
-
-
-
-
-
-
-
-    <!-- bagian footer -->
-    <div w3-include-html="./assets/footer.html"></div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- external js -->
-    <script src="./assets/script/main.js"></script>
-    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-    
-    <script>
-        includeHTML();
-    </script>
-    
-    <script>
-        var swiper = new Swiper('.swiper-container', {
-            effect: 'coverflow',
-            grabCursor: true,
-            centeredSlides: true,
-            slidesPerView: 'auto',
-            coverflowEffect: {
-                rotate: 0,
-                stretch: 0,
-                depth: 100,
-                modifier: 2,
-                slideShadows: true,
-            },
-            loop: 'true',
-            autoplay: {
-                delay: 5000,
-            },
-            pagination: {
-                el: '.swiper-pagination'
-            }
-        })
-    </script>
-</body>
+        <!--========== MAIN JS ==========-->
+        <script src="assets/script/main.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    </body>
 </html>
