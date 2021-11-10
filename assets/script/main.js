@@ -122,4 +122,3 @@ function loop(delay) {
 }
 
 loop(delay);
-
