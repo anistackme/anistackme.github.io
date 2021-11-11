@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="https://www.shareicon.net/data/512x512/2016/10/20/846390_letter_512x512.png"
+            type="image/x-icon" />
+    
+        <!--========== BOX ICONS ==========-->
+        <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+    
+        <!--========== CSS ==========-->
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <link rel="stylesheet" href="assets/css/tools.css" />
+    
+        <!--====== FONT AWESOME ======-->
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" /> -->
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.1/css/all.css" />
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
+    
+        <title>Anistackme</title>
+    </head>
+<body>
+    <div class="container">
+        <h2 class="title">Password Generator</h2>
+        <div class="result">
+            <div class="result__title field-title">Generated Password</div>
+            <div class="result__info right">click to copy</div>
+            <div class="result__info left">copied</div>
+            <div class="result__viewbox" id="result">CLICK GENERATE</div>
+            <button id="copy-btn" style="--x: 0; --y: 0"><i class="far fa-copy"></i></button>
+        </div>
+        <div class="length range__slider" data-min="4" data-max="32">
+            <div class="length__title field-title" data-length='0'>length:</div>
+            <input id="slider" type="range" min="4" max="32" value="16" />
+        </div>
+    
+        <div class="settings">
+            <span class="settings__title field-title">settings</span>
+            <div class="setting">
+                <input type="checkbox" id="uppercase" checked />
+                <label for="uppercase">Include Uppercase</label>
+            </div>
+            <div class="setting">
+                <input type="checkbox" id="lowercase" checked />
+                <label for="lowercase">Include Lowercase</label>
+            </div>
+            <div class="setting">
+                <input type="checkbox" id="number" checked />
+                <label for="number">Include Numbers</label>
+            </div>
+            <div class="setting">
+                <input type="checkbox" id="symbol" />
+                <label for="symbol">Include Symbols</label>
+            </div>
+        </div>
+    
+        <button class="btn generate" id="generate">Generate Password</button>
+    </div>
+
+
+    <!--========== SCROLL REVEAL ==========-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--========== MAIN JS ==========-->
+    <script src="assets/script/main.js"></script>
+    <script src="assets/script/tools.js"></script>
+</body>
+</html>
