@@ -505,7 +505,7 @@ section.pricing{
 .reflection {
   position: relative;
   overflow: hidden;
-  background-color: #666;
+  /* background: #666; */
 }
 .reflection::after {
   content: "";
@@ -515,7 +515,7 @@ section.pricing{
   position: absolute;
   top: -180px;
   left: 0;
-  background-color: hsla(0, 0%, 100%, 50%);
+  background: hsla(0, 0%, 100%, 50%);
   opacity: 0;
   transform: rotate(35deg);
   animation: reflect 4s ease-in-out infinite;
@@ -604,10 +604,6 @@ section.pricing{
     transform: translatey(0px);
   }
 }
-
-
-
-
 
 /*========== FOOTER ==========*/
 section.footer{
