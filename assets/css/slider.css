@@ -122,21 +122,10 @@ body.dark-theme{
 }
 
 /* ======== card nth(child) ========== */
-.card.e1{
-    background-position: center;
-    background-image: linear-gradient(90deg, rgba(145, 146, 122, 0), rgba(13, 4, 24, 0.822)), url('https://wallpaperboat.com/wp-content/uploads/2020/06/03/42361/aesthetic-anime-01.jpg');
-    background-size: cover;
-}
-.card.e2{
-    background-position: center;
-    background-image: linear-gradient(90deg, rgba(145, 146, 122, 0), rgba(13, 4, 24, 0.822)), url('https://wallpapers.com/images/high/breathtaking-nature-anime-scenery-ozmhfiuqzmai1bha.jpg');
-    background-size: cover;
-}
-.card.e3{
-    background-position: center;
-    background-image: linear-gradient(90deg, rgba(145, 146, 122, 0), rgba(13, 4, 24, 0.822)), url('https://wallpaperaccess.com/full/7119887.png');
-    background-size: cover;
-}
+.card.e1{ background-position: center; background-size: cover;
+    background-image: linear-gradient(90deg, rgba(145, 146, 122, 0), rgba(13, 4, 24, 0.822)), url('https://wallpaperboat.com/wp-content/uploads/2020/06/03/42361/aesthetic-anime-01.jpg'); }
+.card.e2{ background-position: center; background-size: cover;
+    background-image: linear-gradient(90deg, rgba(145, 146, 122, 0), rgba(13, 4, 24, 0.822)), url('https://wallpapers.com/images/high/breathtaking-nature-anime-scenery-ozmhfiuqzmai1bha.jpg'); }
 
 
 
@@ -185,7 +174,6 @@ body.dark-theme{
 	position: absolute;
 	top: 50%;
 	left: 5%;
-	width: 40px;
 	height: 40px;
 	margin-top: -20px;
     /* background: var(--tugel); */
@@ -239,7 +227,7 @@ body.dark-theme{
 	.info p { font-size: 1rem; }
 }
 @media screen and (max-width: 900px) {
-	.card { max-width: 70%; height: auto; flex-direction: column;}
+	.card { max-width: 90%; height: auto; flex-direction: column;}
     .cd-slider { height: 80vh; }
     .info { width: 80%; }
 }
