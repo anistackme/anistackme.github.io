@@ -686,6 +686,28 @@ section.pricing{
 }
 
 
+.adssect{
+  position: relative;
+  height: 140px;
+  width: 100%;
+  max-width: 1240px;
+  background: rgb(240, 240, 41);
+  margin: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*========== MEDIA QUERIES ==========*/
