@@ -1,279 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- <link rel="shortcut icon" href="https://www.shareicon.net/data/512x512/2016/10/20/846390_letter_512x512.png" type="image/x-icon"/> -->
+        <link rel="shortcut icon" href="https://yt3.ggpht.com/ytc/AKedOLQNhNLAE1ECJuVKg9sO7PpiRd2g-kaq6VWB6Q69=s900-c-k-c0x00ffffff-no-rj" type="image/x-icon"/>
+        <!-- <link rel="shortcut icon" href="./assets/image/logo1.png" type="image/x-icon"/> -->
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="https://www.shareicon.net/data/512x512/2016/10/20/846390_letter_512x512.png"
-        type="image/x-icon" />
+        <!-- =====BOX ICONS===== -->
+        <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet"/>
 
-    <!--========== BOX ICONS ==========-->
-    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+        <!--====== FONT AWESOME ======-->
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" /> -->
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.1/css/all.css"/>
 
-    <!--========== CSS ==========-->
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/slider.css" />
-    <link rel="stylesheet" href="assets/css/recent.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css" />
+        <!-- ===== CSS ===== -->
+        <link rel="stylesheet" href="./assets/css/style.css" />
 
-    <!--====== FONT AWESOME ======-->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" /> -->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.1/css/all.css" />
+        <!-- ===== JQUERY ===== -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.2.0/imagesloaded.pkgd.min.js"></script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4121413661280799"
-     crossorigin="anonymous"></script>
+        <!-- ====== MASONRY ====== -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.js"></script>
 
-    <title>Anistackme</title>
-</head>
+        <!-- ====== GOOGLE ADS ======= -->
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4121413661280799" crossorigin="anonymous"></script>
 
-<body>
-    <!--========== SCROLL TOP ==========-->
-    <a href="#" class="scrolltop" id="scroll-top">
-        <i class="bx bx-up-arrow-alt scrolltop_icon"></i>
-    </a>
+        <title>Bring Cuteness Everywhere</title>
+    </head>
+    <body>
+        <!--========== SCROLL TOP ==========-->
+        <div class="skips">
+            <ul class="skip-nav">
+                <li><a href="#main-nav">Skip to Nav</a></li>
+                <li><a href="#utama">Skip to Content</a></li>
+                <li><a href="#footer">Skip to Footer</a></li>
+              </ul>
+        </div>
 
-    <!--========== HEADER ==========-->
-    <header class="l-header" id="header">
-        <nav class="nav bd-container magic">
-            <a href="/" class="nav_logo magic__who js-replace">ANISTACKME</a>
+        <div class="menu-btn">
+            <i class="fas fa-bars fa-2x"></i>
+        </div>
 
-            <div class="nav_menu" id="nav-menu">
-                <ul class="nav_list">
-                    <li class="nav_item">
-                        <a href="#home" class="nav_link active-link">Beranda</a>
-                    </li>
-                    <li class="nav_item">
-                        <a href="#event" class="nav_link">Event</a>
-                    </li>
-                    <li class="nav_item">
-                        <a href="#about" class="nav_link">Tentang</a>
-                    </li>
-                    <li class="nav_item">
-                        <a href="#pricing" class="nav_link">Penawaran</a>
-                    </li>
-                    <li class="nav_item"><a href="#more" class="nav_link">More</a></li>
+        <div class="kontainer">
+            <!-- Nav -->
+            <nav class="main-nav">
+            <img src="./assets/image/Frame8.png" alt="Anistackme" class="logo" />
 
-                    <li>
-                        <i class="bx bx-toggle-left change-theme" id="theme-button"></i>
-                    </li>
+            <ul class="right-menu">
+                <ul class="main-menu">
+                <li><a href="/" class="magic__who js-replace">Anistackme</a></li>
+                <li><a href="https://chat.whatsapp.com/JJ91hWtZz0IDR3sC0dwg9F" target="_BLANK" rel="noopener noreferrer">Grup</a></li>
+                <li><a href="#">Tentang</a></li>
+                <li><a href="#eventx">Event</a></li>
+                <li><a href="#">Support</a></li>
+                <!-- <li><i class="bx bx-toggle-left change-theme" id="theme-button"></i></li> -->
                 </ul>
+            </ul>
+            </nav>
+
+            <!-- utama -->
+            <header class="utama" id="utama">
+                <h2>Welcome Follower</h2>
+                <p>Selamat Datang di Website Anistackme, dimana kalian bisa explorasi lebih jauh dan lebih mengenal lagi fanpage kami!, jangan malu-malu untuk berkunjung ke grup official kami dan berinteraksi lebih lanjut dengan kami! :D</p>
+                <a href="#kontenkartu" class="btn">
+                    Telusuri <i class="fas fa-chevron-right"></i>
+                </a>
+            </header>
+
+            <!-- kartu-display 1 -->
+            <section class="kartu-display" id="kontenkartu">
+            <div class="kartu">
+                <img src="./assets/image/frame__animepict9.png" alt="" />
+                <h3>Tentang Animepict9</h3>
+                <p>
+                Berbagi Wallpaper Menarik Seputar Anime, Cosplayer, Dan Masih Banyak Lagi
+                </p>
+                <a href="http://instagram.com/animepict9" target="_BLANK">Lebih Lanjut <i class="fas fa-chevron-right"></i></a>
             </div>
 
-            <div class="nav_toggle" id="nav-toggle">
-                <i class="bx bx-grid-alt"></i>
+            <div class="kartu">
+                <img src="./assets/image/frame__anistackme.png" alt="" />
+                <h3>Tentang Anistackme</h3>
+                <p>
+                Edukasi dan Sharing Materi dan Ilmu Mengenai Desain Grafis dan Juga Web Design
+                </p>
+                <a href="http://instagram.com/anistackme" target="_BLANK">Lebih Lanjut <i class="fas fa-chevron-right"></i></a>
             </div>
-        </nav>
-    </header>
 
-    <main class="l-main">
-        <!--========== HOME ==========-->
-        <section class="home" id="home">
-            <div class="home_container bd-container">
-                <div class="home_data">
-                    <h1 class="home_title">Welcome Followers</h1>
-                    <p class="home_description">
-                        Selamat Datang di Website Anistackme dan Animepict9, dimana kalian
-                        bisa explorasi lebih jauh dan lebih mengenal lagi fanpage kami!,
-                        jangan malu-malu untuk berkunjung ke grup official kami dan
-                        berinteraksi lebih lanjut dengan kami! :D
+            <div class="kartu">
+                <img src="/assets/image/frame__instagrampost.png" alt="" />
+                <h3>Tentang Konten Instagram</h3>
+                <p>
+                Berbagi Wallpaper Anime unik, menarik, imut, dan banyak hal lain setiap harinya.
+                </p>
+                <!-- <a href="#">Lebih Lanjut <i class="fas fa-chevron-right"></i></a> -->
+            </div>
+
+            <div class="kartu">
+                <img src="/assets/image/frame__soon.png" alt="" />
+                <h3>Sesuatu Yang Menarik</h3>
+                <p>
+                Nantikan Event Lanjutan yang Akan Hadir Berikutnya Dari Kami!
+                </p>
+            </div>
+
+            </section>
+
+            <!-- kedua -->
+            <section class="kedua" id="eventx">
+                <div class="content">
+                    <h2>Member Exclusive</h2>
+                    <p>
+                    Gabung Berkumpul Bersama Komunitas Kami Semua, dan Dapatkan Hak Istimewa
+                    yang Menanti Kalian Semua, Salah Satunya adalah Wallpaper dengan Kualitas HD / 4k.
                     </p>
-                    <a href="#event" class="button">Mulai Menyelam</a>
+                    <a href="https://chat.whatsapp.com/JJ91hWtZz0IDR3sC0dwg9F" target="_BLANK" rel="noopener noreferrer" class="btn">
+                    Join Now <i class="fas fa-chevron-right"></i>
+                    </a>
                 </div>
-            </div>
-        </section>
+            </section>
 
-
-        <!-- <section class="adssect">
-            <div class="bcointainer">
-                <div class="bcleftside">
-
-                </div>
-                <div class="bcrightside">
-
-                </div>
-            </div>
-        </section> -->
-
-
-
-        <section class="section event" id="event">
-            <h2 class="section-title">Event Baru Menarik</h2>
-            <div class="cd-slider">
-                <ul>
-                    <li class="item current">
-                        <div class="card e1">
-                      <!-- <img src="url"> -->
-                      <div class="img event_img">
-                        <img src="https://cdn.kibrispdr.org/data/belfast-azur-lane-wallpaper-46.png" alt="">
-                      </div>
-                      <div class="info">
-                      <h1>Desain Tanpa Batas </h1>
-                        <p>kami sekarang memberikan penawaran desain custom untuk para pelanggan, supaya bisa lebih berkreasi dengan desain mereka tanpa harus mikirin pengeluaran yang banyak, dan tentunya event ini terbatas</p>
-                        <a href="https://chat.whatsapp.com/JJ91hWtZz0IDR3sC0dwg9F" class="button">Lebih Lanjut</a>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="item">
-                    <div class="card e2">
-                      <!-- <img src="url"> -->
-                      <div class="img event_img">
-                        <img src="https://github.com/anistackme/anistackme.github.io/blob/main/assets/image/fbkmgm.png?raw=true" alt="">
-                      </div>
-                      <div class="info">
-                      <h1>Merged Fanpage</h1>
-                        <p>Sekarang, Anistackme & Animepict9 telah melakukan kolaborasi permanent, dan menjadi partner utama, serta menjadi satu sumber fanpage instagram.</p>
-                        <a href="https://chat.whatsapp.com/JJ91hWtZz0IDR3sC0dwg9F" class="button">Cari Tau</a>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              
-              <nav>
-                  <a href="#" class="prev">
-                    <i class="fas fa-angle-left"></i>
-                  </a>
-                  <a href="#" class="next">
-                    <i class="fas fa-angle-right"></i>
-                  </a>
-                </nav>
-          
-              </div>
-        </section>
-
-        <!--========== about ==========-->
-        <section class="about section bd-container" id="about">
-            <div class="about_container bd-grid">
-                <div class="about_data">
-                    <h2 class="section-title-center">
-                        Wallpaper Anime & Edukasi setiap hari nyan!~
-                    </h2>
-                    <p class="about_description">
-                        Berbagi Wallpaper Anime unik, menarik, imut, dan banyak hal lain
-                        setiap harinya, serta memberikan info dan edukasi khusus desain
-                        bagi para pengunjung yang tertarik~
+            <!-- event_card
+            <!-- <section class="event_card dark">
+                <div class="content">
+                    <h2>Commiting To event_card Negative</h2>
+                    <p>
+                    Microsoft will be event_card negative by 2030 and by 2050 we will
+                    remove all event_card the company has emitted since it was founded
+                    in 1975
                     </p>
-                    <div class="mini-container">
-                        <a href="https://chat.whatsapp.com/JJ91hWtZz0IDR3sC0dwg9F" class="button">Pelajari tentang @Animepict9</a>
-                        <a href="https://chat.whatsapp.com/JJ91hWtZz0IDR3sC0dwg9F" class="button">Pelajari tentang @Anistackme</a>
-                    </div>
+                    <a href="#" class="btn">
+                    Learn More <i class="fas fa-chevron-right"></i>
+                    </a>
                 </div>
+            </section> -->
+        </div>
 
-                <div class="about_img">
-                    <img class="" src="https://i.pinimg.com/originals/97/09/39/970939a906645b2fe80b142d1681214f.png"
-                        alt="" />
-                </div>
+        <!-- Links -->
+        <section class="links">
+            <div class="links-inner">
+            <ul>
+                <li><h3>Yang Baru Disini</h3></li>
+                <li><a href="https://coolors.co" target="_BLANK" rel="noopener noreferrer">Coolors.co</a></li>
+            </ul>
+            <ul>
+                <li><h3>Lebih Lanjut</h3></li>
+                <li><a href="#">Tentang Admin</a></li>
+                <li><a href="https://chat.whatsapp.com/JJ91hWtZz0IDR3sC0dwg9F">Join Grup</a></li>
+            </ul>
+            <ul>
+                <li><h3>Penawaran Kami</h3></li>
+                <li><a href="#">design course</a></li>
+            </ul>
+            <ul>
+                <li><h3>Development</h3></li>
+                <li><i class="fab fa-github"></i> <a target="_BLANK" href="https://github.com/anistackme">Github</a></li>
+                <li><i class="fab fa-discord"></i> <a target="_BLANK" href="https://discord.gg/uqrrQt7">Discord</a></li>
+            </ul>
+            <ul>
+                <li><h3>Social Media</h3></li>
+                <li><i class="fab fa-instagram"></i> <a target="_BLANK" href="https://instagram.com/animepict9">Animepict9</a></li>
+                <li><i class="fab fa-instagram"></i> <a target="_BLANK" href="https://instagram.com/anistackme">Anistackme</a></li>
+                <li><i class="fab fa-instagram"></i> <a target="_BLANK" href="https://instagram.com/athya5.6">Athya5.6</a></li>
+            </ul>
+            <ul>
+                <li><h3>Kontak Info</h3></li>
+                <li><i class="fas fa-envelope"></i> <a target="_BLANK" href="#">izumiipls@gmail.com</a></li>
+            </ul>
             </div>
         </section>
 
-        <!--========== PRICING ==========-->
-        <!-- <section class="pricing section bd-container" id="pricing">
-            <h2 class="section-title">
-                Promo Menarik <br />Dari Kami Untuk Kalian
-            </h2>
-
-            <div class="pricing_container2 bd-grid">
-                <div class="pricing_data">
-                    <h3 class="pricing_title">Custom ++ Design</h3>
-                    <h1 class="harga">Rp.<span> 110.000</span>/ 1x pembelian</h1>
-                    <a href="#" target="_blank" class="button">Pesan Sekarang</a>
-                    <div class="listed">
-                        <p class="list">Bebas menentukan desain<i class="fas fa-drafting-compass"></i></p>
-                        <p class="list">Bebas jumlah re-desain<i class="fas fa-bezier-curve"></i></p>
-                        <p class="list">Semua Warna, Duo Tone, Grayscale, Flat<i class="fas fa-palette"></i></p>
-                        <p class="list">Mendapatkan File Berupa PNG, Jpeg<i class="fas fa-file"></i></p>
-                        <p class="list">Resolusi Terbaik<i class="fas fa-image"></i></p>
-                        <p class="list">Prioritas Utama CS<i class="fas fa-headset"></i></p>
-                        <p class="list">Penyelesaian Desain Paling Lambat 4-5 Jam<i class="far fa-clock"></i></p>
-                        <p class="list">Menghapus Branding Anistackme <i class="fas fa-tint-slash"></i></p>
-                    </div>
-                </div>
-
-                <div class="pricing_data">
-                    <h3 class="pricing_title">Custom ++ Template</h3>
-                    <h1 class="harga">Rp.<span> 65.000</span>/ 1x pembelian</h1>
-                    <a href="#" target="_blank" class="button">Pesan Sekarang</a>
-                    <div class="listed">
-                        <p class="list">Bebas menentukan desain<i class="fas fa-drafting-compass"></i></p>
-                        <p class="list">10 total desain untuk 1 pembelian<i class="fas fa-box-alt"></i></p>
-                        <p class="list">Resolusi Terbaik<i class="fas fa-image"></i></p>
-                        <p class="list">Prioritas Utama CS<i class="fas fa-headset"></i></p>
-                        <p class="list">Penyelesaian Desain Paling Lambat 2-3 Hari<i class="far fa-clock"></i></p>
-                        <p class="list">Menghapus Branding Anistackme <i class="fas fa-tint-slash"></i></p>
-                    </div>
-                </div>
+        <!-- Footer -->
+        <footer class="footer" id="footer">
+            <div class="footer-inner">
+            <div class="f-img">
+                <img src="./assets/image/Frame8.png" alt="anistackme-logo">
+                <img src="./assets/image/Frame7.png" alt="anistackme-logo">
             </div>
-        </section> -->
-
-        <!--========== ACCESSORIES ==========-->
-        <section class="accessory section bd-container" id="more">
-
-        </section>
-    </main>
-
-    <!--========== FOOTER ==========-->
-    <footer class="footer section">
-        <div class="footer_container bd-container bd-grid">
-            <div class="footer_content">
-                <h3 class="footer_title">Pelayanan Kami</h3>
                 <ul>
-                    <li><a href="#" class="footer_link">Pricing</a></li>
-                    <li><a href="#" class="footer_link">Promo</a></li>
-                    <li><a href="#event" class="footer_link">Event</a></li>
-                    <li><a href="#" class="footer_link">Lainnya</a></li>
+                    <li><a href="#">Tentang Kami</a></li>
+                    <li><a href="#">&copy; Anistackme 2020</a></li>
                 </ul>
             </div>
-            
-            <div class="footer_content">
-                <h3 class="footer_title">Dari Kami</h3>
-                <ul>
-                    <li><a href="#" class="footer_link">Blog</a></li>
-                    <li><a href="#" class="footer_link">Tentang Kami</a></li>
-                    <li><a href="#" class="footer_link">Visi Misi</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer_content">
-                <h3 class="footer_title">Media Sosial</h3>
-                <a href="https://facebook.com/izumiinlf" class="footer_social"><i class="bx bxl-facebook-circle"></i></a>
-                <a href="https://chat.whatsapp.com/JJ91hWtZz0IDR3sC0dwg9F" class="footer_social"><i class="bx bxl-whatsapp"></i></a>
-                <a href="https://discord.gg/uqrrQt7" class="footer_social"><i class="bx bxl-discord"></i></a>
-            </div>
-            
-            <div class="footer_content">
-                <h3 class="footer_title">Info Berguna</h3>
-                <ul>
-                    <li><a href="#" class="footer_link">Covid-19 +</a></li>
-                    <li><a href="./anitools.html" class="footer_link">Password Generator</a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
+        </footer>
 
-    <section class="footer-credits bd-grid">
-        <div class="footer-minibox">
-            <p>copyright @ 2021 anistackme</p>
-        </div>
-        <div class="footer-minibox">
-            <p>
-                dibuat dengan <i class="fas fa-heart"></i> dan
-                <i class="fas fa-coffee"></i> at indonesia
-            </p>
-        </div>
-    </section>
+        <a href="#" class="scrolltop" id="scroll-top">
+            <i class="bx bx-up-arrow-alt scrolltop_icon"></i>
+        </a>
 
-    <!--========== SCROLL REVEAL ==========-->
-    <script src="https://unpkg.com/scrollreveal"></script>
-
-    <!--========== MAIN JS ==========-->
-    <script src="assets/script/main.js"></script>
-    <script src="assets/script/slider.js"></script>
-    
-</body>
-
+        <!-- MAIN SCRIPT -->
+        <script src="./assets/script/main.js"></script>
+    </body>
 </html>
