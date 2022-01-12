@@ -1,41 +1,40 @@
-/*==================== SHOW MENU ====================*/
-const showMenu = (toggleId, navId) =>{
-  const toggle = document.getElementById(toggleId),
-  nav = document.getElementById(navId)
+document.querySelector('.menu-btn').addEventListener('click', () => document.querySelector('.main-menu').classList.toggle('show'));
+
+
+// BUAT GANTI-GANTI TITLE
+var items = [
+    "Animepict9",
+    "Anistackme"
+  ],
+  $text = $(".js-replace"),
+  delay = 5; //seconds
   
-  // verif kalo ada si variabel
-  if(toggle && nav){
-      toggle.addEventListener('click', ()=>{
-          // nambahin show-menu class ke div tag dengan nav_menu class
-          nav.classList.toggle('show-menu')
-      })
+  function loop(delay) {
+  $.each(items, function (i, elm) {
+    $text.delay(delay * 1e3).fadeOut();
+    $text.queue(function () {
+      $text.html(items[i]);
+      $text.dequeue();
+    });
+    $text.fadeIn();
+    $text.queue(function () {
+      if (i == items.length - 1) {
+        loop(delay);
+      }
+      $text.dequeue();
+    });
+  });
   }
-}
-showMenu('nav-toggle','nav-menu')
-
-/*==================== REMOVE MENU MOBILE ====================*/
-const navLink = document.querySelectorAll('.nav_link')
-
-function linkAction(){
-  const navMenu = document.getElementById('nav-menu')
-  // ketika di klik, ngehilangin si menu
-  navMenu.classList.remove('show-menu')
-}
-navLink.forEach(n => n.addEventListener('click', linkAction))
-
-
-
-
+  
+  loop(delay);
 
 /*==================== SHOW SCROLL TOP ====================*/ 
 function scrollTop(){
-  const scrollTop = document.getElementById('scroll-top');
-  // When the scroll is higher than 560 viewport height, add the show-scroll class to the a tag with the scroll-top class
-  if(this.scrollY >= 560) scrollTop.classList.add('show-scroll'); else scrollTop.classList.remove('show-scroll')
-}
+    const scrollTop = document.getElementById('scroll-top');
+    // kalo lewat dari 60 viewport height, nambahin show-scroll class ke tag scroll-top class
+    if(this.scrollY >= 60) scrollTop.classList.add('show-scroll'); else scrollTop.classList.remove('show-scroll')
+  }
 window.addEventListener('scroll', scrollTop)
-
-
 
 
 
@@ -68,56 +67,3 @@ themeButton.addEventListener('click', () => {
   localStorage.setItem('selected-theme', getCurrentTheme())
   localStorage.setItem('selected-icon', getCurrentIcon())
 })
-
-
-// /*==================== SCROLL REVEAL ANIMATION ====================*/
-const sr = ScrollReveal({
-    distance: '60px',
-    // ini durasi buat animasinya
-    duration: 1800,
-    // kalo di true jadi bisa maju mundur animasinya
-    reset: false,
-});
-
-sr.reveal(`.home_data, .home_img, 
-           .pricing_data,
-           .accessory_content,
-           .footer_content`, {
-    origin: 'top',
-    interval: 200,
-})
-
-sr.reveal(`.about_img, .event_content`, {
-    origin: 'left'
-})
-
-sr.reveal(`.about_data, .event_img`, {
-    origin: 'right'
-})
-
-// =========== ini buat title yang ganti-ganti njer ==============
-var items = [
-  "ANIMEPICT9",
-  "ANISTACKME"
-],
-$text = $(".js-replace"),
-delay = 15; //seconds
-
-function loop(delay) {
-$.each(items, function (i, elm) {
-  $text.delay(delay * 1e3).fadeOut();
-  $text.queue(function () {
-    $text.html(items[i]);
-    $text.dequeue();
-  });
-  $text.fadeIn();
-  $text.queue(function () {
-    if (i == items.length - 1) {
-      loop(delay);
-    }
-    $text.dequeue();
-  });
-});
-}
-
-loop(delay);
