@@ -27,26 +27,26 @@
 
 /* ===== VARIABLE DARK THEME ===== */
 body.dark-theme{
-    --white: #000000;
-    --black: #ffffff;
-    --semiblack: #615f5f;
-  
-    --main-background: #474747;
-    --main-background-dark: #383838;
-    --main-background-darken: #292929;
-  
-    --main-button: #15ffa5;
-    --main-button-dark: #18da79;
-    --main-button-darken: #0eb863;
-  
-    --link: #6f21af;
-    --link-hover: #481374;
-    --link-visited: ;
-  
-    --selection: #28ff93;
-    --selection-dark: #19cf74;
-    --hover: #2c66e4;
-    --visited: #471a91;
+  --white: #ffffff;
+  --black: #000000;
+  --semiblack: #292828;
+
+  --main-background: #fcfcfc;
+  --main-background-dark: #ebebeb;
+  --main-background-darken: #d3d3d3;
+
+  --main-button: #15ffa5;
+  --main-button-dark: #18da79;
+  --main-button-darken: #0eb863;
+
+  --link: #6f21af;
+  --link-hover: #481374;
+  --link-visited: ;
+
+  --selection: #28ff93;
+  --selection-dark: #19cf74;
+  --hover: #2c66e4;
+  --visited: #471a91;
 }
 
 
