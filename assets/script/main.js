@@ -1,6 +1,4 @@
-document.querySelector('.menu-btn').addEventListener('click', () => 
-document.querySelector('.main-menu').classList.toggle('show'));
-
+document.querySelector('.menu-btn').addEventListener('click', () => document.querySelector('.main-menu').classList.toggle('show'));
 
 // BUAT GANTI-GANTI TITLE
 var items = [
