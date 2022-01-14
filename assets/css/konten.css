@@ -170,12 +170,15 @@ ul {
     align-items: center;
     justify-content: space-between;
     height: 60px;
+    max-width: 1100px;
     padding: 20px 0;
+    margin: auto;
     font-size: 13px;
 }
 
 .main-nav .logo {
     width: 110px;
+    filter: brightness(1) contrast(20) grayscale(2) invert(1); /* buat bikin logo nya jadi putih item*/
 }
 
 .main-nav ul {
@@ -192,7 +195,7 @@ ul {
 }
 
 .main-nav ul li a:hover {
-    border-bottom: 2px solid var(--hover);
+    border-bottom: 2px solid var(--white);
 }
 
 .main-nav ul.main-menu {
