@@ -66,6 +66,7 @@ themeButton.addEventListener('click', () => {
   localStorage.setItem('selected-icon', getCurrentIcon())
 });
 
+// FUNCTION BUAT INCLUDE FOOTER
 function includeHTML() {
     var z, i, elmnt, file, xhttp;
     /* Loop through a collection of all HTML elements: */
@@ -84,12 +85,13 @@ function includeHTML() {
             /* Remove the attribute, and call this function once more: */
             elmnt.removeAttribute("w3-include-html");
             includeHTML();
-          }
+            }
         }
         xhttp.open("GET", file, true);
         xhttp.send();
         /* Exit the function: */
         return;
-      }
+        }
     }
-  }
+}
+
