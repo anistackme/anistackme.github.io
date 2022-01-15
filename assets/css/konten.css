@@ -36,8 +36,8 @@ body.dark-theme{
     --main-background-darken: #d3d3d3;
   
     --main-button: #2515ff;
-    --main-button-dark: #2b18da;
-    --main-button-darken: #3b0eb8;
+    --main-button-dark: #2716bb;
+    --main-button-darken: #210c5e;
   
     --link: #6f21af;
     --link-hover: #481374;
@@ -106,7 +106,7 @@ body.dark-theme{
 }
 
 body {
-    font-family: "Poppins", Helvetica, sans-serif;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
     background: var(--main-background);
     color: var(--black);
     font-size: 15px;
@@ -134,6 +134,12 @@ ul {
       list-style: none;
 }
 
+/* ===== FONT SETTING BUAT BLOG ===== */
+.konten__title{
+    font-size: 2rem;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+
 /* ===== SETTINGAN BADAN, ISI, DAN KONTAINER ===== */
 .dark {
     color: var(--white);
@@ -141,26 +147,24 @@ ul {
 
 .kontainer {
     width: 90%;
-    max-width: 1400px;
+    max-width: 1100px;
     margin: auto;
 }
 
 .kontainerx{
     width: 90%;
     height: 100vh;
-    max-width: 1400px;
+    max-width: 1100px;
     margin: 0 auto 3rem auto ;
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
 }
 .kontainerx .leftside{
-    width: 30%;
-    /* background: coral; */
+    width: 20%;
 }
 
 .kontainerx .rightside{
-    width: 70%;
-    background: cornflowerblue;
+    width: 80%;
 }
 
 /* ===== BAGIAN NAVIGASI ===== */
@@ -235,6 +239,7 @@ ul {
     color: var(--semiblack);
 }
 
+/* ==== CHANGE THEME SETTING ==== */
 .change-theme{
     /* position: absolute; */
     /* right: 1.5rem; */
@@ -245,6 +250,7 @@ ul {
     cursor: pointer;
 }
 
+/* ===== SKIP NAVIGASI SETTING ===== */
 .skip-nav {
     list-style: none;
     position: absolute;
@@ -277,7 +283,6 @@ ul {
     left: 0;
     width: 100%;
     height: 400px;
-    background: var(--hover);
     position: absolute;
     z-index: -1;
 }
@@ -294,29 +299,70 @@ ul {
 .topik-utama{
     position: relative;
     width: 100%;
-    height: 700px;
-    border-radius: 1.5rem 1.5rem 0 0;
-}
-.topik-utama img{
-    width: 100%;
+    height: 500px;
+    border-radius: 1rem 1rem 0 0;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
 }
-
 
 /* ===== SETTINGAN BOX AUTHOR ===== */
 .leftside .minibox{
-    position: relative;
+    position: sticky;
     width: 100%;
-    background: gray;
-    padding: 2rem 2rem 5rem;
 }
 
-.leftside .minibox img{
+.minibox .topbox{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--main-background-darken);
+}
+
+.minibox .author-icon{
     width: 50px;
     height: 50px;
-    border-radius: 50%;
+    /* border-radius: 50%; */
+}
+
+.minibox .topbox .idbox .author-name a{
+    color: var(--hover);
+    font-size: 16px;
+    font-weight: 500;
+}
+.minibox .topbox .idbox .author-job{
+    color: #16472f;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.minibox .bottbox .author-credit{
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.minibox .bottbox .author-social{
+    padding-top: 1rem;
+    margin-top: 1rem;
+    border-top: 2px solid var(--main-background-darken);
+}
+
+.minibox .bottbox .author-social ul{
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 1rem;
+    font-size: 1.2rem;
+}
+
+.minibox .bottbox .author-social ul li a{
+    color: var(--main-button);
+}
+
+.minibox .bottbox .author-social ul li a:hover{
+    color: var(--main-button-darken);
 }
 
 
@@ -329,6 +375,7 @@ ul {
     .menu-btn {
         display: block;
         font-size: .8rem;
+        color: var(--white);
     }
 
     .menu-btn:hover {
@@ -361,12 +408,50 @@ ul {
         font-size: 14px;
     }
 
+    .main-nav ul li a {
+        color: var(--black);
+    }
+
     .main-nav ul.main-menu li:last-child {
         border-bottom: 0;
     }
 
     .main-nav ul.main-menu.show {
         transform: translateX(-20px);
+    }
+
+    .backdrop{
+        width: 100%;
+        height: 200px;
+    }
+
+    .utama {
+        width: 100%;
+        margin: 2rem 0 2rem;
+    }
+
+    .topik-utama{
+        width: 100%;
+        height: auto;
+    }
+
+    .kontainerx{
+        width: 90%;
+        height: auto;
+        flex-wrap: wrap-reverse;
+    }
+    .kontainerx .leftside{
+        width: 100%;
+    }
+
+    .konten__title {
+        font-size: 1.5rem;
+        font-family: "Montserrat", Arial, Helvetica, sans-serif;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        margin-bottom: 2rem;
     }
 }
 
