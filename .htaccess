@@ -17,6 +17,9 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.*)$ $1.html
 
+#kalo webnya 404
+ErrorDocument 404 www.anistackme.xyz/404.html 
+
 Options +Indexes
 
 <Files .htaccess>
