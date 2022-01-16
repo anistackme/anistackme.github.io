@@ -1,11 +1,16 @@
 /*===== GOOGLE FONTS =====*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Paytone+One:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bowlby+One+SC:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght100;200;300;@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 :root {
   --white: #ffffff;
   --black: #000000;
-  --semiblack: #292828;
+  --semiblack: #3e3e49;
+  --semiblack-2: #58575e;
 
   --main-background: #fcfcfc;
   --main-background-dark: #ebebeb;
@@ -17,7 +22,7 @@
 
   --link: #6f21af;
   --link-hover: #481374;
-  --link-visited: ;
+  --link-visited: #108663;
 
   --selection: #28ff93;
   --selection-dark: #19cf74;
@@ -29,7 +34,8 @@
 body.dark-theme{
     --white: #ffffff;
     --black: #000000;
-    --semiblack: #292828;
+    --semiblack: #3e3e49;
+    --semiblack-2: #58575e;
   
     --main-background: #fcfcfc;
     --main-background-dark: #ebebeb;
@@ -41,7 +47,7 @@ body.dark-theme{
   
     --link: #6f21af;
     --link-hover: #481374;
-    --link-visited: ;
+    --link-visited: #108663;
   
     --selection: #28ff93;
     --selection-dark: #19cf74;
@@ -137,7 +143,18 @@ ul {
 /* ===== FONT SETTING BUAT BLOG ===== */
 .konten__title{
     font-size: 2rem;
-    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    /* font-family: "Paytone One", Arial, Helvetica, sans-serif; */
+    /* font-family: "Luckiest Guy", Arial, Helvetica, sans-serif; */
+    font-family: "Bowlby One SC", Arial, Helvetica, sans-serif;
+    /* font-family: "Mochiy Pop P One", Arial, Helvetica, sans-serif; */
+    font-weight: 500;
+    color: var(--semiblack);
+}
+.konten__paraf{
+    font-size: 1.2rem;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    margin-bottom: 1.2rem;
 }
 
 /* ===== SETTINGAN BADAN, ISI, DAN KONTAINER ===== */
@@ -153,7 +170,7 @@ ul {
 
 .kontainerx{
     width: 90%;
-    height: 100vh;
+    height: auto;
     max-width: 1100px;
     margin: 0 auto 3rem auto ;
     display: flex;
@@ -167,9 +184,21 @@ ul {
     width: 80%;
 }
 
+.clearfix1{
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.clearfix2{
+    width: 100%;
+    margin-bottom: 3rem;
+}
+.clearfixtxt{
+    width: 100%;
+    margin: 3.5rem 0;
+}
+
 /* ===== BAGIAN NAVIGASI ===== */
 .main-nav {
-    color: var(--white);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -182,6 +211,10 @@ ul {
 
 .main-nav .logo {
     width: 110px;
+}
+
+.altered{
+    color: var(--white);
     filter: brightness(1) contrast(20) grayscale(2) invert(1); /* buat bikin logo nya jadi putih item*/
 }
 
@@ -304,6 +337,7 @@ ul {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    object-fit: cover;
 }
 
 /* ===== SETTINGAN BOX AUTHOR ===== */
@@ -365,6 +399,23 @@ ul {
     color: var(--main-button-darken);
 }
 
+
+/* ===== Settingan Bagian Kanan Kontainer ===== */
+.rightside .konten__img{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: transform 500ms ease-in-out;
+}
+.rightside .konten__img:hover{
+    transform: translateX(-10px) translateY(-10px);
+    box-shadow: 5px 10px 10px var(--main-background-darken);
+}
 
 
 
@@ -446,12 +497,20 @@ ul {
 
     .konten__title {
         font-size: 1.5rem;
-        font-family: "Montserrat", Arial, Helvetica, sans-serif;
         margin-bottom: 1rem;
     }
 
     p {
         margin-bottom: 2rem;
+    }
+
+    .kontainerx .rightside{
+        width: 100%;
+    }
+
+    .kontainerx .rightside .konten__img{
+        width: 100%;
+        height: auto;
     }
 }
 
