@@ -7,7 +7,7 @@
         <meta name="description" content="Bring Cuteness Everywhere Anytime">
         <meta name="author" content="Izumiinyaa">
         <meta name="keywords" content="Anime, Wallpaper, Anistackme, Design, Wallpaper HD, Anime Wallpaper, Cute">
-        <title>Blog - Anistackme</title>
+        <title>Bring Cuteness Everywhere</title>
         <!-- <link rel="shortcut icon" href="https://www.shareicon.net/data/512x512/2016/10/20/846390_letter_512x512.png" type="image/x-icon"/> -->
         <link rel="shortcut icon" href="https://yt3.ggpht.com/ytc/AKedOLQNhNLAE1ECJuVKg9sO7PpiRd2g-kaq6VWB6Q69=s900-c-k-c0x00ffffff-no-rj" type="image/x-icon"/>
         <!-- <link rel="shortcut icon" href="./assets/image/logo1.png" type="image/x-icon"/> -->
@@ -47,7 +47,7 @@
 
         <div class="kontainer">
             <!-- Nav -->
-            <nav class="main-nav">
+            <nav class="main-nav" id="main-nav">
                 <div class="lah">
                     <img src="./assets/image/Frame8.png" alt="Anistackme" class="logo" />
                     <p>Blog</p>
@@ -56,10 +56,10 @@
                 <ul class="right-menu">
                     <ul class="main-menu">
                         <li><a href="/">Beranda</a></li>
-                        <li><a href="#" onclick="myFunction()" class="dropbtn">Check Here <i class="fas fa-chevron-down"></i></a>
+                        <li><a href="#" onclick="myFunction()" class="dropbtn">Kategori <i class="fas fa-chevron-down"></i></a>
                             <div class="dropdown">
                                 <div id="myDropdown" class="dropdown-content">
-                                    <a href="#">Community</a>
+                                    <a href="#">Komunitas</a>
                                     <a href="#">Course</a>
                                     <a href="#">Important</a>
                                 </div>
@@ -70,15 +70,15 @@
                 </ul>
             </nav>
 
-            <ul class="category__nav">
-                <li><a data-target="Important" href="#">Important</a></li>
-                <li><a data-target="Community" href="#">Community</a></li>
-                <li><a data-target="Featured" href="#">Featured</a></li>
-                <li><a data-target="Course" href="#">Course</a></li>
+            <ul class="category__nav items">
+                <li class="item"><a data-target="Important" href="#">Important</a></li>
+                <li class="item"><a data-target="Komunitas" href="#">Komunitas</a></li>
+                <li class="item"><a data-target="Featured" href="#">Featured</a></li>
+                <li class="item"><a data-target="Course" href="#">Course</a></li>
             </ul>
 
-            <!-- kartu-display 1 -->
-            <section class="kartu-display-2 category" id="kontenkartu">
+            <!-- kartu-display 1 BAGIAN FEATURED DAN IMPORTANT ANNOUNCEMENT -->
+            <section class="kartu-display-2 category" id="kontenkartu utama">
                 
             <a href="#" class="kartu" data-target="Featured">
                 <div class="kartudiv">
@@ -102,7 +102,7 @@
 
             </section>
 
-            <!-- kartu-display 1 -->
+            <!-- kartu-display 2 DISPLAY 12 ENTRY BUAT BLOG -->
             <section class="kartu-display category" id="kontenkartu">
                 
                 <a href="#" class="kartu" data-target="Course">
@@ -125,10 +125,10 @@
                     </div>
                 </a>
                 
-                <a href="#" class="kartu" data-target="Community">
+                <a href="#" class="kartu" data-target="Komunitas">
                     <div class="kartudiv">
                         <img src="./assets/image/frame__soon.png" alt="" />
-                        <h3>Community</h3>
+                        <h3>Komunitas</h3>
                         <p>
                         Blog Komunitas Akan Hadir Segera
                         </p>
