@@ -221,16 +221,26 @@ ul {
 
 /* ===== CATEGORY TO FILTER ===== */
 .category__nav {
-    padding: 15px;
+    position: relative;
     list-style-type: none;
-    margin-top: -11px;
-    display: block;
-    margin-bottom: 71px;
-    margin-left: -13px;
+    display: flex;
+    justify-content: start;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    overflow-x: auto;
+    gap: 10px;
+    cursor: grab;
 }
+.category__nav::-webkit-scrollbar{
+    height: 0px;
+}
+.category__nav::-webkit-scrollbar-thumb{
+    background: none;
+}
+
 .category__nav li {
     float: left;
-    margin-right: 5px;
 }
 .category__nav li a {
     color: #235d80;
@@ -358,14 +368,16 @@ ul {
 }
 
 .kartu{
-    border: 1px solid rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(136, 59, 59, 0.1);
     padding: 1rem;
-    border-radius: 1rem;
+    /* border-radius: 1rem; */
+    transition: 300ms ease-in-out;
 }
 
 .kartu:hover{
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     transition: 300ms ease-in-out;
+    transform: scale(1.02);
 }
 
 .kartu img {
