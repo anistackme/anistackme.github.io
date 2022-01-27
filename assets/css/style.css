@@ -49,35 +49,14 @@ body.dark-theme{
     --visited: #471a91;
 }
 
-
-/* ===== SETTING SCROLL TOP ===== */
-.scrolltop{
+/* BAGIAN NAVIGASI DAN TOMBOL ADMIN UNTUK EDITING ONLY */
+.adminclear{
     position: fixed;
-    right: 3rem;
-    bottom: -50%;
+    top: 1rem;
+    left: 1rem;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: .3rem;
-    background: var(--main-button);
-    border-radius: .4rem;
-    z-index: 100;
-    transition: .4s;
-    visibility: hidden;
-}
-
-.scrolltop:hover{
-    background-color: var(--main-button-dark);
-}
-
-.scrolltop_icon{
-    font-size: 1.5rem;
-    color: var(--white);
-}
-
-.show-scroll{
-    visibility: visible;
-    bottom: 1.5rem;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 
@@ -180,6 +159,45 @@ ul {
     margin-left: 20px;
 }
 
+.announcement {
+    background: var(--hover);
+    background: url('https://a-static.besthdwallpaper.com/the-devil-is-a-part-timer-suzuno-kamazuki-minimalis-wallpaper-2880x960-19278_104.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--white);
+    position: relative;
+    padding: 2rem 2rem;
+}
+
+.announcement-kontainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.announcement-kontainer .titleannouncement{
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.announcement-kontainer .parafannouncement{
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.announcement-kontainer a{
+    font-size: 1.5rem;
+    color: var(--white);
+    cursor: pointer;
+    transition: 200ms ease-in;
+    padding-left: 12rem;
+}
+.announcement-kontainer a:hover{
+    color: var(--main-button);
+    transition: 200ms ease-in;
+}
+
 /* ===== SETTINGAN TOMBOL ===== */
 .menu-btn {
     cursor: pointer;
@@ -246,6 +264,115 @@ ul {
     color: #fff;
     left: 0;
     padding: 3px 10px;
+}
+
+/* == tombol whatsapp == */
+.bungkuswa p {
+    text-align: center;
+    margin: 0 0 1rem;
+    padding-bottom: 1rem;
+    color: var(--semiblack);
+    font-size: 12px;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    border-bottom: 1px solid var(--main-background-darken);
+}
+
+.bungkuswa {
+    position: fixed;
+    width: 290px;
+    bottom: 75px;
+    right: 2.8rem;
+    padding: 10px;
+    border: 2px solid var(--main-background-dark);
+    background: var(--white);
+    border-radius: .5rem;
+    display: none;
+    z-index: 101;
+}
+  
+#whatsapp {
+    position: fixed;
+    bottom: 2rem;
+    right: 2.8rem;
+    width: 2.5rem;
+    aspect-ratio: 1;
+    font-size: 22px;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: var(--main-button);
+    color: var(--white);
+    z-index: 100;
+    transition: .4s;
+    border: none;
+}
+
+#whatsapp:hover {
+    cursor: pointer;
+}
+
+#msg {
+    display: block;
+    height: 150px;
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+    background: var(--main-background-dark);
+    resize: none;
+    outline: none;
+    padding: 10px;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+#sendMsg {
+    display: block;
+    border: none;
+    width: 100%;
+    margin: 10px 0 0;
+    background: var(--main-button);
+    color: var(--main-background);
+    padding: 5px 0;
+    border-radius: 3px;
+    transition: background 0.2s;
+}
+
+#sendMsg:hover {
+    cursor: pointer;
+    background: #2980b9;
+}
+
+/* ===== SETTING SCROLL TOP ===== */
+.scrolltop{
+    position: fixed;
+    right: 3rem;
+    bottom: -50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .3rem;
+    background: var(--main-button);
+    border-radius: .4rem;
+    transition: .4s;
+    visibility: hidden;
+}
+
+.scrolltop:hover{
+    background-color: var(--main-button-dark);
+}
+
+.scrolltop_icon{
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+.show-scroll{
+    z-index: 99;
+    visibility: visible;
+    bottom: 6rem;
 }
 
 /* ===== SETTINGAN PAGE UTAMA ===== */
@@ -401,6 +528,16 @@ ul {
         width: 85%;
     }
 
+    .announcement-kontainer .titleannouncement{
+        font-size: 1rem;
+        font-weight: 700;
+    }
+    
+    .announcement-kontainer .parafannouncement{
+        font-size: 18PX;
+        font-weight: 300;
+    }
+
 }
 
 @media (max-width: 500px) {
@@ -410,6 +547,52 @@ ul {
 
     .scrolltop{
         right: 1rem;
+    }
+
+    .announcement{
+        padding: 1rem 2rem;
+    }
+    .announcement-kontainer{
+        flex-wrap: wrap;
+        justify-content: left;
+        width: 70%;
+    }
+    .announcement-kontainer .titleannouncement {
+        font-size: 12px;
+        font-weight: 700;
+    }
+    .announcement-kontainer .parafannouncement{
+        font-size: 10px;
+        font-weight: 400;
+    }
+    .announcement-kontainer a{
+        padding-left: 0;
+        position: absolute;
+        right: 1rem;
+        top: 10px;
+        font-size: 1rem;
+    }
+
+    #whatsapp{
+        right: .8rem;
+    }
+    #whatsapp p{
+        font-size: 10px;
+    }
+    .bungkuswa{
+        width: 90%;
+        margin: 0 1rem 0 1rem;
+        right: 0;
+    }
+
+    .darknessw{
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--black);
+        z-index: 99;
+        opacity: .5;
     }
 
     .utama h2,
