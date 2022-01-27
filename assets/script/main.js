@@ -1,6 +1,33 @@
 document.querySelector('.menu-btn').addEventListener('click', () => document.querySelector('.main-menu').classList.toggle('show'));
 
 
+// PUNYA TOMBOL WHATSAPP
+$(function() {
+  const $txtArea = $('#msg'),
+        $send = $('#sendMsg'),
+        $whatsBtn = $('#whatsapp'),
+        $msgArea = $('.bungkuswa'),
+        $darknessw = $('.darknessw');
+  
+  //Toggle Message Section
+  $whatsBtn.on('click', () => {
+    $msgArea.fadeToggle(300);
+    $darknessw.fadeToggle(300);
+  });
+
+  //Send Message
+  $send.on('click', () => {
+    if ($txtArea.val() !== '') {
+      let msg = $txtArea.val();
+      let url = `https://api.whatsapp.com/send?phone=6285881630649&text=${msg}`;
+
+      window.open(url);
+      $txtArea.val('');
+    }
+  });
+});
+
+
 // BUAT GANTI-GANTI TITLE
 var items = [
     "Animepict9",
@@ -64,6 +91,22 @@ themeButton.addEventListener('click', () => {
   // We save the theme and the current icon that the user chose
   localStorage.setItem('selected-theme', getCurrentTheme())
   localStorage.setItem('selected-icon', getCurrentIcon())
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const announc = document.querySelector('#announcement'),
+        announcClose = document.querySelector('.announcement-close'),
+        clearBtn = document.querySelector('.clear'),
+        isShow = localStorage.getItem('isShow');
+  
+  if (isShow) announc.remove();
+
+  announcClose.addEventListener('click', () => {
+    localStorage.setItem('isShow', 1);
+    announc.remove();
+  });
+  
+  clearBtn.addEventListener('click', () => localStorage.clear());
 });
 
 // FUNCTION BUAT INCLUDE FOOTER
