@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="htmls">
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -18,6 +18,7 @@
         <!--====== FONT AWESOME ======-->
         <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" /> -->
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.1/css/all.css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <!-- ===== CSS ===== -->
         <link rel="stylesheet" href="./assets/css/style.css">
@@ -41,9 +42,25 @@
               </ul>
         </div>
 
+        <!-- MESSAGE BOX-->
+        <div class="bungkuswa">
+            <p>Halo Kak, Silahkan Ketikan Pesanan Kakak</p>
+            <textarea id="msg"></textarea>
+            <button id="sendMsg">Kirim</button>
+        </div>
+        <div class="darknessw"></div>
+        
+        <!--WHATSAPP BUTTON-->
+        <button id="whatsapp"><i class="fa fa-whatsapp"></i></button>
+
         <div class="menu-btn">
             <i class="fas fa-bars fa-2x"></i>
         </div>
+
+        <!-- admin button for edit only -->
+        <!-- <div class="adminclear">
+            <button class="clear">Clear Local Storage</button>
+        </div> -->
 
         <div class="kontainer">
             <!-- Nav -->
@@ -54,13 +71,27 @@
                 <ul class="main-menu">
                 <li><a href="/" class="magic__who js-replace">Anistackme</a></li>
                 <li><a href="https://chat.whatsapp.com/JJ91hWtZz0IDR3sC0dwg9F" target="_BLANK" rel="noopener noreferrer">Grup</a></li>
-                <li><a href="./blog/about.html">Tentang</a></li>
+                <li><a href="./about.html">Tentang</a></li>
                 <li><a href="#eventx">Event</a></li>
                 <li><a href="#">Support</a></li>
                 <li><i class="bx bx-toggle-left change-theme" id="theme-button"></i></li>
                 </ul>
             </ul>
             </nav>
+
+
+            <div id="announcement" class="announcement">
+                <div class="announcement-kontainer">
+                  <div class="announcement-content">
+                    <h3 class="titleannouncement">Animepict9 Sampai 7000 Followers Omedetou</h5>
+                    <p id="adminon" class="parafannouncement">Terimakasih untuk semua follower yang telah mengikuti hingga sampai titik ini :D</p>
+                  </div>
+                    <a class="announcement-close">
+                        <i class="fas fa-times"></i>
+                    </a>
+                </div>
+            </div>
+
 
             <!-- utama -->
             <header class="utama" id="utama">
