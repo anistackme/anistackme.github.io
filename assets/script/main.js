@@ -1,4 +1,38 @@
-document.querySelector('.menu-btn').addEventListener('click', () => document.querySelector('.main-menu').classList.toggle('show'));
+var nav = document.getElementById("navigasi");
+var navigasi = nav.getElementsByClassName("navlink");
+
+function setActiveLink() {
+  for (var i = 0; i < navigasi.length; i++) {
+    navigasi[i].addEventListener("click", function () {
+      var current = document.getElementsByClassName("active");
+      if (current.length > 0) {
+        current[0].className = current[0].className.replace(" active", "");
+      }
+      this.className += " active";
+    });
+  }
+}
+
+setActiveLink();
+
+document.querySelector('.menux').addEventListener('click', () => document.querySelector('.panel__utama-side').classList.toggle('show'));
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const announc = document.querySelector('#announcement'),
+        announcClose = document.querySelector('.announcement-close'),
+        clearBtn = document.querySelector('.clear'),
+        isShow = localStorage.getItem('isShow');
+  
+  if (isShow) announc.remove();
+
+  announcClose.addEventListener('click', () => {
+    localStorage.setItem('isShow', 1);
+    announc.remove();
+  });
+  
+  clearBtn.addEventListener('click', () => localStorage.clear());
+});
 
 
 // PUNYA TOMBOL WHATSAPP
@@ -93,21 +127,7 @@ themeButton.addEventListener('click', () => {
   localStorage.setItem('selected-icon', getCurrentIcon())
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-  const announc = document.querySelector('#announcement'),
-        announcClose = document.querySelector('.announcement-close'),
-        clearBtn = document.querySelector('.clear'),
-        isShow = localStorage.getItem('isShow');
-  
-  if (isShow) announc.remove();
 
-  announcClose.addEventListener('click', () => {
-    localStorage.setItem('isShow', 1);
-    announc.remove();
-  });
-  
-  clearBtn.addEventListener('click', () => localStorage.clear());
-});
 
 // FUNCTION BUAT INCLUDE FOOTER
 function includeHTML() {
@@ -137,3 +157,4 @@ function includeHTML() {
       }
   }
 }
+
