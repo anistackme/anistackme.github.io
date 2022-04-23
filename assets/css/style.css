@@ -122,7 +122,7 @@ body {width: 100%;height: auto;background-color: var(--gray-3);}
 
 /* TEXT SETTING */
 h1,h2,h3,h4,h5,h6,p,ul,li,a 
-{margin: 0;padding: 0;box-sizing: border-box;text-decoration: none;list-style: none;max-inline-size: none;}
+{margin: 0;padding: 0;box-sizing: border-box;text-decoration: none;list-style: none;max-inline-size: none;color: var(--light);}
 h2{margin-block-end: 2rem;}
 h4{margin-block-end: 1rem;}
 p{margin-block-end: 1rem;font-size: var(--font-size-3);}
