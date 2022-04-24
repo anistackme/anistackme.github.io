@@ -6,6 +6,10 @@
     --gray-7x: #3c4349;
     --brand-1: #14c773;         --brand-2: #1d9671;
 
+    /* WIDTH SETTING */
+    --maxwidth: 1440px;
+    --width1: 85%;
+
 }
 @media (prefers-color-scheme: light) {
     h1,h2,h3,h4,h5,h6,ul,li {color: var(--light);}
@@ -26,6 +30,7 @@
 }
 
 /* KONTAINER CLASS COLOR */
+.m-320n{display: none;}
 .c1{background-color: var(--gray-7);}
 .c2{background-image: url("../image/bannerads.svg");background-position: center;background-size: cover;}
 .c-ads{
@@ -46,7 +51,7 @@
 /* BADGE AND TOOLTIPS */
 .badge {
     display: inline-block;
-    margin-inline: 1rem;
+    margin-inline-start: 1rem;
     padding-inline: 3px;
     border-radius: 4px;
     color: var(--light);
@@ -54,74 +59,73 @@
     font-weight: 400;
     text-align: center;
 }
+
+#icn-ftr{padding-inline-end: 10px;}
+
     .b-wip{border: 2px solid var(--brand-1);}
     .b-demo{border: 2px solid var(--green-1);}
     .b-new{border: none; font-size: var(--font-size-1); color: var(--blue-3);}
     .b-off{border: none; font-size: var(--font-size-2); color: var(--lime-2);}
 
+/* START TOOLTIP */
 [data-tooltip] {
     position: relative;
     z-index: 2;
     cursor: pointer;
-    
 }
-[data-tooltip]:before,
-[data-tooltip]:after {
-  visibility: hidden;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
-  pointer-events: none;
-  transition: ease-out 300ms;
-}
-
-/* Position tooltip above the element */
-[data-tooltip]:before {
-  position: absolute;
-  bottom: 150%;
-  left: 200%;
-  margin-bottom: 5px;
-  margin-left: -80px;
-  padding-inline: 10px;
-  padding-block: 5px;
-  width: max-content;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  background-color: hsla(213, 11%, 20%, 0.9);
-  font-weight: 400;
-  color: var(--light);
-  content: attr(data-tooltip);
-  text-align: center;
-  font-size: var(--font-size-0);
-  line-height: 1.2;
-}
-
-/* Triangle hack to make tooltip look like a speech bubble */
-[data-tooltip]:after {
-  position: absolute;
-  bottom: 150%;
-  left: 50%;
-  margin-left: -5px;
-  width: 0;
-  border-top: 5px solid #000;
-  border-top: 5px solid hsla(0, 0%, 20%, 0.9);
-  border-right: 5px solid transparent;
-  border-left: 5px solid transparent;
-  content: " ";
-  font-size: 0;
-  line-height: 0;
-  
-}
-
-/* Show tooltip content on hover */
-[data-tooltip]:hover:before,
-[data-tooltip]:hover:after {
-  visibility: visible;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-  filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
-}
+    [data-tooltip]:before,
+    [data-tooltip]:after {
+        visibility: hidden;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+        opacity: 0;
+        pointer-events: none;
+        transition: ease-out 300ms;
+    }
+    /* POSISI BUAT TOOLTIP NYA */
+    [data-tooltip]:before {
+        position: absolute;
+        bottom: 150%;
+        left: 200%;
+        margin-bottom: 5px;
+        margin-left: -80px;
+        padding-inline: 10px;
+        padding-block: 5px;
+        width: max-content;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        background-color: hsla(213, 11%, 20%, 0.9);
+        font-weight: 400;
+        color: var(--light);
+        content: attr(data-tooltip);
+        text-align: center;
+        font-size: var(--font-size-0);
+        line-height: 1.2;
+    }
+    /* NGATUR SEGITIGA KECILNYA BUAT POPUP */
+    [data-tooltip]:after {
+        position: absolute;
+        bottom: 150%;
+        left: 50%;
+        margin-left: -5px;
+        width: 0;
+        border-top: 5px solid #000;
+        border-top: 5px solid hsla(0, 0%, 20%, 0.9);
+        border-right: 5px solid transparent;
+        border-left: 5px solid transparent;
+        content: " ";
+        font-size: 0;
+        line-height: 0;
+    }
+    /* BUAT SHOW PAS HOVER */
+    [data-tooltip]:hover:before,
+    [data-tooltip]:hover:after {
+        visibility: visible;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+        filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+        opacity: 1;
+    }
 
 /* GLOBAL SETTING */
 html {font-size: 95%;}
@@ -180,7 +184,8 @@ a.tombol-2:hover{
 section.sect-left {
     position: relative;
     height: auto;
-    max-width: 85%;
+    width: var(--width1);
+    max-width: var(--maxwidth);
     padding: 15px 25px;
     margin-inline: auto;
     margin-block: 4rem 6rem;
@@ -188,7 +193,8 @@ section.sect-left {
 section.sect-m {
     position: relative;
     height: auto;
-    max-width: 85%;
+    width: var(--width1);
+    max-width: var(--maxwidth);
     padding: 15px 25px;
     margin-inline: auto;
     margin-block: 4rem 6rem;
@@ -197,7 +203,8 @@ section.sect-m {
 section.sect-d {
     position: relative;
     height: auto;
-    max-width: 85%;
+    width: var(--width1);
+    max-width: var(--maxwidth);
     padding: 15px 25px;
     margin-inline: auto;
     margin-block: 4rem 6rem;
@@ -209,6 +216,7 @@ section.sect-d {
         min-height: 25vh;
         display: flex;
         gap: 5rem;
+        align-items: center;
     }
     .sect-d .block{
         position: relative;
@@ -254,15 +262,16 @@ section.sect-mid{
     margin-block: 15px;;
 }
 
-.kartu__grid
-    {display: flex;justify-content: space-around;flex-wrap: wrap;gap: 1rem;}
-    .kartu__grid a{color: var(--light);}
+    .kartu__grid
+        {display: flex;justify-content: space-around;flex-wrap: wrap;gap: 1rem;}
 
-.kartu__projects {
-    min-width: 15rem;
-    min-height: 10rem;
-    flex: 1 1;
-}
+        .kartu__grid a{color: var(--light);}
+
+    .kartu__projects {
+        min-width: 15rem;
+        min-height: 10rem;
+        flex: 1 1;
+    }
 
 /* KONTAINER UTAMA */
 .bungkus {
@@ -280,7 +289,9 @@ section.sect-mid{
     position: relative;
     background: var(--gray-7x);
     height: 100vh;
-    width: 240px;
+    width: 100%;
+    min-width: 240px;
+    max-width: 260px;
 }
 
 .panel__utama .panel__utama-side .logo{
@@ -330,8 +341,10 @@ section.sect-mid{
     min-height: 40vh;
 }
     .grid__center{
-        max-width: 85%;
+        width: var(--width1);
+        max-width: var(--maxwidth);
         padding-block-start: 3rem;
+        padding-inline: 15px;
         margin-inline: auto;
         display: flex;
         flex-flow: row;
@@ -342,10 +355,27 @@ section.sect-mid{
         min-width: 15rem;
         min-height: 10rem;
         flex: 1 1;
+        margin-block-end: 3rem;
     }
         .grid__cell p{padding: 0rem;margin: 0rem;font-size: var(--font-size-3);}
         .grid__cell p a{color: var(--gray-5);}
         .grid__cell p a:hover{color: var(--gray-3);text-decoration: underline;}
+
+
+.footer__kontainer{
+    height: auto;
+    width: var(--width1);
+    max-width: var(--maxwidth);
+    margin: auto;
+}
+footer p{
+    display: flex;
+    padding-block: 1rem;
+    padding-inline: 15px;
+    /* align-items: center; */
+    margin: auto;
+    font-size: var(--font-size-2);
+}
 
 
 
@@ -366,7 +396,8 @@ section.sect-mid{
         position: fixed;
         top: 0;
         left: 0;
-        width: 40%;
+        width: 100;
+        max-width: 350px;
         height: 100%;
         opacity: 0.9;
         padding: 30px;
@@ -399,10 +430,17 @@ section.sect-mid{
     h3{font-size: var(--font-size-3);}
     h4{font-size: var(--font-size-2);}
     p{font-size: var(--font-size-1);}
-    .panel__utama .panel__utama-side {
-        width: 70%;
-    }
+
+    .b-wip{border: 2px solid var(--brand-1);}
+    .b-demo{border: 2px solid var(--green-1);}
+    .b-new{border: none; font-size: var(--font-size-0); color: var(--blue-3);}
+    .b-off{border: none; font-size: var(--font-size-2); color: var(--lime-2);}
+
+    .panel__utama .panel__utama-side .list__links li{font-size: var(--font-size-1);}
+
+    .panel__utama .panel__utama-side {width: 80%;max-width: 330px;}
     .announcement-kontainer a{right: -10px;top: -5px;}
+
     section.sect-mid{text-align: center;}
     section.sect-left{max-width: 100%;}
     section.sect-d{max-width: 100%;}
@@ -410,9 +448,35 @@ section.sect-mid{
         .sect-d__kontainer:nth-child(2){flex-direction: column-reverse;}
             .sect-d .block{width: 100%;}
             .sect-d .blockt{width: 100%;margin-block-start: 0;padding: 5px 10px;font-size: var(--font-size-1);}
+
     section.sect-m{max-width: 100%;}
     .pelurus {gap: 0rem;width: 100%;justify-content: center;flex-wrap: wrap;}
     a.tombol-1, a.tombol-2 {min-width: 100%;text-align: center;justify-content: center;}
     .grid__cell p{padding: 0;margin: 0;font-size: var(--font-size-1);}
     footer p{position: relative;font-size: 14px; justify-content: center;display: flex;align-items: center;padding-block-start: 1rem;}
+}
+
+@media only screen and (max-width:315px) {
+    .m-320n{
+        top: 0;
+        left: 0;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        color: var(--light);
+        background-color: var(--gray-8);
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        padding-inline: 2rem;
+        z-index: 10000;
+    }
+    .m-320n p{font-size: var(--font-size-0);}
+    .m-320n i{
+        color: var(--red-2);
+        font-size: 5rem;
+    }
 }
