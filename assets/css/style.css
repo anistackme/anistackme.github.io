@@ -441,15 +441,15 @@ footer p{
     .panel__utama .panel__utama-side {width: 80%;max-width: 330px;}
     .announcement-kontainer a{right: -10px;top: -5px;}
 
-    section.sect-mid{text-align: center;}
-    section.sect-left{max-width: 100%;}
-    section.sect-d{max-width: 100%;}
+    section.sect-mid{text-align: center;padding: 0;}
+    section.sect-left{max-width: 100%;padding: 0;}
+    section.sect-m{max-width: 100%;padding: 0;}
+    section.sect-d{max-width: 100%;padding: 0;}
         .sect-d__kontainer{flex-direction: column;align-items: center;}
         .sect-d__kontainer:nth-child(2){flex-direction: column-reverse;}
             .sect-d .block{width: 100%;}
             .sect-d .blockt{width: 100%;margin-block-start: 0;padding: 5px 10px;font-size: var(--font-size-1);}
 
-    section.sect-m{max-width: 100%;}
     .pelurus {gap: 0rem;width: 100%;justify-content: center;flex-wrap: wrap;}
     a.tombol-1, a.tombol-2 {min-width: 100%;text-align: center;justify-content: center;}
     .grid__cell p{padding: 0;margin: 0;font-size: var(--font-size-1);}
