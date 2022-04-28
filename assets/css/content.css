@@ -23,8 +23,6 @@
     font-family: 'Montserrat' Arial, Helvetica, sans-serif;
 }
 
-ol,ul,li{padding-inline-start: 0;}
-
 section.sect-d{
     margin-block: 2rem;
     min-height: 100vh;
@@ -65,7 +63,7 @@ input[type="radio"] {
 
 .post-title a{color: var(--light);}
 
-.post-categories{margin-block: 10px;display: flex; gap: 5px;}
+.post-categories{margin-block: 10px;display: flex; gap: 5px;padding-inline-start: 0;}
 .post-categories .tab__categories{
     padding: 2px 5px;
     border: 2px solid var(--brand-1);
