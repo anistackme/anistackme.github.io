@@ -12,7 +12,7 @@
 
 }
 @media (prefers-color-scheme: light) {
-    h1,h2,h3,h4,h5,h6,ul,li {color: var(--light);}
+    h1,h2,h3,h4,h5,h6,ul,ol,li {color: var(--light);}
     a,p{color: var(--gray-5);}
 }
 
@@ -130,9 +130,10 @@
 /* GLOBAL SETTING */
 html {font-size: 95%;}
 body {width: 100%;height: auto;background-color: var(--gray-3);}
+img{image-rendering: optimizeSpeed;}
 
 /* TEXT SETTING */
-h1,h2,h3,h4,h5,h6,p,ul,li,a 
+h1,h2,h3,h4,h5,h6,p,ul,ol,li,a 
 {margin: 0;padding: 0;box-sizing: border-box;text-decoration: none;list-style: none;max-inline-size: none;}
 h2{margin-block-end: 2rem;}
 h4{margin-block-end: 1rem;}
@@ -173,10 +174,12 @@ a.tombol-2:hover{
 
 /* SCROLL BAR SETTING */
 *::-webkit-scrollbar
-{width: 10px;}
+{width: 8px;}
 *::-webkit-scrollbar-track
 {background: var(--gray-7);}
 *::-webkit-scrollbar-thumb
+{background-color: var(--gray-6);}
+*::-webkit-scrollbar-thumb:hover
 {background-color: var(--blue-4);}
 
 .menux{display: none;}
@@ -285,7 +288,6 @@ section.sect-mid{
     overflow: hidden;
 }
 .panel__utama .panel__utama-side {
-    top: 0; left: 0;
     position: relative;
     background: var(--gray-7x);
     height: 100vh;
@@ -368,11 +370,12 @@ section.sect-mid{
     max-width: var(--maxwidth);
     margin: auto;
 }
+
+footer{background-color: var(--brand-2);color: var(--light);}
 footer p{
     display: flex;
     padding-block: 1rem;
     padding-inline: 15px;
-    /* align-items: center; */
     margin: auto;
     font-size: var(--font-size-2);
 }
@@ -399,7 +402,6 @@ footer p{
         width: 100;
         max-width: 350px;
         height: 100%;
-        opacity: 0.9;
         padding: 30px;
         transform: translateX(-500px);
         transition: transform 0.8s ease-in-out;
@@ -412,12 +414,13 @@ footer p{
         display: block;
         position: fixed;
         right: 20px; top: 20px;
-        padding: 5px 10px;
+        padding: 2px 5px;
         border: 2px solid var(--light);
         border-radius: 5px;
         color: var(--light);
         opacity: .6;
-        z-index: 1000;
+        z-index: 1001;
+        font-size: var(--font-size-0);
     }
         .menux:hover{opacity: 1;}
 }
@@ -431,8 +434,6 @@ footer p{
     h4{font-size: var(--font-size-2);}
     p{font-size: var(--font-size-1);}
 
-    .b-wip{border: 2px solid var(--brand-1);}
-    .b-demo{border: 2px solid var(--green-1);}
     .b-new{border: none; font-size: var(--font-size-0); color: var(--blue-3);}
     .b-off{border: none; font-size: var(--font-size-2); color: var(--lime-2);}
 
