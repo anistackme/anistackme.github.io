@@ -23,6 +23,8 @@
     font-family: 'Montserrat' Arial, Helvetica, sans-serif;
 }
 
+ol,ul,li{padding-inline-start: 0;}
+
 section.sect-d{
     margin-block: 2rem;
     min-height: 100vh;
