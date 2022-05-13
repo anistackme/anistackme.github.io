@@ -1,0 +1,81 @@
+html{
+    background-color: var(--gray-2);
+}
+
+body{
+    width: 100%;
+}
+
+header{
+    position: relative;
+    background-color: var(--gray-7);
+    min-height: 10rem;
+    overflow-y: hidden;
+}
+
+section{
+    min-height: 100vh;
+    width: 100%;
+    margin-block: 2rem;
+}
+
+.wrapp{
+    margin: auto;
+    width: var(--width);
+    max-width: var(--maxwidth);
+    padding-inline: var(--wpadding);
+}
+
+.hero__about{
+    position: absolute;
+    top: -250px; left: 0; right: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: brightness(60%);
+    width: 100%;
+    margin: auto;
+}
+
+.coming, .coming h1{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    color: var(--gray-8);
+    font-size: var(--font-size-8);
+    margin: auto;
+    z-index: 2;
+}
+    .coming img{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0; left: 25%;
+        transform: translate(10vw, 10vw);
+        width: 30%;
+        background-size: cover;
+        background-position: center;
+        filter: opacity(.06);
+        z-index: 1;
+    }
+    .btnnow2{
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 10px 20px;
+        max-width: max-content;
+        background-color: var(--gray-7);
+        color: var(--white);
+        gap: 1rem;
+        margin-block-start: 3rem;
+        margin-inline: auto;
+        z-index: 5;
+        transition: ease-in-out 300ms;
+    }
+        .btnnow2:hover{
+            background-color: var(--grape-5);
+        }
+
+
