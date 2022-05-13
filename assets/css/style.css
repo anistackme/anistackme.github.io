@@ -16,7 +16,7 @@
     --wpadding: 2rem;
 }
 @media (prefers-color-scheme: light) {
-    body{background-color: var(--white);color: var(--dark);}
+    body{background-color: var(--white);}
 }
 
 *,
@@ -278,9 +278,11 @@ section.rangkuman{
 
 .kartu__projects i{
     font-size: 5rem;
+    color: var(--white);
 }
 .xparaf{
     font-size: 2rem;
+    color: var(--white);
 }
 /* AKHIR RANGKUMAN SETTING */
 
