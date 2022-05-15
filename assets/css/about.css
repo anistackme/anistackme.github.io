@@ -1,81 +1,210 @@
-html{
+html {
     background-color: var(--gray-2);
 }
 
-body{
+body {
     width: 100%;
+    background-color: var(--gray-2);
 }
 
-header{
+header {
     position: relative;
-    background-color: var(--gray-7);
-    min-height: 10rem;
+    background-color: darkslateblue;
+    min-height: 5rem;
     overflow-y: hidden;
+    background-image: url('https://www.pikpng.com/pngl/b/129-1294604_download-confetti-png-transparent-picture-transparent-background-confetti.png');
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: soft-light;
+    z-index: 10;
 }
 
-section{
-    min-height: 100vh;
-    width: 100%;
-    margin-block: 2rem;
+section {
+    /* margin-block: 5rem; */
+    padding-block: 3rem;
+    max-width: 95%;
 }
 
-.wrapp{
-    margin: auto;
+.navigasi_links{
+    gap: 0;
+}
+
+.pembagi{
+    min-width: 100%;
+    height: 20vh;
+}
+
+.tdark {
+    color: var(--gray-7);
+}
+
+.wrappers {
     width: var(--width);
     max-width: var(--maxwidth);
     padding-inline: var(--wpadding);
-}
-
-.hero__about{
-    position: absolute;
-    top: -250px; left: 0; right: 0;
-    background-size: cover;
-    background-repeat: no-repeat;
-    filter: brightness(60%);
-    width: 100%;
     margin: auto;
 }
 
-.coming, .coming h1{
+/** page layout **/
+main {
+	display: grid;
+	grid-template-columns: 1fr 20%;
+	max-width: var(--maxwidth);
+    margin-top: 3rem;
+	margin-inline: auto;
+    color: var(--gray-7);
+}
+
+main .atitle {
+    color: var(--blue-9);
+    font-size: 2rem;
+}
+
+main .asubtitle {
+    font-size: var(--font-size-3);
+    padding-bottom: 1rem;
+}
+
+main .paraff{
+    min-width: 100%;
+    margin-bottom: 2rem;
+    text-align: justify;
+}
+
+main img{
+    padding: 1rem;
+    background-color: var(--gray-3);
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+}
+
+main > nav {
+	position: sticky;
+	top: 2rem;
+	align-self: start;
+}
+
+/* 3. ScrollSpy active styles (see JS tab for activation) */
+.section-nav li.active > a {
+	color: var(--gray-8);
+	font-weight: 600;
+}
+
+/* Sidebar Navigation */
+.section-nav {
+	padding-left: 0;
+	border-left: 4px solid var(--grape-8);
+}
+
+.section-nav a {
+	text-decoration: none;
+	display: block;
+	padding: 5px 0;
+	color: var(--gray-5);
+	transition: all 50ms ease-in-out; /* 💡 This small transition makes setting of the active state smooth */
+}
+
+.section-nav a:hover,
+.section-nav a:focus {
+	color: var(--grape-8);
+}
+
+ul, ol {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+li {
+	margin-left: 1rem;
+}
+
+.slider-konten{
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
-    color: var(--gray-8);
-    font-size: var(--font-size-8);
-    margin: auto;
-    z-index: 2;
+    max-width: 70vw;
+    /* filter: brightness(50%); */
 }
-    .coming img{
-        position: absolute;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        top: 0; left: 25%;
-        transform: translate(10vw, 10vw);
-        width: 30%;
-        background-size: cover;
-        background-position: center;
-        filter: opacity(.06);
-        z-index: 1;
+
+.slider-konten img{
+    position: relative;
+    width: auto;
+    max-height: 100%;
+    object-fit: cover;
+    /* background-color: tomato; */
+    background-repeat: no-repeat;
+}
+
+.menux3{
+    display: none;
+}
+
+@media (max-width:768px) {
+    .section-nav{
+        position: fixed;
+        min-height: 100vh;
+        left: 0; top: 0;
+        transform: translateX(-500px);
+        transition: transform 0.8s ease-in-out;
+        background-color: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(5px);
+        line-height: 3;
+        padding-top: 3rem;
+        padding-right: 20px;
+        z-index: 100;
     }
-    .btnnow2{
-        position: relative;
-        display: flex;
-        align-items: center;
-        padding: 10px 20px;
-        max-width: max-content;
-        background-color: var(--gray-7);
+    .section-nav.showed{
+        transform: translateX(0px);
+    }
+    .section-nav li.active > a {
+        color: var(--gray-1);
+        font-weight: 600;
+    }
+    .section-nav a {
+        text-decoration: none;
+        display: block;
+        padding: 5px 0;
+        color: var(--gray-5);
+        transition: all 50ms ease-in-out; /* 💡 This small transition makes setting of the active state smooth */
+    }
+    
+    .section-nav a:hover,
+    .section-nav a:focus {
+        color: var(--gray-1);
+    }
+    .menux3{
+        display: block;
+        position: fixed;
+        right: 20px; top: 55px;
+        padding: 2px 5px;
+        border: 2px solid var(--white);
+        border-radius: 5px;
         color: var(--white);
-        gap: 1rem;
-        margin-block-start: 3rem;
-        margin-inline: auto;
-        z-index: 5;
-        transition: ease-in-out 300ms;
+        z-index: 1003;
+        font-size: var(--font-size-0);
     }
-        .btnnow2:hover{
-            background-color: var(--grape-5);
-        }
 
+    section{
+        margin-block: 0;
+        max-width: 100%;
+        overflow: hidden;
+    }
 
+    main {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+    }
+
+    main .atitle {
+        color: var(--blue-9);
+        font-size: 2rem;
+        margin-bottom: 3rem;
+    }
+    
+    main .paraff {
+        text-align: left;
+        font-size: var(--font-size-1);
+    }
+    .slider-konten{
+        margin: auto;
+        max-height: 50vh;
+    }
+}
