@@ -1,33 +1,4 @@
-// INCLUDE HTML SETTING
-function includeHTML() {
-  var z, i, elmnt, file, xhttp;
-
-  z = document.getElementsByTagName("*");
-  for (i = 0; i < z.length; i++) {
-    elmnt = z[i];
-
-    file = elmnt.getAttribute("w3-include-html");
-    if (file) {
-
-      xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4) {
-          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-
-          elmnt.removeAttribute("w3-include-html");
-          includeHTML();
-          }
-      }
-      xhttp.open("GET", file, true);
-      xhttp.send();
-
-      return;
-      }
-  }
-}
-
-// SCROLL TO TOP
+// SCROLL TO TOP<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.1/css/all.css" />
 function scrollTop(){
   const scrollTop = document.getElementById('scroll-top');
   // kalo lewat dari 60 viewport height, nambahin show-scroll class ke tag scroll-top class
