@@ -1,45 +1,96 @@
-*,*::before,*::after{padding: 0;margin: 0;box-sizing: border-box;}
+html{
+    background-color: var(--gray-2);
+}
 
-.kartu2 {
+body{
+    width: 100%;
+    background-color: var(--gray-2);
+}
+
+html {
+    background-color: var(--gray-2);
+}
+
+body {
+    width: 100%;
+    background-color: var(--gray-2);
+}
+
+header {
     position: relative;
-    color: var(--light);
-    margin-block: 15px;;
-    overflow: hidden;
-    filter: opacity(0.8);
-    transition: ease-out 400ms;
-}
-    .kartu2:hover {filter: opacity(1);}
-
-
-.kartu2 h3{margin-bottom: 1rem;}
-
-
-    .kartu__blog
-    {min-height: 20rem;flex: 1 1;}
-
-    .kartu__blog {min-width: 20rem;max-width: 100%;}
-
-.kartu2 .img1,.kartu2 .img2
-    {object-fit: cover;margin-bottom: 2rem;width: 100%;}
-
-    .kartu2 .img1{height: 25rem;}
-    .kartu2 .img2{height: 15rem;}
-
-.kartu__grid
-{display: flex;justify-content: space-around;flex-wrap: wrap;gap: 3rem;}
-
-    .kartu__grid a{color: var(--light);}
-
-
-@media(min-width:426px) and (max-width:768px) {
-    h2{font-size: var(--font-size-5);}
-    .kartu2 .img1 {height: auto;}
+    background-color: darkslateblue;
+    min-height: 5rem;
+    overflow-y: hidden;
+    background-image: url('https://www.pikpng.com/pngl/b/129-1294604_download-confetti-png-transparent-picture-transparent-background-confetti.png');
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: soft-light;
+    z-index: 10;
 }
 
-@media(min-width:319px) and (max-width:425px) {
-    h2{margin-block-end: 0rem;font-size: var(--font-size-4);}
-    h3{font-size: var(--font-size-3);}
-    .kartu2{padding: 1rem;}
-    .kartu2 .img1,.kartu2 .img2 {height: auto;}
-    .kartu__grid {gap: 0rem;}
+section{
+    min-height: 100vh;
+    width: 100%;
+    margin-block: 2rem;
 }
+
+.wrapp{
+    margin: auto;
+    width: var(--width);
+    max-width: var(--maxwidth);
+    padding-inline: var(--wpadding);
+}
+
+.hero__about{
+    position: absolute;
+    top: -250px; left: 0; right: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: brightness(60%);
+    width: 100%;
+    margin: auto;
+}
+
+.coming, .coming h1{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    color: var(--gray-8);
+    font-size: var(--font-size-8);
+    margin: auto;
+    z-index: 2;
+}
+    .coming img{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0; left: 25%;
+        transform: translate(10vw, 10vw);
+        width: 30%;
+        background-size: cover;
+        background-position: center;
+        filter: opacity(.06);
+        z-index: 1;
+    }
+    .btnnow2{
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 10px 20px;
+        max-width: max-content;
+        background-color: var(--gray-7);
+        color: var(--white);
+        gap: 1rem;
+        margin-block-start: 3rem;
+        margin-inline: auto;
+        z-index: 5;
+        transition: ease-in-out 300ms;
+    }
+        .btnnow2:hover{
+            background-color: var(--grape-5);
+        }
+
+
