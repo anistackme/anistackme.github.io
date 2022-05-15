@@ -158,11 +158,12 @@ nav.navigasi .brand{
     transition: ease-out 200ms;
 }
 .kepala__konten .btnnow i{
-    padding-left: 5px;
+    padding-left: 10px;
+    margin-right: 10px;
     animation:
-        var(--animation-slide-out-right) infinite,
-        var(--animation-fade-out) infinite;
-    animation-timing-function: var(--ease-2);
+    var(--animation-slide-out-right) infinite alternate;
+    /* var(--animation-fade-out) infinite; */
+    animation-timing-function: var(--ease-1);
     animation-duration: 2s;
 }
     .kepala__konten .btnnow:hover{
@@ -233,7 +234,7 @@ section.rangkuman{
     margin-block: 15px;;
 }
 .kartu__grid
-{display: flex;justify-content: space-around;flex-wrap: wrap;gap: 1rem;width: var(--width);}
+{display: flex;justify-content: space-around;flex-wrap: wrap;gap: 1rem;width: var(--width);margin-top: 1rem;}
 
 .kartu__projects {
     min-width: 15rem;
@@ -259,18 +260,36 @@ section.rangkuman{
     background-blend-mode: soft-light;
 }
 .purple{
-    background-color: #911ebe;
+    background-color: #8519af;
     background-image: url('https://dbdzm869oupei.cloudfront.net/img/sticker/preview/75499.png');
     background-position: center;
     background-size: cover;
     background-blend-mode: soft-light;
 }
+.blue{
+    background-color: #745feb;
+    background-image: url('https://www.maxpixel.net/static/photo/640/Drawing-Cut-Study-Sample-School-Sketch-6757104.png');
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: soft-light;
+}
+.grayosh{
+    background-color: #4a4f50;
+    background-image: url('https://www.anindote.com/wp-content/uploads/2021/10/pattern-reversed-918x555.webp');
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: soft-light;
+    position: relative;
+    overflow: hidden;
+}
 
-.orange,.green,.purple{
+.orange,.green,.purple,.grayosh,.blue{
     transition: ease-out 300ms;}
 
 .orange:hover,
 .green:hover,
+.blue:hover,
+.grayosh:hover,
 .purple:hover{
     filter:brightness(110%);
     box-shadow: var(--shadow-3);
@@ -279,12 +298,177 @@ section.rangkuman{
 .kartu__projects i{
     font-size: 5rem;
     color: var(--white);
+    padding-bottom: 10px;
 }
 .xparaf{
+    display: flex;
+    align-items: flex-start;
     font-size: 2rem;
+    margin-bottom: 10px;
     color: var(--white);
 }
+
+
+
+.grayosh:before {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    opacity: 0;
+    background: var(--white);
+    box-shadow: 0 0 20px 3px var(--white);
+    -webkit-transform: skewX(-30deg);
+    -moz-transform: skewX(-30deg);
+    -ms-transform: skewX(-30deg);
+    -o-transform: skewX(-30deg);
+    transform: skewX(-30deg);
+    -webkit-animation: shinyy 4s 0s infinite;
+    -moz-animation: shinyy 4s 0s infinite;
+    animation: shinyy 4s 0s infinite;
+}
+
+@-webkit-keyframes shinyy {
+    from {
+    opacity: 0;
+    left: -150%;
+    }
+    50% {
+    opacity: 0.3;
+    }
+    to {
+    opacity: 0;
+    left: 550%;
+    }
+}
+@-moz-keyframes shinyy {
+    from {
+    opacity: 0;
+    left: -150%;
+    }
+    50% {
+    opacity: 0.3;
+    }
+    to {
+    opacity: 0;
+    left: 550%;
+    }
+}
+@keyframes shinyy {
+    from {
+    opacity: 0;
+    left: -150%;
+    }
+    50% {
+    opacity: 0.3;
+    }
+    to {
+    opacity: 0;
+    left: 550%;
+    }
+}
 /* AKHIR RANGKUMAN SETTING */
+
+
+
+
+/* TOOLTIP */
+.badge {
+    display: inline-block;
+    margin-inline-start: 1rem;
+    padding-inline: 3px;
+    border-radius: 4px;
+    color: var(--white);
+    font-size: 10px;
+    font-weight: 400;
+    text-align: center;
+}
+
+#icn-ftr{padding-inline-end: 10px;}
+
+    .b-new{
+        border: none;
+        font-size: var(--font-size-0);
+        color: var(--white);
+        padding: 2px 5px;
+        background-color: var(--blue-4);
+    }
+
+    .b-baru{
+        border: none;
+        font-size: var(--font-size-0);
+        color: var(--white);
+        padding: 2px 5px;
+        background-color: var(--orange-4);
+    }
+
+/* START TOOLTIP */
+[data-tooltip] {
+    position: relative;
+    z-index: 3;
+    cursor: pointer;
+}
+    [data-tooltip]:before,
+    [data-tooltip]:after {
+        visibility: hidden;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+        opacity: 0;
+        pointer-events: none;
+        transition: ease-out 300ms;
+    }
+    /* POSISI BUAT TOOLTIP NYA */
+    [data-tooltip]:before {
+        position: absolute;
+        bottom: 150%;
+        left: 50%;
+        transform: translateX(50%);
+        margin-bottom: 5px;
+        margin-inline: -90px;
+        padding-inline: 10px;
+        padding-block: 5px;
+        width: max-content;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        background-color: hsla(225, 5%, 16%, 0.9);
+        font-weight: 400;
+        color: var(--white);
+        content: attr(data-tooltip);
+        text-align: center;
+        font-size: var(--font-size-0);
+        line-height: 1.2;
+    }
+    /* NGATUR SEGITIGA KECILNYA BUAT POPUP */
+    [data-tooltip]:after {
+        content: " ";
+        position: absolute;
+        bottom: 150%;
+        left: 50%;
+        margin-left: -5px;
+        width: 0;
+        border-top: 5px solid #000;
+        border-top: 5px solid hsla(0, 0%, 20%, 0.9);
+        border-right: 5px solid transparent;
+        border-left: 5px solid transparent;
+        font-size: 0;
+        line-height: 0;
+    }
+    /* BUAT SHOW PAS HOVER */
+    [data-tooltip]:hover:before,
+    [data-tooltip]:hover:after {
+        visibility: visible;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+        filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+        opacity: 1;
+    }
+
+
+
+
 
 
 
@@ -323,13 +507,18 @@ section.interest .boxx{
 
 section.interest .xparaf{
     font-size: 3rem;
+    display: flex;
     color: var(--gray-7);
     line-height: 1.5;
 }
 section.interest i.iconx{
     font-size: 6rem;
-    color: var(--grape-5);
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.308);
+    color: var(--white);
+    padding: 1rem;
+    background-color: var(--grape-5);
+    border-radius: 1rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.308);
+    box-shadow: var(--shadow-2);
 }
 
 section.interest .boxx2{
@@ -450,6 +639,9 @@ footer{
 @media(min-width:319px) and (max-width:580px) {
     html{
         font-size: 90%;
+    }
+    .xparaf{
+        font-size: 1.2rem;
     }
     .xsubtitle{
         font-size: var(--font-size-4);
