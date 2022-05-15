@@ -27,6 +27,15 @@ function includeHTML() {
   }
 }
 
+// SCROLL TO TOP
+function scrollTop(){
+  const scrollTop = document.getElementById('scroll-top');
+  // kalo lewat dari 60 viewport height, nambahin show-scroll class ke tag scroll-top class
+  if(this.scrollY >= 60) scrollTop.classList.add('show-scroll'); else scrollTop.classList.remove('show-scroll')
+}
+window.addEventListener('scroll', scrollTop);
+
+// INI BUAT TOMBOL SIDEBAR
 document.querySelector('.menux').addEventListener('click', () => document.querySelector('.navigasi_links').classList.toggle('show'));
 
 // SCROLL REVEAL SETTING DISINI
