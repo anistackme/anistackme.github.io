@@ -32,14 +32,15 @@
     font-family: 'Montserrat' Arial, Helvetica, sans-serif;
 }
 
-::-webkit-scrollbar{width: 10px;background-color: var(--gray-8);}
-::-webkit-scrollbar-thumb{background-color: var(--gray-6);}
+::-webkit-scrollbar{width: 10px;background-color: inherit;}
+::-webkit-scrollbar-thumb{background-color: var(--blue-1);}
 ::-webkit-scrollbar-thumb:hover{background-color: var(--orange-5);}
 
 ::selection{background-color: var(--orange-5);color: var(--white);}
 
 body{
     height: 100vh;
+    background-color: var(--gray-2);
 }
 
 .link.nyala{
@@ -93,9 +94,9 @@ nav.navigasi .brand{
     font-weight: 400;
     color: var(--white);
 }
-.navigasi_links a:hover{
-    text-decoration: underline 2px;
-}
+    .navigasi_links a:hover{
+        text-decoration: underline 2px;
+    }
 
 .menux{display: none;}
 /* AKHIR NAVIGASI SETTING */
@@ -128,10 +129,12 @@ nav.navigasi .brand{
     filter: brightness(50%);
     z-index: 1;
 }
+
 .kepala__konten{
     position: relative;
     z-index: 2;
 }
+
 .kepala__konten .title{
     color: var(--white);
     font-weight: 800;
@@ -141,10 +144,12 @@ nav.navigasi .brand{
     font-family: 'Oswald', Arial, Helvetica, sans-serif;
     text-shadow: 5px 1px 10px var(--dark);
 }
+
 .kepala__konten .subtitle{
     color: var(--white);
     text-shadow: 5px 1px 10px var(--dark);
 }
+
 .kepala__konten .btnnow{
     display: flex;
     width: max-content;
@@ -157,8 +162,9 @@ nav.navigasi .brand{
     box-shadow: var(--shadow-1);
     transition: ease-out 200ms;
 }
+
 .kepala__konten .btnnow i{
-    padding-left: 10px;
+    padding-left: 5px;
     margin-right: 10px;
     animation:
     var(--animation-slide-out-right) infinite alternate;
@@ -166,6 +172,7 @@ nav.navigasi .brand{
     animation-timing-function: var(--ease-1);
     animation-duration: 2s;
 }
+
     .kepala__konten .btnnow:hover{
         background-color: var(--white);
         color: var(--gray-8);
@@ -191,6 +198,7 @@ section.rangkuman{
     overflow: hidden;
     padding-bottom: 3rem;
 }
+
 .backgrounddrop{
     position: absolute;
     top: 0; left: 0;
@@ -200,6 +208,7 @@ section.rangkuman{
     width: 100%;
     z-index: 1;
 }
+
 .kontainer__konten{
     position: relative;
     width: var(--width);
@@ -212,6 +221,7 @@ section.rangkuman{
     z-index: 5;
     padding-block: 3rem;
 }
+
 .xsubtitle{
     color: var(--dark);
     font-weight: 500;
@@ -226,6 +236,14 @@ section.rangkuman{
     padding-inline: 4rem;
 }
 
+.kartu__grid{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: var(--width);
+    margin-top: 1rem;}
+
 .kartu {
     position: relative;
     border-radius: 10px;
@@ -233,8 +251,6 @@ section.rangkuman{
     color: var(--dark);
     margin-block: 15px;;
 }
-.kartu__grid
-{display: flex;justify-content: space-around;flex-wrap: wrap;gap: 1rem;width: var(--width);margin-top: 1rem;}
 
 .kartu__projects {
     min-width: 15rem;
@@ -309,7 +325,7 @@ section.rangkuman{
 }
 
 
-
+/* SHIMERING SHINY SETTING */
 .grayosh:before {
     content: "";
     display: block;
@@ -334,7 +350,7 @@ section.rangkuman{
 @-webkit-keyframes shinyy {
     from {
     opacity: 0;
-    left: -150%;
+    left: -250%;
     }
     50% {
     opacity: 0.3;
@@ -347,7 +363,7 @@ section.rangkuman{
 @-moz-keyframes shinyy {
     from {
     opacity: 0;
-    left: -150%;
+    left: -250%;
     }
     50% {
     opacity: 0.3;
@@ -360,7 +376,7 @@ section.rangkuman{
 @keyframes shinyy {
     from {
     opacity: 0;
-    left: -150%;
+    left: -250%;
     }
     50% {
     opacity: 0.3;
@@ -375,7 +391,8 @@ section.rangkuman{
 
 
 
-/* TOOLTIP */
+
+/* BADGE SETTING */
 .badge {
     display: inline-block;
     margin-inline-start: 1rem;
@@ -386,8 +403,6 @@ section.rangkuman{
     font-weight: 400;
     text-align: center;
 }
-
-#icn-ftr{padding-inline-end: 10px;}
 
     .b-new{
         border: none;
@@ -404,6 +419,11 @@ section.rangkuman{
         padding: 2px 5px;
         background-color: var(--orange-4);
     }
+/* AKHIR BADGE SETTING */
+
+
+
+
 
 /* START TOOLTIP */
 [data-tooltip] {
@@ -425,9 +445,10 @@ section.rangkuman{
         position: absolute;
         bottom: 150%;
         left: 50%;
-        transform: translateX(50%);
+        transform: translateX(-50%);
+        /* margin-bottom: 5px; */
+        margin: auto;
         margin-bottom: 5px;
-        margin-inline: -90px;
         padding-inline: 10px;
         padding-block: 5px;
         width: max-content;
@@ -467,12 +488,6 @@ section.rangkuman{
     }
 
 
-
-
-
-
-
-
 /* JOIN FIGMA SETTING */
 section.interest{
     position: relative;
@@ -489,6 +504,7 @@ section.interest{
     display: flex;
     align-items: center;
 }
+
     .bungkus__interest{
         display: flex;
         align-items: center;
@@ -511,11 +527,12 @@ section.interest .xparaf{
     color: var(--gray-7);
     line-height: 1.5;
 }
+
 section.interest i.iconx{
     font-size: 6rem;
     color: var(--white);
-    padding: 1rem;
-    background-color: var(--grape-5);
+    padding: 1rem 1.3rem;
+    background-color: var(--blue-5);
     border-radius: 1rem;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.308);
     box-shadow: var(--shadow-2);
@@ -526,6 +543,7 @@ section.interest .boxx2{
     /* margin: auto; */
     gap: 2rem;
 }
+
 section.interest .btnnow2{
     display: flex;
     align-items: center;
@@ -536,7 +554,7 @@ section.interest .btnnow2{
     transition: ease-in-out 300ms;
 }
     section.interest .btnnow2:hover{
-        background-color: var(--grape-5);
+        background-color: var(--blue-5);
     }
 /* AKHIR FIGMA JOIN */
 
@@ -607,7 +625,7 @@ footer{
         padding: 50px;
         transform: translateX(-500px);
         transition: transform 0.8s ease-in-out;
-        z-index: 1000;
+        z-index: 1003;
         background-color: var(--gray-7);
         line-height: 3;
     }
