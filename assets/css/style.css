@@ -305,24 +305,35 @@ section.rangkuman{
     overflow: hidden;
 }
 
-.orange,.green,.purple,.grayosh,.blue{
+.orange,.green,.purple,.grayosh,.blue {
     transition: ease-out 300ms;}
 
 .orange:hover,
 .green:hover,
 .blue:hover,
 .grayosh:hover,
-.purple:hover{
+.purple:hover {
     filter:brightness(110%);
     box-shadow: var(--shadow-3);
 }
 
-.kartu__projects .icn-kartu{
+.kartu__projects .icn-kartu {
     font-size: 5rem;
     fill: var(--white);
     padding-bottom: 10px;
 }
-.xparaf{
+
+.icn-kartu .svgcall1{
+    border: none;
+    stroke: none;
+}
+
+.icn-kartu .svgcall2{
+    border: none;
+    stroke: none;
+}
+
+.xparaf {
     display: flex;
     align-items: flex-start;
     font-size: 2rem;
@@ -335,7 +346,7 @@ section.rangkuman{
 .grayosh:before {
     content: "";
     display: block;
-    width: 80px;
+    width: 120px;
     height: 100%;
     position: absolute;
     top: 0%;
@@ -348,9 +359,9 @@ section.rangkuman{
     -ms-transform: skewX(-30deg);
     -o-transform: skewX(-30deg);
     transform: skewX(-30deg);
-    -webkit-animation: shinyy 4s 0s infinite;
-    -moz-animation: shinyy 4s 0s infinite;
-    animation: shinyy 4s 0s infinite;
+    -webkit-animation: shinyy 4s ease 0s infinite;
+    -moz-animation: shinyy 4s ease 0s infinite;
+    animation: shinyy 4s ease 0s infinite;
 }
 
 @-webkit-keyframes shinyy {
@@ -534,13 +545,14 @@ section.interest .xparaf{
     line-height: 1.5;
 }
 
-section.interest i.iconx{
-    font-size: 6rem;
-    color: var(--white);
-    padding: 1rem 1.3rem;
-    background-color: var(--blue-5);
+section.interest .iconx{
+    width: 7rem;
+    height: auto;
+    fill: var(--white);
+    padding: 1rem 1rem;
+    background: rgb(98,75,255);
+    background: linear-gradient(0deg, rgba(98,75,255,1) 0%, rgba(191,101,255,1) 100%);
     border-radius: 1rem;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.308);
     box-shadow: var(--shadow-2);
 }
 
@@ -634,7 +646,8 @@ footer{
         left: 0;
         width: 200px;
         height: 100%;
-        padding: 50px;
+        padding-block: 40px;
+        padding-inline: 30px;
         transform: translateX(-500px);
         transition: transform 0.8s ease-in-out;
         z-index: 1003;
@@ -648,12 +661,13 @@ footer{
         display: block;
         position: fixed;
         right: 20px; top: 20px;
-        padding: 2px 5px;
-        border: 2px solid var(--white);
+        padding: 5px 8px;
         border-radius: 5px;
-        color: var(--white);
+        color: var(--dark);
+        background-color: var(--white);
         z-index: 1001;
         font-size: var(--font-size-0);
+        box-shadow: var(--shadow-1);
     }
     .kontainer__konten{
         width: 100%;
@@ -703,7 +717,6 @@ footer{
     .bungkus__interest{
         align-items: flex-start;
         flex-direction: column;
-        width: 100%;
         min-height: 80vh;
     }
     section.interest .xparaf {
