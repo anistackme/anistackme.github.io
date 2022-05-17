@@ -1,5 +1,5 @@
 AuthName "member"
 AuthType Basic
-AuthUserFile ./.htpasswds
+AuthUserFile ../member/.htpasswds
 
 Require valid-user
