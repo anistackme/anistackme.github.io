@@ -34,7 +34,7 @@ $(document).ready(function(){
       slideToShow: 1,
       slideToScroll: 1,
       infinite: false,
-      arrows: true,
-      dots: false
+      arrows: false,
+      dots: true
     });
   });
