@@ -1,7 +1,7 @@
-AuthUserFile ./.htuwunyan
+AuthUserFile ./.htpasswd
 AuthType Basic
 AuthName "My Secret Page"
 
-<Files "member/index.html">
+<Files "index.html">
   Require valid-user
 </Files>
