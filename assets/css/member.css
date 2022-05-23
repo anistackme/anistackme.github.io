@@ -1,0 +1,396 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap");
+
+
+html {
+    min-height: 100vh;
+    background-color: var(--gray-2);
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* START TOOLTIP */
+[data-tooltip] {
+    position: relative;
+    z-index: 200;
+    cursor: pointer;
+}
+    [data-tooltip]:before,
+    [data-tooltip]:after {
+        visibility: hidden;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+        opacity: 0;
+        pointer-events: none;
+        transition: ease-out 300ms;
+    }
+    /* POSISI BUAT TOOLTIP NYA */
+    [data-tooltip]:before {
+        position: absolute;
+        bottom: 105%;
+        left: 50%;
+        transform: translateX(-50%);
+        /* margin-bottom: 5px; */
+        margin: auto;
+        margin-bottom: 5px;
+        padding-inline: 10px;
+        padding-block: 5px;
+        width: max-content;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        background-color: hsla(225, 5%, 16%, 0.9);
+        font-weight: 400;
+        color: var(--white);
+        content: attr(data-tooltip);
+        text-align: center;
+        font-size: var(--font-size-0);
+        line-height: 1.2;
+    }
+    /* NGATUR SEGITIGA KECILNYA BUAT POPUP */
+    [data-tooltip]:after {
+        content: " ";
+        position: absolute;
+        bottom: 105%;
+        left: 50%;
+        margin-left: -5px;
+        width: 0;
+        border-top: 5px solid #000;
+        border-top: 5px solid hsla(0, 0%, 20%, 0.9);
+        border-right: 5px solid transparent;
+        border-left: 5px solid transparent;
+        font-size: 0;
+        line-height: 0;
+    }
+    /* BUAT SHOW PAS HOVER */
+    [data-tooltip]:hover:before,
+    [data-tooltip]:hover:after {
+        visibility: visible;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+        filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+        opacity: 1;
+    }
+
+.alert {
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    width: max-content;
+    padding: 10px;
+    color: var(--white);
+    background-color: #f316346e;
+    border-left: 5px solid #ff4141bd;
+    opacity: 1;
+    transition: opacity 0.6s;
+    z-index: 100;
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: var(--white);
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+header {
+    position: relative;
+    background-color: darkslateblue;
+    min-height: var(--minheight);
+    overflow-y: hidden;
+    background-image: url('https://p4.wallpaperbetter.com/wallpaper/440/135/814/anime-that-time-i-got-reincarnated-as-a-slime-rimuru-tempest-wallpaper-preview.jpg');
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: soft-light;
+    z-index: 10;
+}
+
+.kont {
+    position: relative;
+    width: var(--width);
+    max-width: var(--maxwidth);
+    min-height: 100vh;
+    height: auto;
+    margin: auto;
+}
+
+.kont__pembagi {
+    width: 100%;
+    height: 1rem;
+    margin-top: 2rem;
+    border-top: 1px solid var(--gray-7);
+    opacity: .2;
+}
+
+.inn__kont {
+    position: relative;
+    width: 100%;
+    max-width: var(--maxwidth);
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* SIDEBAR KONTEN */
+.side__kont {
+    position: relative;
+    width: 100%;
+    max-width: 20vw;
+    min-height: 100vh;
+    margin: var(--wpadding);
+}
+
+.side__kont-inn {
+    position: sticky;
+    top: 2rem;
+    align-self: start;
+}
+
+/* MAIN KONTEN */
+.main__kont {
+    position: relative;
+    width: 100%;
+    max-width: 1024px;
+    /* background-color: wheat; */
+    margin: var(--wpadding);
+}
+
+.h4__kont {
+    color: var(--gray-7);
+    font-size: var(--font-size-5);
+}
+
+.slide__kont {
+    position: relative;
+    width: 100%;
+    min-height: 10rem;
+    margin-block: 2rem;
+}
+    .slick-list { padding:0 3rem 0 0 !important; }
+    .slick-slide { margin-inline-end: 1rem;}
+
+.slide__kont-inn {
+    position: relative;
+    min-width: 10rem;
+    min-height: 10rem;
+    padding: 1rem;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.slide__kont-inn img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%);
+    z-index: 9;
+    transition: 200ms ease-out;
+}
+
+.title__kont {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    padding: 0 5px;
+    /* background-color: var(--gray-3); */
+    font-weight: 600;
+    color: var(--white);
+    z-index: 10;
+}
+
+.subtitle__kont {
+    position: absolute;
+    bottom: 35px;
+    color: var(--white);
+    font-weight: bold;
+    font-size: var(--font-size-3);
+    z-index: 10;
+}
+
+.paraf__kont {
+    position: absolute;
+    bottom: 10px;
+    color: var(--white);
+    z-index: 10;
+}
+
+/* BAGIAN CARD */
+.kont__kartu-grid {
+    margin-block: 3rem;
+}
+
+.kont__kartu {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 1rem;
+}
+
+@media (min-width: 30em) {
+    .kont__kartu {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 60em) {
+    .kont__kartu {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    position: relative;
+    min-height: 100%;
+    background: var(--gray-1);
+    color: var(--gray-7);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #0000001a;
+    overflow: hidden;
+    text-decoration: none;
+    transition: all 100ms ease-in;
+    filter: grayscale(1);
+}
+    .card:hover {
+        top: -2px;
+        box-shadow: 0 4px 5px #00000033;
+        filter: grayscale(0);
+    }
+
+.card article {
+    padding: 1rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card h1 {
+    font-size: var(--font-size-2);
+    margin: 0;
+    margin-bottom: 10px;
+    color: var(--gray-7);
+}
+
+.card p {
+    flex: 1;
+    line-height: 1.4;
+}
+
+.card span {
+    font-size: 12px;
+    font-weight: bold;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 2em 0 0 0;
+}
+
+.card .thumb {
+    padding-bottom: 60%;
+    background-size: cover;
+    background-position: center center;
+}
+
+@media (min-width: 60em) {
+    .item-1 {
+    grid-column: 1/span 2;
+    }
+    .item-1 h1 {
+    font-size: 24px;
+    }
+}
+
+.kont__link {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1;
+    gap: 1rem;
+    padding-block: 1rem;
+}
+
+.kont__download {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    width: 100%;
+    color: var(--gray-7);
+    background-color: var(--gray-3);
+    font-weight: 500;
+}
+
+.kont__ctn-downd {
+    display: flex;
+    gap: 5rem;
+}
+
+.kont__dtxt-a {
+    padding: 5px 10px;
+    color: var(--white);
+    background-color: var(--orange-4);
+}
+
+.kont__dtxt-f,
+.kont__dtxt-t {
+    font-weight: 400;
+}
+
+
+
+
+/* RESPONSIVE */
+@media (max-width: 1200px) {
+
+    html {
+        font-size: 95%;
+    }
+
+    .side__kont {
+        display: none;
+    }
+
+    .main__kont {
+        max-width: var(--width);
+        margin: auto;
+    }
+
+}
+
+@media (max-width: 1024px) {
+
+    .inn__kont {
+        margin-top: 2rem;
+    }
+
+}
+
+@media (max-width: 768px) and (min-width: 600px) {
+
+    html {
+        font-size: 75%;
+    }
+
+}
+
+@media (max-width: 426px) {
+
+    html {
+        font-size: 70%;
+    }
+
+    .kont__ctn-downd {
+        gap: 1rem;
+    }
+
+}
