@@ -19,7 +19,7 @@ body {
 header {
     position: relative;
     background-color: darkslateblue;
-    min-height: 5rem;
+    min-height: var(--minheight);
     overflow-y: hidden;
     background-image: url('https://www.pikpng.com/pngl/b/129-1294604_download-confetti-png-transparent-picture-transparent-background-confetti.png');
     background-position: center;
