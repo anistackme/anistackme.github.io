@@ -13,6 +13,7 @@
 /* WIDTH SETTING */
     --maxwidth: 1440px;
     --width: 95%;
+    --minheight: 4.1rem;
     --wpadding: 2rem;
 }
 @media (prefers-color-scheme: light) {
@@ -228,7 +229,7 @@ section.rangkuman{
     padding-block: 3rem;
 }
 
-.xsubtitle{
+.xsubtitle {
     color: var(--dark);
     font-weight: 500;
     text-align: center;
@@ -242,20 +243,21 @@ section.rangkuman{
     padding-inline: 4rem;
 }
 
-.kartu__grid{
+.kartu__grid {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 1rem;
     width: var(--width);
-    margin-top: 1rem;}
+    margin-top: 1rem;
+}
 
 .kartu {
     position: relative;
     border-radius: 10px;
     padding: 2rem 2rem;
     color: var(--dark);
-    margin-block: 15px;;
+    margin-block: 15px;
 }
 
 .kartu__projects {
