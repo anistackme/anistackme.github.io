@@ -10,7 +10,7 @@ body {
 header {
     position: relative;
     background-color: darkslateblue;
-    min-height: 5rem;
+    min-height: var(--minheight);
     overflow-y: hidden;
     background-image: url('https://www.pikpng.com/pngl/b/129-1294604_download-confetti-png-transparent-picture-transparent-background-confetti.png');
     background-position: center;
@@ -21,8 +21,9 @@ header {
 
 section {
     /* margin-block: 5rem; */
-    padding-block: 3rem;
+    padding-block: 1rem;
     max-width: 100%;
+    /* min-height: 100vh; */
 }
 
 .navigasi_links{
@@ -72,11 +73,13 @@ main {
 main .atitle {
     color: var(--blue-9);
     font-size: 2rem;
+    padding-top: 2rem;
 }
 
 main .asubtitle {
     font-size: var(--font-size-3);
     padding-bottom: 1rem;
+    padding-top: 2rem;
 }
 
 main .paraff{
@@ -182,7 +185,10 @@ li {
 
 @media (max-width:768px) {
     section {
+        margin-block: 0;
         padding-block: 2rem;
+        max-width: 100%;
+        overflow: hidden;
     }
 
     .kontainer__konten-kiri{
@@ -234,12 +240,6 @@ li {
         box-shadow: var(--shadow-1);
     }
 
-    section{
-        margin-block: 0;
-        max-width: 100%;
-        overflow: hidden;
-    }
-
     main {
         grid-template-columns: 1fr;
         max-width: 100%;
@@ -270,3 +270,6 @@ li {
         margin-inline: 0;
     }
 }
+
+
+/* =============== */
