@@ -81,7 +81,7 @@ html {
     border-left: 5px solid #ff4141bd;
     opacity: 1;
     transition: opacity 0.6s;
-    z-index: 100;
+    z-index: 300;
 }
 
 .closebtn {
@@ -147,6 +147,31 @@ header {
     top: 2rem;
     align-self: start;
 }
+
+.side__kont-inn ul li {
+    margin-block: 10px;
+}
+
+.side__kont-inn a {
+    color: var(--gray-7);
+}
+    .side__kont-inn a:hover {
+        color: var(--grape-7);
+        text-decoration: underline;
+    }
+
+.side__kont-inn p.sorts {
+    margin-block: 10px;
+    font-size: 12px;
+    color: var(--gray-5);
+}
+
+
+
+
+
+
+
 
 /* MAIN KONTEN */
 .main__kont {
@@ -219,7 +244,7 @@ header {
     z-index: 10;
 }
 
-/* BAGIAN CARD */
+/* BAGIAN kont__kartu-kartu */
 .kont__kartu-grid {
     margin-block: 3rem;
 }
@@ -246,7 +271,7 @@ header {
     }
 }
 
-.card {
+.kont__kartu-kartu {
     display: flex;
     flex-direction: column;
     top: 0;
@@ -258,16 +283,16 @@ header {
     box-shadow: 0 2px 5px #0000001a;
     overflow: hidden;
     text-decoration: none;
-    transition: all 100ms ease-in;
+    transition: all 300ms ease-in;
     filter: grayscale(1);
 }
-    .card:hover {
+    .kont__kartu-kartu:hover {
         top: -2px;
         box-shadow: 0 4px 5px #00000033;
         filter: grayscale(0);
     }
 
-.card article {
+.kont__kartu-kartu article {
     padding: 1rem;
     flex: 1;
     display: flex;
@@ -275,28 +300,28 @@ header {
     justify-content: space-between;
 }
 
-.card h1 {
+.kont__kartu-kartu h1 {
     font-size: var(--font-size-2);
     margin: 0;
     margin-bottom: 10px;
     color: var(--gray-7);
 }
 
-.card p {
+.kont__kartu-kartu p {
     flex: 1;
     line-height: 1.4;
 }
 
-.card span {
+.kont__kartu-kartu span {
     font-size: 12px;
     font-weight: bold;
-    color: #999;
+    color: var(--gray-5);
     text-transform: uppercase;
     letter-spacing: 0.05em;
     margin: 2em 0 0 0;
 }
 
-.card .thumb {
+.kont__kartu-kartu .thumb {
     padding-bottom: 60%;
     background-size: cover;
     background-position: center center;
@@ -389,8 +414,20 @@ header {
         font-size: 70%;
     }
 
+    .navigasi_links * {
+        font-size: var(--font-size-3);
+    }
+
     .kont__ctn-downd {
         gap: 1rem;
+    }
+
+    .kont__kartu-kartu {
+        filter: grayscale(0);
+    }
+
+    .kont__kartu-kartu h1 {
+        font-size: var(--font-size-3);
     }
 
 }
