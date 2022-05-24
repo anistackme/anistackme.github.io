@@ -79,7 +79,7 @@ nav.navigasi{
     width: var(--width);
     max-width: var(--maxwidth);
     margin: auto;
-    z-index: 100;
+    z-index: 9999;
 }
 nav.navigasi .brand{
     position: relative;
@@ -652,9 +652,9 @@ footer{
         padding-inline: 30px;
         transform: translateX(-500px);
         transition: transform 0.8s ease-in-out;
-        z-index: 1003;
         background-color: var(--gray-7);
         line-height: 3;
+        z-index: 9999;
     }
     .navigasi_links.show{
         transform: translateX(-20px);
@@ -667,9 +667,9 @@ footer{
         border-radius: 5px;
         color: var(--dark);
         background-color: var(--white);
-        z-index: 1001;
         font-size: var(--font-size-0);
         box-shadow: var(--shadow-1);
+        z-index: 9999;
     }
     .kontainer__konten{
         width: 100%;
