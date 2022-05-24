@@ -393,6 +393,7 @@ input.caridownload {
     border-radius: 5px;
     color: var(--gray-7);
     box-shadow: var(--shadow-1);
+    cursor: text;
 }
 input.caridownload:focus {
     outline: none;
@@ -446,6 +447,10 @@ input.caridownload:focus {
         font-size: var(--font-size-3);
     }
 
+    .kont__link {
+        padding-block: 2.5rem;
+    }
+
     .kont__ctn-downd {
         gap: 1rem;
     }
@@ -455,7 +460,11 @@ input.caridownload:focus {
     }
 
     .kont__kartu-kartu h1 {
-        font-size: var(--font-size-3);
+        font-size: 18px;
+    }
+
+    .kont__kartu-kartu p {
+        font-size: 14px;
     }
 
 }
