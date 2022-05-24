@@ -235,9 +235,9 @@ li {
         border-radius: 5px;
         color: var(--dark);
         background-color: var(--white);
-        z-index: 1001;
         font-size: var(--font-size-0);
         box-shadow: var(--shadow-1);
+        z-index: 9999;
     }
 
     main {
