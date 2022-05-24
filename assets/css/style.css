@@ -44,6 +44,10 @@ body{
     background-color: var(--gray-2);
 }
 
+.cpntr {
+    cursor: pointer;
+}
+
 .link.nyala{
     color: var(--orange-3);
 }
