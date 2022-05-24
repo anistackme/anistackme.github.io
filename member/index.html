@@ -60,10 +60,7 @@
         <a class="menux">☰</a>
     </header>
 
-    <div class="alert">
-        Program <b>BETA</b>, masih dalam pengembangan!
-        <span class="closebtn">&times;</span>
-    </div>
+    <span><a id="stop" class="scrollTop">▲</a></span>
 
     <div class="kont">
         <div class="inn__kont">
@@ -200,7 +197,7 @@
                             </a>
                         </div>
 
-                        <div class="item-5 downx2" data-tooltip="Un-Downloadable">
+                        <div class="item-5 downx2">
                             <a class="kont__kartu-kartu"
                                 target="_blank"                               
                                 >
@@ -215,7 +212,7 @@
                                 <h1>Classroom Elite</h1>
                                 <p>Wallpaper 8K+, Classroom of The Elite</p>
                                 
-                                <span>Un-Downloadable</span>
+                                <span data-tooltip="Un-Downloadable">Un-Downloadable</span>
 
                                 </article>
                             </a>
@@ -225,25 +222,45 @@
 
                 </div>
 
-                <h4 class="h4__kont downx2" id="newest">Link Bulanan/Tahun Tersimpan</h4>
+                <div class="penempel__kont">
+                    <h4 class="h4__kont downx2" id="newest">Link Bulanan/Tahun Tersimpan</h4>
+                    <input class="caridownload downx2" id="kolomcarii" placeholder="Cari Disini..." type="text" onkeyup="filterTextInput()" />
 
-                <!-- LINK -->
-                <div class="kont__link">
+                    <!-- LINK -->
+                    <div class="kont__link">
 
-                    <a class="kont__download downx2" data-tooltip="Release Akhir Bulan Mei">
-                        <span class="kont__ctn-downd">
-                            <span class="kont__dtxt-d">Mei 2022</span>
-                            <span class="kont__dtxt-f">1 Pack</span>
-                            <span class="kont__dtxt-t">100 Wallpaper</span>
-                        </span>
-                        <span class="kont__dtxt-a">In-Progress</span>
-                    </a>
+                        <a class="kont__download downx2" data-tooltip="Release Akhir Bulan Mei" data-content="Mei 2022">
+                            <span class="kont__ctn-downd">
+                                <span class="kont__dtxt-d">Mei 2022</span>
+                                <span class="kont__dtxt-f">1 Pack</span>
+                                <span class="kont__dtxt-t">50 Wallpaper</span>
+                            </span>
+                            <span class="kont__dtxt-a">In-Progress</span>
+                        </a>
+
+                        <a class="kont__download downx2" data-tooltip="Release Akhir Bulan Juni" data-content="Juni 2022">
+                            <span class="kont__ctn-downd">
+                                <span class="kont__dtxt-d">Juni 2022</span>
+                                <span class="kont__dtxt-f">0 Pack</span>
+                                <span class="kont__dtxt-t">0 Wallpaper</span>
+                            </span>
+                            <span class="kont__dtxt-a-3">Incoming</span>
+                        </a>
+
+                    </div>
 
                 </div>
 
             </div>
         </div>
     </div>
+
+    
+    <footer class="footer">
+        <div class="bungkus__footer">
+            <p>&copy; 2022 Anistackme Development</p>
+        </div>
+    </footer>
 
 
 
