@@ -308,7 +308,16 @@ header {
     color: var(--gray-5);
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    margin: 2em 0 0 0;
+    margin: 0;
+}
+
+.kont__kartu-kartu span.userfrom {
+    font-size: 12px;
+    font-weight: lighter;
+    color: var(--gray-6);
+    text-transform: lowercase;
+    letter-spacing: 0.05em;
+    margin: 2em 0 5px 0;
 }
 
 .kont__kartu-kartu .thumb {
