@@ -1,21 +1,21 @@
 // SLICK CAROUSEL SETTING DISINI
 $(document).ready(function(){
     $('.slide__kont').slick({        
-        infinite: false,
+        infinite: true,
         slidesToShow: 3,
         slidesToScroll: 1,
         arrows: false,
         pauseOnFocus: true,
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 5000,
-        dots: true,
+        dots: false,
         responsive: [
             {
                 breakpoint: 768,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
-                    infinite: false,
+                    infinite: true,
                     dots: false
                 }
             },
@@ -24,7 +24,7 @@ $(document).ready(function(){
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    infinite: false,
+                    infinite: true,
                     dots: false
                 }
             }
@@ -38,7 +38,6 @@ function filterTextInput() {
     text_filter = input.value.toUpperCase();
     divList = $(".kont__download");
     
-// Loop through all table rows, and hide those who don't match the search query
     for (i = 0; i < divList.length; i++) {
     td0 = divList[i].getAttribute('data-content');
     if (td0) {
@@ -60,7 +59,7 @@ $(document).ready(function() {
   
       if (topPos > 300) {
         $(scrollTop).css("display", "block");
-      } else {
+    } else {
         $(scrollTop).css("display", "none");
       }
   
