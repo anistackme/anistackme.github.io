@@ -33,7 +33,7 @@ $(document).ready(function(){
 });
 
 function filterTextInput() {
-    var input, radios, radio_filter, text_filter, td0, i, divList;
+    var input, text_filter, td0, i, divList;
     input = document.getElementById("kolomcarii");
     text_filter = input.value.toUpperCase();
     divList = $(".kont__download");
@@ -73,4 +73,10 @@ $(document).ready(function() {
       return false;
   
     });
+});
+
+$(document).ready(function(){
+
+    $('#app1').load("pgdat1.html");
+    
 });
