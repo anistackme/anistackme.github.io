@@ -1,10 +1,8 @@
-// SCROLL TO TOP<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.1/css/all.css" />
-function scrollTop(){
-  const scrollTop = document.getElementById('scroll-top');
-  // kalo lewat dari 60 viewport height, nambahin show-scroll class ke tag scroll-top class
-  if(this.scrollY >= 60) scrollTop.classList.add('show-scroll'); else scrollTop.classList.remove('show-scroll')
-}
-window.addEventListener('scroll', scrollTop);
+$(document).ready(function(){
+
+  $('#footer').load("../../assets/components/footer.htm");
+  
+});
 
 // INI BUAT TOMBOL SIDEBAR
 document.querySelector('.menux').addEventListener('click', () => document.querySelector('.navigasi_links').classList.toggle('show'));
@@ -57,3 +55,7 @@ $(document).ready(function(){
     fade: true
   });
 });
+
+
+
+// =====================
