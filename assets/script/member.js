@@ -1,4 +1,3 @@
-// SLICK CAROUSEL SETTING DISINI
 $(document).ready(function(){
     $('.slide__kont').slick({        
         infinite: true,
@@ -78,5 +77,6 @@ $(document).ready(function() {
 $(document).ready(function(){
 
     $('#app1').load("pgdat1.html");
+    $('#app2').load("pgctn1.html");
     
 });
