@@ -6,7 +6,7 @@ $(document).ready(function(){
 
 document.addEventListener('DOMContentLoaded', () => {
   const announc = document.querySelector('#announcement'),
-          announcClose = document.querySelector('.announcement-close'),
+          announcClose = document.querySelector('.closedex'),
           clearBtn = document.querySelector('.clear'),
           isShow = localStorage.getItem('isShow');
 
