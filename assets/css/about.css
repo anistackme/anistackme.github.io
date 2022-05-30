@@ -88,6 +88,11 @@ main .paraff{
     text-align: justify;
 }
 
+main .paraff a {
+    color: var(--grape-8);
+    text-decoration: dotted underline;
+}
+
 main img{
     padding: 1rem;
     background-color: var(--gray-3);
@@ -101,10 +106,9 @@ main > nav {
 	align-self: start;
 }
 
-/* 3. ScrollSpy active styles (see JS tab for activation) */
-.section-nav li.active > a {
-	color: var(--gray-8);
-	font-weight: 600;
+.section-nav a.is-active {
+    color: var(--blue-9);
+    font-weight: 600;
 }
 
 /* Sidebar Navigation */
@@ -224,7 +228,8 @@ li {
     }
     
     .section-nav a:hover,
-    .section-nav a:focus {
+    .section-nav a:focus,
+    .section-nav a.is-active {
         color: var(--gray-1);
     }
     .menux3{
@@ -259,6 +264,7 @@ li {
         text-align: left;
         font-size: var(--font-size-1);
     }
+    
     .slider-konten{
         padding: auto;
         margin: auto;
