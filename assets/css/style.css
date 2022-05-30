@@ -589,6 +589,43 @@ section.interest .btnnow2{
 /* AKHIR FIGMA JOIN */
 
 
+/* ADS SETTING */
+.announcement-kontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    color: var(--dark);
+}
+
+.announcement-kontainer .titleannouncement {
+    font-size: var(--font-size-2);
+    font-weight: 700;
+}
+
+.announcement-kontainer .parafannouncement {
+    font-size: var(--font-size-1);
+    font-weight: 600;
+}
+
+.announcement-kontainer .announcement-close {
+    font-size: var(--font-size-1);
+    color: var(--white);
+    background-color: #4068a3;
+    cursor: pointer;
+    transition: 200ms ease-in;
+    padding: 5px 15px;
+    margin-left: 1rem;
+}
+
+.announcement-kontainer a:hover {
+    color: var(--white);
+    background-color: #4e7fc9;
+    transition: 200ms ease-in;
+}
+/* AKHIR ADS */
+
+
 
 /* FOOTER SETTING */
 footer{
@@ -744,4 +781,28 @@ footer{
         font-size: 14px;
         padding: 10px 20px;
     }
+}
+
+@media (max-width: 426px) {
+    .announcement {
+        padding: 5px;
+    }
+
+    .announcement-kontainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .announcement-kontainer .parafannouncement {
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .announcement-kontainer .announcement-close {
+        font-size: 10px;
+        padding: 3px 5px;
+        margin-left: 0;
+    }   
 }
