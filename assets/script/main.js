@@ -4,6 +4,22 @@ $(document).ready(function(){
   
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const announc = document.querySelector('#announcement'),
+          announcClose = document.querySelector('.announcement-close'),
+          clearBtn = document.querySelector('.clear'),
+          isShow = localStorage.getItem('isShow');
+
+if (isShow) announc.remove();
+
+announcClose.addEventListener('click', () => {
+  localStorage.setItem('isShow', 1);
+  announc.remove();
+});
+
+  clearBtn.addEventListener('click', () => localStorage.clear());
+});
+
 // INI BUAT TOMBOL SIDEBAR
 document.querySelector('.menux').addEventListener('click', () => document.querySelector('.navigasi_links').classList.toggle('show'));
 
