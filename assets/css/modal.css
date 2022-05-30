@@ -39,7 +39,9 @@
 }
 
 .modal-content .ximg {
+    max-width: 80%;
     border-radius: 10px;
+    margin-inline: auto;
     margin-block: 20px;
     border: 5px solid currentColor;
 }
@@ -50,7 +52,6 @@
 
 .modal-content ul {
     font-family: monospace;
-    margin-left: 20px;
     margin-bottom: 10px;
 }
 
