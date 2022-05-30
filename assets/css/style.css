@@ -628,24 +628,30 @@ section.interest .btnnow2{
 
 
 /* FOOTER SETTING */
-footer{
+footer {
     background-color: var(--gray-8);
     width: 100%;
     padding-block: 1rem;
     display: flex;
     align-items: center;
 }
-.bungkus__footer{
+.bungkus__footer {
     /* background-color: tomato; */
     width: var(--width);
     max-width: var(--maxwidth);
     padding-inline: var(--wpadding);
     margin: auto;
+    display: flex;
+    justify-content: space-between;
 }
-.bungkus__footer p{
+.bungkus__footer p,
+.bungkus__footer a {
     color: var(--gray-2);
     font-size: var(--font-size-0);
     font-weight: 400;
+}
+.bungkus__footer a:hover {
+    text-decoration: underline;
 }
 /* AKHIR FOOTER SETTING */
 
