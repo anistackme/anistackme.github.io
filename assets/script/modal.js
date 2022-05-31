@@ -1,82 +1,88 @@
-$(document).ready(function(){
-    $('.slide__kont').slick({        
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        arrows: false,
-        pauseOnFocus: true,
-        autoplay: true,
-        autoplaySpeed: 5000,
-        dots: false,
-        responsive: [
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                    infinite: true,
-                    dots: false
-                }
-            },
-            {
-                breakpoint: 426,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    infinite: true,
-                    dots: false
-                }
-            }
-        ]
-    });
-});
-
-function filterTextInput() {
-    var input, text_filter, td0, i, divList;
-    input = document.getElementById("kolomcarii");
-    text_filter = input.value.toUpperCase();
-    divList = $(".kont__download");
+var modules = {
+    $window: $(window),
+    $html: $('html'),
+    $body: $('body'),
+    $container: $('.container'),
     
-    for (i = 0; i < divList.length; i++) {
-    td0 = divList[i].getAttribute('data-content');
-    if (td0) {
-        if (td0.toUpperCase().indexOf(text_filter) > -1) {
-        divList[i].style.display = "";
-        } else {
-        divList[i].style.display = "none";
-        }
-    } 
+    init: function () {
+      $(function () {
+         modules.modals.init();
+      });
     }
-}
-
-$(document).ready(function() {
-
-    var scrollTop = $(".scrollTop");
-  
-    $(window).scroll(function() {
-      var topPos = $(this).scrollTop();
-  
-      if (topPos > 300) {
-        $(scrollTop).css("display", "block");
-    } else {
-        $(scrollTop).css("display", "none");
-      }
-  
-    });
-  
-    $(scrollTop).click(function() {
-      $('html, body').animate({
-        scrollTop: 0
-      }, 0);
-
-      return false;
-  
-    });
-});
-
-$(document).ready(function(){
-
-    $('#app1').load("pgdat1.html");
-    $('#app2').load("pgctn1.html");
     
-});
+    ,modals: {
+      trigger: $('.modal-trigger'),
+      modal: $('.modal'),
+      scrollTopPosition: null,
+    
+      init: function () {
+        var self = this;
+    
+        if (self.trigger.length > 0 && self.modal.length > 0) {
+          modules.$body.append('<div class="modal-overlay"></div>');
+    
+          self.triggers();
+        }
+      },
+    
+      triggers: function () {
+        var self = this;
+      
+        self.trigger.on('click', function (e) {
+          e.preventDefault();
+        
+          var $trigger = $(this);
+        
+          self.openModal($trigger, $trigger.data('modalId'));
+        });
+      
+        $('.modal-overlay').on('click', function (e) {
+          e.preventDefault();
+          self.closeModal();
+        });
+      
+        modules.$body.on('keydown', function(e){
+          if (e.keyCode === 27) {
+            self.closeModal();
+          }
+        });
+      
+        $('.modal-close').on('click', function(e) {
+          e.preventDefault();
+          self.closeModal();
+        });
+      },
+      
+      openModal: function (_trigger, _modalId) {
+        var self = this,
+            scrollTopPosition = modules.$window.scrollTop(),
+            $targetModal = $('#' + _modalId);
+        
+        self.scrollTopPosition = scrollTopPosition;
+        
+        modules.$html
+        .addClass('modal-show')
+        .attr('data-modal-effect', $targetModal.data('modal-effect'));
+        
+        $targetModal.addClass('modal-show');
+        
+        modules.$container.scrollTop(scrollTopPosition);
+      },
+        
+      closeModal: function () {
+        var self = this;
+        
+        $('.modal-show').removeClass('modal-show');
+        modules.$html
+          .removeClass('modal-show')
+          .removeAttr('data-modal-effect');
+          
+        modules.$window.scrollTop(self.scrollTopPosition);
+      }
+    }
+  }
+  
+  modules.init();
+
+
+  
