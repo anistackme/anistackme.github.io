@@ -44,6 +44,26 @@ body{
     background-color: var(--gray-2);
 }
 
+.unseen {
+    position: relative;
+}
+    .unseen::after {
+        content: "";
+        position: absolute;
+        top: 3px;
+        right: -5px;
+        background-color: var(--orange-4);
+        width: 5px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        transition: ease 300ms;
+        animation: var(--animation-blink);
+    }
+    .unseen:hover::after {
+        background-color: var(--grape-8);
+    }
+
+
 .cpntr {
     cursor: pointer;
 }
@@ -635,6 +655,14 @@ footer {
     display: flex;
     align-items: center;
 }
+
+.linkfoot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
 .bungkus__footer {
     /* background-color: tomato; */
     width: var(--width);
