@@ -175,7 +175,20 @@ header {
 .h4__kont {
     color: var(--gray-7);
     font-size: var(--font-size-5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 100%;
 }
+
+.h4__kont a {
+    font-weight: 400;
+    font-size: var(--font-size-1);
+    color: var(--grape-7);
+}
+    .h4__kont a:hover {
+        text-decoration: underline;
+    }
 
 .slide__kont {
     position: relative;
