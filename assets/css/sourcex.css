@@ -71,6 +71,9 @@ h3 {
     border: 1px solid var(--gray-3);
     border-radius: 6px;
 }
+.kont_sauce .linkcond:nth-child(2n) {
+    background-color: #f0e3ff;
+}
     .kont_sauce a:hover {
         border: 1px solid var(--gray-5);
     }
