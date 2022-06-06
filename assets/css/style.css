@@ -31,6 +31,7 @@
     list-style: none;
     text-decoration: none;
     font-family: 'Montserrat' Arial, Helvetica, sans-serif;
+    image-rendering: optimizeSpeed;
 }
 
 ::-webkit-scrollbar{width: 10px;background-color: inherit;-ms-overflow-style: none;scrollbar-width: none;display: none;}
