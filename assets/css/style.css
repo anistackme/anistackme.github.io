@@ -331,14 +331,24 @@ section.rangkuman{
     position: relative;
     overflow: hidden;
 }
+.cyan{
+    background-color: #099b83;
+    background-image: url('https://www.anindote.com/wp-content/uploads/2021/10/pattern-reversed-918x555.webp');
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: soft-light;
+    position: relative;
+    overflow: hidden;
+}
 
-.orange,.green,.purple,.grayosh,.blue {
+.orange,.green,.purple,.grayosh,.blue,.cyan {
     transition: ease-out 300ms;}
 
 .orange:hover,
 .green:hover,
 .blue:hover,
 .grayosh:hover,
+.cyan:hover,
 .purple:hover {
     filter:brightness(110%);
     box-shadow: var(--shadow-3);
@@ -370,6 +380,7 @@ section.rangkuman{
 
 
 /* SHIMERING SHINY SETTING */
+.cyan:before,
 .grayosh:before {
     content: "";
     display: block;
