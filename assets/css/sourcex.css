@@ -72,7 +72,7 @@ h3 {
     border-radius: 6px;
 }
 .kont_sauce .linkcond:nth-child(2n) {
-    background-color: #f0e3ff;
+    background-color: #e7e4e4;
 }
     .kont_sauce a:hover {
         border: 1px solid var(--gray-5);
