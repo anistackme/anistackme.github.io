@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap");
 
+* {
+    transition: all ease 300ms;
+}
 
 html {
     min-height: 100vh;
@@ -52,22 +55,26 @@ header {
     align-items: center;
 }
 
-@media (max-width: 768px) {
-    .leader_isi-kont {
-        margin: auto;
-        width: 90%;
-    }
+.leader_isi-kont .btnxxbx {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-block: 2rem;
+    justify-content: center;
 }
 
-.leader_isi-kont .btnxx {
-    margin-block: 2rem;
+.leader_isi-kont .btnxxbx .btnxx {
     padding: 10px 2rem;
     background-color: var(--gray-8);
     color: var(--gray-1);
     transition: all 200ms;
 }
-    .leader_isi-kont .btnxx:hover {
-        background-color: var(--gray-7);
+.leader_isi-kont .btnxxbx .btnxx:nth-child(2n) {
+    background-color: var(--grape-8);
+    color: var(--gray-1);
+}
+    .leader_isi-kont .btnxxbx .btnxx:hover {
+        filter: brightness(130%);
         color: var(--gray-0);
     }
 
@@ -99,10 +106,18 @@ header {
     text-align: center;
 }
 
+.leader_isi-kont .xparaf3 {
+    color: var(--blue-8);
+    font-size: var(--font-size-2);
+    padding-block: 1rem;
+    text-align: center;
+}
+
 .leader_kont_draw {
     margin-top: 4rem;
     color: var(--gray-8);
     width: 100%;
+    font-family: monospace;
 }
 
 .leader_kont_draw a {
@@ -124,26 +139,41 @@ header {
     line-height: 1;
 }
 
-span.x1 {
-    color: var(--orange-7);
-    font-size: var(--font-size-5);
-    font-weight: 900;
-    font-family: monospace;
+.up1,.dn1,.stay1 {
+    font-size: var(--font-size-2);
     line-height: 1;
+    font-weight: 600;
+    font-family: monospace;
+    letter-spacing: 10px;
 }
 
-span.x2 {
-    color: var(--blue-7);
-    font-size: var(--font-size-4);
-    font-weight: 700;
-    font-family: monospace;
-    line-height: 1;
+span.up1 {color: var(--green-5);}
+span.stay1 {color: var(--orange-5);}
+span.dn1 {color: var(--red-7);}
+
+
+@media (max-width: 768px) {
+    .leader_isi-kont {
+        margin: auto;
+        width: 90%;
+    }
+
+    .leader_isi-kont .btnxxbx {
+        min-width: 90%;
+    }
+
+    .leader_isi-kont .btnxxbx .btnxx {
+        width: 100%;
+        text-align: center;
+    }
+
+    .leader_kont_draw a span{
+        display: none;
+    }
 }
 
-span.x3 {
-    color: var(--red-7);
-    font-size: var(--font-size-3);
-    font-weight: 500;
-    font-family: monospace;
-    line-height: 1;
+@media (max-width: 375px) {
+    .leader_kont_draw a i{
+        display: none;
+    }
 }
