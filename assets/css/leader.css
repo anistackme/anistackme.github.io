@@ -167,13 +167,13 @@ span.dn1 {color: var(--red-7);}
         text-align: center;
     }
 
-    .leader_kont_draw a span{
+    .leader_kont_draw a i{
         display: none;
     }
 }
 
 @media (max-width: 375px) {
-    .leader_kont_draw a i{
+    .leader_kont_draw a span{
         display: none;
     }
 }
