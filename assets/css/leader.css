@@ -120,6 +120,14 @@ header {
     font-family: monospace;
 }
 
+.leader_kont_draw_win {
+    margin-top: 4rem;
+    padding: 0.10em;
+    width: 100%;
+    background-color: #fe939328;
+    border-left: 5px solid blue;
+}
+
 .leader_kont_draw a {
     position: relative;
     color: var(--gray-8);
@@ -133,6 +141,18 @@ header {
     .leader_kont_draw a:hover {
         background-color: var(--gray-3);
     }
+
+.leader_kont_draw_win a {
+    position: relative;
+    color: var(--gray-9);
+    font-weight: 600;
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 200ms ease;
+    line-height: 1;
+}
 
 .leader_kont_draw p {
     font-weight: 700;
